@@ -1,2 +1,2 @@
-# Habbetat-Colmena-saludable
+# Habeetat-Colmena-saludable
 Capstone project
