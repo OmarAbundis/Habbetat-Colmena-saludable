@@ -80,7 +80,7 @@ IPAddress server(192,168,1,64);
 
 const int LOADCELL_DOUT_PIN = 13;         // Conexión con <HX711,DT> y <ESP32,GPIO13>
 const int LOADCELL_SCK_PIN = 12;          // Conexión con <HX711,12> y <ESP32, GPIO12>
-
+const float ajuste = 1031.56;             // valor inicial sin peso y sin la función balanza.tare(30) en void setup()
 
 #define DHTTYPE DHT11                     // DHT 11
 #define DHTPIN 2                          // Digital pin connected to the DHT sensor
@@ -167,7 +167,7 @@ void setup()
   Serial.println("No ponga ningún objeto sobre la balanza");
   Serial.println("Destarando...");
   balanza.set_scale(105.125);
-  balanza.tare(30);                                                             // Hacer 30 lecturas, el promedio es la tara
+  //balanza.tare(30);                                                             // Hacer 30 lecturas, el promedio es la tara
   Serial.println("Listo para pesar");
 
 }                                                                               // fin del void setup ()
@@ -206,8 +206,9 @@ void loop()
 
 //  Obtención del peso de la balanza
 
-    float p = balanza.get_units(30);
-       
+    float reading = balanza.get_units(30);                                      // Se toma un valor proveniente del HX711
+    float p = reading - ajuste;                                                 // Se hace un ajuste para no tomar en cuenta que se tare con un nuevo valor en una falla de energía.
+           
                                                                                 //Se construye el string correspondiente al JSON que contiene 3 variables
     
     String json = "{\"id\":\"OmarAb\",\"temp\":"+String(t)+",\"hum\":"+String(h)+",\"peso\":"+String(p)+"}";
