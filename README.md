@@ -7,11 +7,14 @@ En está primer parte del desarrollo del proyecto Capstone, **Habeetat Comlmena 
 
 ## Material necesario
 
-- 1 ESP32CAM
-- 1 FTDI
-- 1 DHT11, sensor de temperatura y humedad
-- 1 HX711
-- 1 Resistor de 10Kohms
+- 1 [ESP32CAM](https://docs.ai-thinker.com/en/esp32-cam). Tarjeta de desarrollo
+- 1 [FTDI](https://ftdichip.com/wp-content/uploads/2020/08/DS_FT232R.pdf). TArjeta controladora USB
+- 1 [DHT11](https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf). Sensor de temperatura y humedad
+- 1 (HX711)[https://cdn.sparkfun.com/datasheets/Sensors/ForceFlex/hx711_english.pdf]. ADC-24 bits para escalas de peso.
+- 1 (Celda de carga para 20Kg.)[https://naylampmechatronics.com/sensores/157-celda-de-carga-20kg.html]. También conocida como galga extensiométrica.
+- 1 Resistor de 10Kohms. (Café,Negro,Naranja,Dorado)
+- 1 cable USB a USB mini.
+- Jumpers MM.
 
 ## Software necesario
 
