@@ -57,9 +57,9 @@ Adicional a lo ya indicado en líneas superiores, también es necesario contar c
 
 ![Circuito de control](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/Circuito%20de%20control%20de%20peso_temperatura%20y%20humedad.png)
 
-2. Se tiene que fijar la celda de carga de 20Kg., en una base sólida que evite el desequilibrio de la báscula, cuidando la posición de la celda de carga, la cual suele tener una flecha que debe señalar hacia a base, para su correcta colocación.
+2. Se tiene que fijar la celda de carga de 20Kg., en una base sólida que evite el desequilibrio de la báscula, cuidando la posición de la celda de carga, la cual suele tener una flecha que debe señalar hacia la base inferior, para su correcta colocación.
 3. Fijar la base de la colmena en la parte superior de la celda, teniendo un registro previo del peso total de la colmena para poder destarar y ajustar el valor correspondiente al peso registrado.
-4. 
+4. Cargar el [programa de control y adquisición de peso, temperatura y humedad](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Sensores_Temp_Humedad_Peso_MQTT/Sensores_Temp_Humedad_Peso_MQTT.ino)
 
 ## Instrucciones de operación
 
