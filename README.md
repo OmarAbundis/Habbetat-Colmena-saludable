@@ -18,6 +18,8 @@ En está primer parte del desarrollo del proyecto Capstone, **Habeetat Comlmena 
 
 ## Software necesario
 
+En la experimentación de está práctica se debe de contar con el siguiente software libre:
+
 - Ubuntu 20.04
 - Arduino IDE
 - Mosquitto MQTT Broker, Listener en puerto 1883 para 0.0.0.0 y conexiones autentificadas activadas.
@@ -26,6 +28,23 @@ En está primer parte del desarrollo del proyecto Capstone, **Habeetat Comlmena 
 - Grafana
 
 ## Material de referencia
+
+Previamente a la realización de está práctica, ha sido necesario el estudio de distitos temas, que se encuentran en la plataforma edu.codigoiot.com, en donde se explican conceptos y configuraciones necesarias, tales como:
+
+- Instalación de virtual Box y Ubuntu 20.04
+- Configuración de Arduino IDE para ESP32CAM
+- Instalación de NodeRed
+- Introducción a NodeRed
+- Instalación de Mosquitto MQTT
+
+También se recomienda el estudio de las siguientes páginas, donde se explican algunas implementaciones de una báscula electrónica usando la tarjeta de desarrollo Arduino UNO.
+
+- [bogde/HX711](https://github.com/bogde/HX711)
+- [Tutorial trasmisor de celda de carga HX711, Balanza Digital](https://naylampmechatronics.com/blog/25_tutorial-trasmisor-de-celda-de-carga-hx711-balanza-digital.html)
+- [Balanza Electronica con HX711 y Arduino](https://controlautomaticoeducacion.com/arduino/balanza-electronica-hx711-arduino/)
+- [Balanza WIFI con ESP32](https://www.prometec.net/balanza-wifi-esp32/)
+- [Celda de carga 50 kg arduino programacion](https://arduinoque.com/arduino/celda-de-carga-50-kg-arduino-programacion/)
+- [ESP32 Troubleshooting Guide](https://randomnerdtutorials.com/esp32-troubleshooting-guide/)
 
 ## Servicios
 
