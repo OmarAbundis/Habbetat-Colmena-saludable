@@ -48,6 +48,10 @@ También se recomienda el estudio de las siguientes páginas, donde se explican 
 
 ## Servicios
 
+Adicional a lo ya indicado en líneas superiores, también es necesario contar con los siguientes servicios:
+
+[HiveMQ](https://www.hivemq.com/public-mqtt-broker/). Es un broker público y que no demanda de contar con una cuenta.
+
 ## Instrucciones para realizar el control del circuito de sensado de variables
 
 ## Instrucciones de operación
