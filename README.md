@@ -13,6 +13,15 @@ En está primer parte del desarrollo del proyecto Capstone, **Habeetat Comlmena 
 - 1 HX711
 - 1 Resistor de 10Kohms
 
+## Software necesario
+
+- Ubuntu 20.04
+- Arduino IDE
+- Mosquitto MQTT Broker, Listener en puerto 1883 para 0.0.0.0 y conexiones autentificadas activadas.
+- NodeJS. NPM, NodeRed y Node Dashboard.
+- MySQL
+- Grafana
+
 ## Material de referencia
 
 ## Servicios
