@@ -7,6 +7,12 @@ En está primer parte del desarrollo del proyecto Capstone, **Habeetat Comlmena 
 
 ## Material necesario
 
+- 1 ESP32CAM
+- 1 FTDI
+- 1 DHT11, sensor de temperatura y humedad
+- 1 HX711
+- 1 Resistor de 10Kohms
+
 ## Material de referencia
 
 ## Servicios
