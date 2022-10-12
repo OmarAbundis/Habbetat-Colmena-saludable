@@ -53,9 +53,13 @@ Adicional a lo ya indicado en líneas superiores, también es necesario contar c
 
 1.  Se debe de armar el circuito electrónico mostrado en la figura 1, teniendo cuidado de conectar a las terminales indicadas del ESP32-CAM, y cuidar la polaridad de los dispositivos.
 
-**Figura 1.** *Circuito Electrónico de Control y Adquisición Peso, Temperatura y Humedad*
+**Figura 1.** *Circuito Electrónico de Control y Adquisición de Peso, Temperatura y Humedad*
 
 ![Circuito de control](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/Circuito%20de%20control%20de%20peso_temperatura%20y%20humedad.png)
+
+2. Se tiene que fijar la celda de carga de 20Kg., en una base sólida que evite el desequilibrio de la báscula, cuidando la posición de la celda de carga, la cual suele tener una flecha que debe señalar hacia a base, para su correcta colocación.
+3. Fijar la base de la colmena en la parte superior de la celda, teniendo un registro previo del peso total de la colmena para poder destarar y ajustar el valor correspondiente al peso registrado.
+4. 
 
 ## Instrucciones de operación
 
