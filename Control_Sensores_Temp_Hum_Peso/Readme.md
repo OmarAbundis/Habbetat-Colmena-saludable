@@ -49,6 +49,14 @@ Adicional a lo ya indicado en líneas superiores, también es necesario contar c
 
 ## Instrucciones para realizar el control del circuito de sensado de variables
 
+**Nota:** Se recomienda revisar la información previamente citada, antes de comenzar con el armado del circuito electrónico, para reducir la probabilidad de realizar malas conexiones entre los dispositivos, fallas en la polarización y en consecuencia el daño permanente de los dispositivos o daño parcial o total de su equipo de cómputo.
+
+1.  Se debe de armar el circuito electrónico mostrado en la figura 1, teniendo cuidado de conectar a las terminales indicadas del ESP32-CAM, y cuidar la polaridad de los dispositivos.
+
+**Figura 1.** *Circuito Electrónico de Control y Adquisición Peso, Temperatura y Humedad*
+
+![Circuito de control](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/Circuito%20de%20control%20de%20peso_temperatura%20y%20humedad.png)
+
 ## Instrucciones de operación
 
 ## Resultados
