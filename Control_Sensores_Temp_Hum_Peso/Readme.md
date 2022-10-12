@@ -61,15 +61,20 @@ En la tabla 1, se puede observar la correspondencia de las terminales que se deb
 
 **Tabla 1.** *Terminales de Conexión de ESP32-CAM a DHT11*.
 
-|-----------|------|
 | ESP32-CAM | DTH11|
-|-----------|------|
 | GPIO 2    | DATA |
-|-----------|------|
 | 5V        | Vcc  |
-|-----------|------|
 | GND       | GND  |
-|-----------|------|
+
+En la tabla 2, se puede observar la correspondencia de las terminales que se deben de conectar entre el ESP32-CAM y el HX711.
+
+**Tabla 2.** *Terminales de Conexión de ESP32-CAM a HX711*.
+
+| ESP32-CAM | HX711 |
+| Vcc = 5V  | Vcc   |
+| GND       | GND   |
+| GPIO 12   | SCK   |
+| GPIO 13   | DT    |
 
 2. Se tiene que fijar la celda de carga de 20Kg., en una base sólida que evite el desequilibrio de la báscula, cuidando la posición de la celda de carga, la cual suele tener una flecha que debe señalar hacia la base inferior, para su correcta colocación.
 3. Fijar la base de la colmena en la parte superior de la celda, teniendo un registro previo del peso total de la colmena para poder destarar y ajustar el valor correspondiente al peso registrado.
