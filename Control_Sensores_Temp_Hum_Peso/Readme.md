@@ -62,6 +62,7 @@ En la tabla 1, se puede observar la correspondencia de las terminales que se deb
 **Tabla 1.** *Terminales de Conexión de ESP32-CAM a DHT11*.
 
 | ESP32-CAM | DTH11|
+| ----------|------|
 | GPIO 2    | DATA |
 | 5V        | Vcc  |
 | GND       | GND  |
