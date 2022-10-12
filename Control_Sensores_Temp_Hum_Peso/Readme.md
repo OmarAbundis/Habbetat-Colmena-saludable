@@ -72,6 +72,7 @@ En la tabla 2, se puede observar la correspondencia de las terminales que se deb
 **Tabla 2.** *Terminales de Conexión de ESP32-CAM a HX711*.
 
 | ESP32-CAM | HX711 |
+|-----------|-------|
 | Vcc = 5V  | Vcc   |
 | GND       | GND   |
 | GPIO 12   | SCK   |
