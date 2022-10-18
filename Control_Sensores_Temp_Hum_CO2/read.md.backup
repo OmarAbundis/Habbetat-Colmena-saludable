@@ -47,7 +47,7 @@ Los pines del sensor MQ135 son los siguientes
 ![](../../../Fritzing/MQ135-pinout.jpg)
 
 Los pines del sensor DHT11 son los siguientes
-
+![](../../../Fritzing/dht11.png)
 
 - El sensor MQ135 debe conectarse al microcontrolador de la siguiente forma
 
