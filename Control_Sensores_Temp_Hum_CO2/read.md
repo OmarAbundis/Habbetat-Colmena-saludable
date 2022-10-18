@@ -37,17 +37,15 @@ Se requiere la creación de un bot de Telegram, para usar tal servicio se requie
 # Instrucciones para construir y programar el circuito de medición de temperatura, humedad y concentración de CO2
 
 El circuito a crear es el siguiente
-
-![](../../../Fritzing/mq135_DHT11_ESP32_bb.png)
+![mq135_DHT11_ESP32_bb](https://user-images.githubusercontent.com/72757419/196530284-8dddd8f8-5c5d-4881-b6c0-6d7075505e9f.png)
 
 Deben tomarse en cuenta las siguientes consideraciones
 
 Los pines del sensor MQ135 son los siguientes
-
-![](../../../Fritzing/MQ135-pinout.jpg)
+![MQ135-pinout](https://user-images.githubusercontent.com/72757419/196530385-ba1a9ea7-016d-4f87-aa35-57e096b4e68a.jpg)
 
 Los pines del sensor DHT11 son los siguientes
-![](../../../Fritzing/dht11.png)
+![dht11](https://user-images.githubusercontent.com/72757419/196530433-02793838-1d82-4d0f-a192-28b7bf4f9647.png)
 
 - El sensor MQ135 debe conectarse al microcontrolador de la siguiente forma
 - Los pines 
