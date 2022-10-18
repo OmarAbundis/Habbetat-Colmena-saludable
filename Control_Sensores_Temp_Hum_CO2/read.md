@@ -42,9 +42,11 @@ El circuito a crear es el siguiente
 Deben tomarse en cuenta las siguientes consideraciones
 
 Los pines del sensor MQ135 son los siguientes
+
 ![MQ135-pinout](https://user-images.githubusercontent.com/72757419/196530385-ba1a9ea7-016d-4f87-aa35-57e096b4e68a.jpg)
 
 Los pines del sensor DHT11 son los siguientes
+
 ![dht11](https://user-images.githubusercontent.com/72757419/196530433-02793838-1d82-4d0f-a192-28b7bf4f9647.png)
 
 - El sensor MQ135 debe conectarse al microcontrolador de la siguiente forma
