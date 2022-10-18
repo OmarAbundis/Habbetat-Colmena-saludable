@@ -9,6 +9,7 @@ En esta sección del proyecto **Habeetat** se construye el módulo encargado de 
 4. 1 Protoboard 
 5. Cables jumper
 6. 1 resistencia de 10 kiloohms
+7. 1 cable microusb a USB
 
 # Software a utilizar
 
