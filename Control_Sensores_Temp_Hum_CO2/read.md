@@ -27,7 +27,7 @@ Biblotecas de Arduino para programar el microontrolador y los sensores
 - [PubSubclient](https://github.com/knolleary/pubsubclient)
 - [DHT11](https://github.com/adafruit/DHT-sensor-library)
 - [Grafana v9.1.7](https://grafana.com/)
-- [Python 3.9](https://www.python.org/downloads/release/python-390/)
+-  [Python 3.9](https://www.python.org/downloads/release/python-390/)
 # Material de referencia
 
 
