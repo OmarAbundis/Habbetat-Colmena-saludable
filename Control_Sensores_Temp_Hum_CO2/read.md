@@ -41,6 +41,8 @@ El circuito a crear es el siguiente
 
 Deben tomarse en cuenta las siguientes consideraciones
 
+Los pines del ESP32 se consideran así
+![](../../../Fritzing/esp32-pinout-chip-ESP-WROOM-32.jpeg)
 Los pines del sensor MQ135 son los siguientes
 
 ![MQ135-pinout](https://user-images.githubusercontent.com/72757419/196530385-ba1a9ea7-016d-4f87-aa35-57e096b4e68a.jpg)
@@ -49,12 +51,24 @@ Los pines del sensor DHT11 son los siguientes
 
 ![dht11](https://user-images.githubusercontent.com/72757419/196530433-02793838-1d82-4d0f-a192-28b7bf4f9647.png)
 
-- El sensor MQ135 debe conectarse al microcontrolador de la siguiente forma
-- Los pines 
+- El sensor MQ135 debe conectarse al microcontrolador a través de los siguientes pines
+- 
+|ESP32|MQ135|
+|--|--|
+| Vcc (5V)|Vcc|
+|GND |GND|
+|GPIO 34|A0|
 
 
-- El sensor DHT11 debe conectarse al microcontrolador de la siguiente forma
+- El sensor DHT11 debe conectarse al microcontrolador través de los siguientes pines
 
+|ESP32|DHT11 |
+|--|--|
+| Vcc (5V)|Vcc  |
+|GND |GND |
+|GPIO 25 (14)|DATA (2)|
+
+La tierra y la corriente se pueden conectar en paralelo para ser comunes. 
 
 
 # Instrucciones de uso
