@@ -20,14 +20,15 @@ Para implementar la programación de microcontrolador se requiere la siguiente l
 - [NodeRed v3.0.2](https://nodered.org/)
 - [Mosquitto 2.0.15](https://mosquitto.org/)
 - [MySQL 8.0.30-0ubuntu0.22.04.1 (Ubuntu)](https://ubuntu.com/server/docs/databases-mysql)
+- [Grafana v9.1.7](https://grafana.com/)
+- [Python 3.9](https://www.python.org/downloads/release/python-390/)
 
 Biblotecas de Arduino para programar el microontrolador y los sensores
 
 - [Wifi](https://github.com/arduino-libraries/WiFi)
 - [PubSubclient](https://github.com/knolleary/pubsubclient)
 - [DHT11](https://github.com/adafruit/DHT-sensor-library)
-- [Grafana v9.1.7](https://grafana.com/)
--  [Python 3.9](https://www.python.org/downloads/release/python-390/)
+
 # Material de referencia
 
 
