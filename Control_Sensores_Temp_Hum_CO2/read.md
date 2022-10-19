@@ -16,19 +16,20 @@ En esta sección del proyecto **Habeetat** se construye el módulo encargado de 
 
 Para implementar la programación de microcontrolador se requiere la siguiente lista de software (todo el software es gratuito y con licencia de uso libre).
 
-- Sistema operativo Ubuntu 22.02 corriendo en la computadora
-- IDE de Arduino 1.8.20
-- NodeRed v3.0.2
-- Mosquitto 2.0.15
-- MySQL 8.0.30-0ubuntu0.22.04.1 (Ubuntu)
-- Biblotecas de Arduino para programar el microontrolador y los sensores
-	+ Wifi
-	+ PubSubclient
-	+ DHT11
-- Grafana v9.1.7
-- Python 3.9
+- [IDE de Arduino 1.8.20](https://www.arduino.cc/en/software)
+- [NodeRed v3.0.2](https://nodered.org/)
+- [Mosquitto 2.0.15](https://mosquitto.org/)
+- [MySQL 8.0.30-0ubuntu0.22.04.1 (Ubuntu)](https://ubuntu.com/server/docs/databases-mysql)
 
+Biblotecas de Arduino para programar el microontrolador y los sensores
+
+- [Wifi](https://github.com/arduino-libraries/WiFi)
+- [PubSubclient](https://github.com/knolleary/pubsubclient)
+- [DHT11](https://github.com/adafruit/DHT-sensor-library)
+- [Grafana v9.1.7](https://grafana.com/)
+- [Python 3.9](https://www.python.org/downloads/release/python-390/)
 # Material de referencia
+
 
 # Servicios
 
@@ -54,7 +55,7 @@ Los pines del sensor DHT11 son los siguientes
 ![dht11](https://user-images.githubusercontent.com/72757419/196530433-02793838-1d82-4d0f-a192-28b7bf4f9647.png)
 
 - El sensor MQ135 debe conectarse al microcontrolador a través de los siguientes pines
-
+- 
 |ESP32|MQ135|
 |--|--|
 | Vcc (5V)|Vcc|
