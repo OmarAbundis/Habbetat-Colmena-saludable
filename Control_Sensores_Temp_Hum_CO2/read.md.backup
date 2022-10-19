@@ -43,7 +43,7 @@ Deben tomarse en cuenta las siguientes consideraciones
 
 Los pines del ESP32 se consideran así
 
-![](../../../Fritzing/esp32-pinout-chip-ESP-WROOM-32.jpeg)
+![esp32-pinout-chip-ESP-WROOM-32](https://user-images.githubusercontent.com/72757419/196814939-c0b0c2f7-9d13-410f-b943-aba817300433.jpeg)
 
 Los pines del sensor MQ135 son los siguientes
 
