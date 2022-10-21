@@ -97,6 +97,7 @@ HX711 balanza;                            // Objeto balanza
 // Variables
 
 int flashLedPin = 4;                      // Para mostrar mensajes recibidos
+int ActivaCarga = 15;                      // Para mandar señal al actuador
 int statusLedPin = 33;                    // Para indicar el estatus de conexión
 long timeNow, timeLast;                   // Variables de control de tiempo no bloqueante
 int wait = 5000;                          // Indica la espera cada 5 segundos para envío de mensajes MQTT
@@ -112,7 +113,9 @@ void setup()
  
   pinMode (flashLedPin, OUTPUT);
   pinMode (statusLedPin, OUTPUT);
+  pinMode (ActivaCarga, OUTPUT);
   digitalWrite (flashLedPin, LOW);
+  digitalWrite (ActivaCarga, LOW);
   digitalWrite (statusLedPin, HIGH);
 
   Serial.println();
@@ -212,7 +215,7 @@ void loop()
            
                                                                                 //Se construye el string correspondiente al JSON que contiene 3 variables
     
-    String json = "{\"id\":\"OmarAb\",\"temp\":"+String(t)+",\"hum\":"+String(h)+",\"peso\":"+String(p)+"}";
+    String json = "{\"id\":\"Habeetat_SensoresExt\",\"temp\":"+String(t)+",\"hum\":"+String(h)+",\"peso\":"+String(p)+"}";
     
     Serial.println(json);                                                       // Se imprime en monitor solo para poder visualizar que el string esta correctamente creado
     
@@ -262,15 +265,25 @@ void callback(char* topic, byte* message, unsigned int length)
     {                                                         // En caso de recibirse mensaje en el tema codigoIoT/G7/Habeetat
       if(messageTemp == "true")
       {
-        Serial.println("Led encendido");
+        //Serial.println("Led encendido");
+        //digitalWrite(flashLedPin, HIGH);
+        
+        Serial.println("Carga Activada");
+        digitalWrite(ActivaCarga, HIGH);
         digitalWrite(flashLedPin, HIGH);
-      }// fin del if (String(topic) == "")
+      
+      }                                                       // fin del if (String(topic) == "")
       
       else if(messageTemp == "false")
       {
-        Serial.println("Led apagado");
+        //Serial.println("Led apagado");
+        //digitalWrite(flashLedPin, LOW);
+
+        Serial.println("Carga Desactivada");
+        digitalWrite(ActivaCarga, LOW);
         digitalWrite(flashLedPin, LOW);
-      }// fin del else if(messageTemp == "false")
+        
+      }                                                       // fin del else if(messageTemp == "false")
       
     }                                                                                         // fin del if (String(topic) == "esp32/output")
     
