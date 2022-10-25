@@ -83,7 +83,8 @@
                 "fa9b31ec7a4ac5c9",
                 "fbd597732f010dd1",
                 "79d34a735c8b211b",
-                "00743324b431afc2"
+                "00743324b431afc2",
+                "cc353ff39daa994a"
             ]
         ]
     },
@@ -98,8 +99,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 750,
-        "y": 260,
+        "x": 770,
+        "y": 160,
         "wires": [
             [
                 "06c1f227830fa078"
@@ -117,8 +118,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 740,
-        "y": 160,
+        "x": 760,
+        "y": 100,
         "wires": [
             [
                 "6548df46646a65a1"
@@ -136,8 +137,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 730,
-        "y": 60,
+        "x": 750,
+        "y": 40,
         "wires": [
             [
                 "6461814043332265"
@@ -149,7 +150,7 @@
         "type": "ui_text",
         "z": "173e8d1844a7f519",
         "group": "4561cb748213f12f",
-        "order": 1,
+        "order": 3,
         "width": 6,
         "height": 1,
         "name": "",
@@ -158,7 +159,7 @@
         "layout": "row-spread",
         "className": "",
         "x": 970,
-        "y": 60,
+        "y": 40,
         "wires": []
     },
     {
@@ -166,16 +167,16 @@
         "type": "ui_text",
         "z": "173e8d1844a7f519",
         "group": "4561cb748213f12f",
-        "order": 5,
+        "order": 6,
         "width": 6,
-        "height": 1,
+        "height": 2,
         "name": "",
-        "label": "Humedad",
+        "label": "Humedad [%]",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 980,
-        "y": 160,
+        "x": 1000,
+        "y": 100,
         "wires": []
     },
     {
@@ -183,16 +184,16 @@
         "type": "ui_text",
         "z": "173e8d1844a7f519",
         "group": "4561cb748213f12f",
-        "order": 3,
+        "order": 4,
         "width": 6,
-        "height": 1,
+        "height": 2,
         "name": "",
-        "label": "temperatura",
+        "label": "temperatura [°C]",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 990,
-        "y": 260,
+        "x": 1000,
+        "y": 160,
         "wires": []
     },
     {
@@ -206,8 +207,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 730,
-        "y": 320,
+        "x": 750,
+        "y": 220,
         "wires": [
             [
                 "63c95867ea4dafa5",
@@ -220,16 +221,16 @@
         "type": "ui_text",
         "z": "173e8d1844a7f519",
         "group": "4561cb748213f12f",
-        "order": 4,
-        "width": 0,
-        "height": 0,
+        "order": 5,
+        "width": 6,
+        "height": 2,
         "name": "",
-        "label": "Peso",
+        "label": "Peso [grs.]",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 970,
-        "y": 320,
+        "x": 990,
+        "y": 220,
         "wires": []
     },
     {
@@ -243,8 +244,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 750,
-        "y": 460,
+        "x": 770,
+        "y": 300,
         "wires": [
             [
                 "8bef375580512dcc"
@@ -262,8 +263,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 760,
-        "y": 540,
+        "x": 780,
+        "y": 360,
         "wires": [
             [
                 "8bef375580512dcc"
@@ -276,10 +277,10 @@
         "z": "173e8d1844a7f519",
         "name": "OmarAb",
         "group": "667dcfb7cec66985",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "label": "Hist. Temperatura y humedad",
+        "order": 2,
+        "width": 12,
+        "height": 4,
+        "label": "Hist. Temperatura [°C] -- humedad [%]",
         "chartType": "line",
         "legend": "true",
         "xformat": "HH:mm:ss",
@@ -309,7 +310,7 @@
         "useDifferentColor": false,
         "className": "",
         "x": 980,
-        "y": 480,
+        "y": 340,
         "wires": [
             []
         ]
@@ -325,8 +326,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 750,
-        "y": 620,
+        "x": 770,
+        "y": 420,
         "wires": [
             [
                 "7fd65055e8fe8b93"
@@ -340,8 +341,8 @@
         "name": "",
         "group": "667dcfb7cec66985",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": 12,
+        "height": 4,
         "label": "Peso (grms.)",
         "chartType": "bar",
         "legend": "false",
@@ -372,7 +373,7 @@
         "useDifferentColor": false,
         "className": "",
         "x": 990,
-        "y": 620,
+        "y": 420,
         "wires": [
             []
         ]
@@ -383,11 +384,11 @@
         "z": "173e8d1844a7f519",
         "name": "",
         "group": "4561cb748213f12f",
-        "order": 5,
-        "width": 0,
-        "height": 0,
+        "order": 2,
+        "width": 6,
+        "height": 8,
         "gtype": "donut",
-        "title": "Peso",
+        "title": "Peso [grs.]",
         "label": "grms.",
         "format": "{{value}}",
         "min": 0,
@@ -400,23 +401,23 @@
         "seg1": "1000",
         "seg2": "3000",
         "className": "",
-        "x": 970,
-        "y": 380,
+        "x": 990,
+        "y": 280,
         "wires": []
     },
     {
         "id": "00743324b431afc2",
         "type": "function",
         "z": "173e8d1844a7f519",
-        "name": "Enciende > 26°C",
-        "func": "if (msg.payload.temp > 26){\n    msg.payload = \"true\";\n}\nelse{\n    msg.payload = \"false\";\n}\nreturn msg;",
+        "name": "Enciende > 28°C",
+        "func": "if (msg.payload.temp > 28){\n    msg.payload = \"true\";\n}\nelse{\n    msg.payload = \"false\";\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 770,
-        "y": 700,
+        "x": 790,
+        "y": 480,
         "wires": [
             [
                 "7c5e512d670a64a8"
@@ -437,8 +438,70 @@
         "correl": "",
         "expiry": "",
         "broker": "d191d34239fdbca3",
-        "x": 1050,
-        "y": 700,
+        "x": 1030,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "cc353ff39daa994a",
+        "type": "function",
+        "z": "173e8d1844a7f519",
+        "name": "Query",
+        "func": "msg.topic = \"INSERT INTO Habeetat_SExt (Nombre,Temperatura,Humedad,Peso) VALUES ('\" + msg.payload.id + \"',\" + msg.payload.temp+ \",\" + msg.payload.hum + \",\" + msg.payload.peso + \");\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 560,
+        "wires": [
+            [
+                "95654e1c4dfd6fab"
+            ]
+        ]
+    },
+    {
+        "id": "95654e1c4dfd6fab",
+        "type": "mysql",
+        "z": "173e8d1844a7f519",
+        "mydb": "3d5a27b023274846",
+        "name": "Habeetat Sensores Externos",
+        "x": 1040,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "147405583648d950",
+        "type": "ui_template",
+        "z": "173e8d1844a7f519",
+        "group": "93f7ef4239ea03b2",
+        "name": "Habeetat Sensores Externos en Grafana",
+        "order": 1,
+        "width": 24,
+        "height": 4,
+        "format": "<iframe src=\"http://localhost:3000/d-solo/RTqKJ4H4k/habeetat_test?orgId=1&from=1666640665000&to=1666642809000&panelId=6\" width=\"1800\" height=\"400\" frameborder=\"0\"></iframe>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 240,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7c533008bd74dbb6",
+        "type": "comment",
+        "z": "173e8d1844a7f519",
+        "name": "Panel de Grafana",
+        "info": "",
+        "x": 160,
+        "y": 520,
         "wires": []
     },
     {
@@ -475,7 +538,7 @@
         "tab": "6f4bed16441c2925",
         "order": 1,
         "disp": true,
-        "width": "6",
+        "width": 12,
         "collapse": false,
         "className": ""
     },
@@ -486,7 +549,28 @@
         "tab": "6f4bed16441c2925",
         "order": 2,
         "disp": true,
-        "width": "6",
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3d5a27b023274846",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "Habeetat_SensoresExt",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "93f7ef4239ea03b2",
+        "type": "ui_group",
+        "name": "Grafana",
+        "tab": "6f4bed16441c2925",
+        "order": 3,
+        "disp": true,
+        "width": 24,
         "collapse": false,
         "className": ""
     },
