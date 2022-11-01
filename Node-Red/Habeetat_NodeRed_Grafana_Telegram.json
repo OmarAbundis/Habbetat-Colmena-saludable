@@ -1,0 +1,22 @@
+[
+    {
+        "id": "4163e33f5b234bcc",
+        "type": "function",
+        "z": "173e8d1844a7f519",
+        "name": "function para consulta de datos",
+        "func": "if (msg.payload.content == \"Consulta\" || msg.payload.content == \"consulta\")\n{\n    msg.payload = {};\n    msg.payload.chatId = -775229224, -825211725;\n    msg.payload.type = 'message';\n    var espacio = \" \\n\";\n    msg.payload.content = \"\\u{1F41D}\" + \" Datos de la colmena \" + \"\\u{1F41D}\" + espacio + \"Datos desde: \" + global.get('id') + espacio + \"\\u{1F321}\"+\"Temperatura: \"+ global.get(\"temperatura\")+ \" °C\"+espacio + \"\\u{2614}\"+\"Humedad: \" + global.get(\"humedad\") + \" %\"+ espacio + \"\\u{2696}\"+\"Peso de la Colmena: \"+ global.get(\"peso\")+ \" grms.\"+ espacio+\"Envia <consulta> para acceder a los datos más actuales de la colmena.\";\n    //msg.payload.content = \"datos\"\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 820,
+        "wires": [
+            [
+                "a4c44d1001bbd62c",
+                "0fe314a191d378d0"
+            ]
+        ]
+    }
+]
