@@ -105,7 +105,8 @@ Notas del uso del programa:
 
 
 ## Resultados
-
+Captura de pantalla del monitor serial del IDE de arduino con los datos de salida de las lecturas de los sensores y el archivo json que se publica en el broker local
+![imagen](https://user-images.githubusercontent.com/72757419/200640844-e3ce6719-60ad-45df-b4fe-98c2a3800893.png)
 
 ## Evidencias
 
