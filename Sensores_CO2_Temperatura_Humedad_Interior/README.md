@@ -97,8 +97,8 @@ El programa del ESP32 WROOM permite las siguiente acciones:
 Notas del uso del programa:
 
 - Colocar el SSID y el password de la red Wifi a la que se conectará el ESP32 WROOM
-- `const char* ssid = "NOMBRE DE LA RED";`
-- `const char* password = "Contrasena";`
+  - `const char* ssid = "NOMBRE DE LA RED";`
+  - `const char* password = "Contrasena";`
 
 
 
