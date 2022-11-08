@@ -16,19 +16,21 @@ En esta sección del proyecto **Habeetat** se construye el módulo encargado de 
 
 Para implementar la programación de microcontrolador se requiere la siguiente lista de software (todo el software es gratuito y con licencia de uso libre).
 
-- Sistema operativo Ubuntu 22.02 corriendo en la computadora
-- IDE de Arduino 1.8.20
-- NodeRed v3.0.2
-- Mosquitto 2.0.15
-- MySQL 8.0.30-0ubuntu0.22.04.1 (Ubuntu)
-- Biblotecas de Arduino para programar el microontrolador y los sensores
-	+ Wifi
-	+ PubSubclient
-	+ DHT11
-- Grafana v9.1.7
-- Python 3.9
+- [IDE de Arduino 1.8.20](https://www.arduino.cc/en/software)
+- [NodeRed v3.0.2](https://nodered.org/)
+- [Mosquitto 2.0.15](https://mosquitto.org/)
+- [MySQL 8.0.30-0ubuntu0.22.04.1 (Ubuntu)](https://ubuntu.com/server/docs/databases-mysql)
+- [Grafana v9.1.7](https://grafana.com/)
+- [Python 3.9](https://www.python.org/downloads/release/python-390/)
+
+Biblotecas de Arduino para programar el microontrolador y los sensores
+
+- [Wifi](https://github.com/arduino-libraries/WiFi)
+- [PubSubclient](https://github.com/knolleary/pubsubclient)
+- [DHT11](https://github.com/adafruit/DHT-sensor-library)
 
 # Material de referencia
+
 
 # Servicios
 
@@ -41,6 +43,10 @@ El circuito a crear es el siguiente
 
 Deben tomarse en cuenta las siguientes consideraciones
 
+Los pines del ESP32 se consideran así
+
+![](../../../Fritzing/esp32-pinout-chip-ESP-WROOM-32.jpeg)
+
 Los pines del sensor MQ135 son los siguientes
 
 ![MQ135-pinout](https://user-images.githubusercontent.com/72757419/196530385-ba1a9ea7-016d-4f87-aa35-57e096b4e68a.jpg)
@@ -49,12 +55,24 @@ Los pines del sensor DHT11 son los siguientes
 
 ![dht11](https://user-images.githubusercontent.com/72757419/196530433-02793838-1d82-4d0f-a192-28b7bf4f9647.png)
 
-- El sensor MQ135 debe conectarse al microcontrolador de la siguiente forma
-- Los pines 
+- El sensor MQ135 debe conectarse al microcontrolador a través de los siguientes pines
+- 
+|ESP32|MQ135|
+|--|--|
+| Vcc (5V)|Vcc|
+|GND |GND|
+|GPIO 34|A0|
 
 
-- El sensor DHT11 debe conectarse al microcontrolador de la siguiente forma
+- El sensor DHT11 debe conectarse al microcontrolador través de los siguientes pines
 
+|ESP32|DHT11 |
+|--|--|
+| Vcc (5V)|Vcc  |
+|GND |GND |
+|GPIO 25 (14)|DATA (2)|
+
+La tierra y la corriente se pueden conectar en paralelo para ser comunes. 
 
 
 # Instrucciones de uso
@@ -70,4 +88,3 @@ Los pines del sensor DHT11 son los siguientes
 # Bibliografía
 
 # Créditos
-
