@@ -41,11 +41,11 @@ Se requiere la creación de un bot de Telegram, para usar tal servicio se requie
 El circuito a crear es el siguiente
 ![mq135_DHT11_ESP32_bb](https://user-images.githubusercontent.com/72757419/196530284-8dddd8f8-5c5d-4881-b6c0-6d7075505e9f.png)
 
-Deben tomarse en cuenta las siguientes consideraciones
+Deben tomarse en cuenta las siguientes consideraciones para el armado del circuito
 
-Los pines del ESP32 se consideran así
+Los pines del ESP32 se consideran así de acuerdo a la siguiente nomenclatura
 
-![](../../../Fritzing/esp32-pinout-chip-ESP-WROOM-32.jpeg)
+![imagen](https://user-images.githubusercontent.com/72757419/200460988-6ad9b2ea-0108-404c-bbcd-777da94db86a.png)
 
 Los pines del sensor MQ135 son los siguientes
 
