@@ -87,7 +87,7 @@ En la tabla 2, se puede observar la correspondencia de las terminales que se deb
 | GPIO 12   | SCK   |
 | GPIO 13   | DT    |
 
-En la tabla , se puede observar la correspondencia de las terminales que se deben de conectar entre el ESP32-CAM y el MOC3043.
+En la tabla 3, se puede observar la correspondencia de las terminales que se deben de conectar entre el ESP32-CAM y el MOC3043.
 
 **Tabla 3.** *Terminales de Conexión de ESP32-CAM a MOC3043*.
 
