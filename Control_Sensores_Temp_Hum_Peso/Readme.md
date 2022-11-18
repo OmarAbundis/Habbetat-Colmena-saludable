@@ -62,9 +62,9 @@ Adicional a lo ya indicado en líneas superiores, también es necesario contar c
 
 1.  Se debe de armar el circuito electrónico mostrado en la figura 1, teniendo cuidado de conectar a las terminales indicadas del ESP32-CAM, y cuidar la polaridad de los dispositivos.
 
-**Figura 1.** *Circuito Electrónico de Control y Adquisición de Peso, Temperatura y Humedad*.
+**Figura 1.** *Circuito Electrónico de Control y Adquisición de Peso, Temperatura y Humedad, y control de carga*.
 
-![Circuito de control](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/Circuito%20de%20control%20de%20peso_temperatura%20y%20humedad.png)
+![Circuito de control](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/Circuito%20de%20control%20de%20peso_temperatura%20humedad%20y%20carga.png)
 
 En la tabla 1, se puede observar la correspondencia de las terminales que se deben de conectar entre el ESP32-CAM y el DHT11.
 
