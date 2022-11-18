@@ -1,5 +1,7 @@
 ## Introducción
 
+En desarrolo
+
 ## Material necesario
 
 - 1 [ESP32CAM](https://docs.ai-thinker.com/en/esp32-cam). Tarjeta de desarrollo
