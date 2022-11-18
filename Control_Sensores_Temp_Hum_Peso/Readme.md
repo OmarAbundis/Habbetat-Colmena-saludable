@@ -9,7 +9,13 @@ En desarrolo
 - 1 [DHT11](https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf). Sensor de temperatura y humedad
 - 1 [HX711](https://cdn.sparkfun.com/datasheets/Sensors/ForceFlex/hx711_english.pdf). ADC-24 bits para escalas de peso.
 - 1 [Celda de carga para 20Kg.](https://naylampmechatronics.com/sensores/157-celda-de-carga-20kg.html). También conocida como galga extensiométrica.
+- 1 Resistor de 100ohms. (Café,Negro,Café,Dorado)
+- 1 Resistor de 220ohms. (Rojo,Rojo,Café,Dorado)
+- 1 Resistor de 330ohms. (Naranja,Naranja,Café,Dorado)
+- 1 Resistor de 360ohms. (Naranja,Azul,Café,Dorado)
 - 1 Resistor de 10Kohms. (Café,Negro,Naranja,Dorado)
+- 1 BT137 (TRIAC)
+- 1 Capacitor de 10nF (103)
 - 1 cable USB a USB mini.
 - Jumpers MM.
 
