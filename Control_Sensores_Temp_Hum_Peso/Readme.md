@@ -15,6 +15,7 @@ En desarrolo
 - 1 Resistor de 360ohms. (Naranja,Azul,Café,Dorado)
 - 1 Resistor de 10Kohms. (Café,Negro,Naranja,Dorado)
 - 1 BT137 (TRIAC)
+- 1 MOC3043 (Optoacoplador)
 - 1 Capacitor de 10nF (103)
 - 1 cable USB a USB mini.
 - Jumpers MM.
@@ -85,6 +86,15 @@ En la tabla 2, se puede observar la correspondencia de las terminales que se deb
 | GND       | GND   |
 | GPIO 12   | SCK   |
 | GPIO 13   | DT    |
+
+En la tabla , se puede observar la correspondencia de las terminales que se deben de conectar entre el ESP32-CAM y el MOC3043.
+
+**Tabla 3.** *Terminales de Conexión de ESP32-CAM a MOC3043*.
+
+| ESP32-CAM | MOC3043 |
+|-----------|---------|
+| GPIO 15   | PIN 1   |
+| GND       | PIN 2   |
 
 2. Se tiene que fijar la celda de carga de 20Kg., en una base sólida que evite el desequilibrio de la báscula, cuidando la posición de la celda de carga, la cual suele tener una flecha que debe señalar hacia la base inferior, para su correcta colocación.
 3. Fijar la base de la colmena en la parte superior de la celda, teniendo un registro previo del peso total de la colmena para poder destarar y ajustar el valor correspondiente al peso registrado.
