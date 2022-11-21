@@ -71,18 +71,13 @@ fig3.savefig('zonas_cambios.png')
 
 
 
-# #plt.plot(forecast(['ds']))
-# datos = forecast[:]['trend']
-# tiempo = forecast[:]['ds'] 
-# #print(forecast[:]['trend'])
-# plt.plot(tiempo, datos, 'r')
-# plt.plot(forecast['ds'],forecast['yhat'], 'g')
-plt.show()
+
+#plt.show() #descomentar si se queiren observar las gráficas en una ventana aparte
 
 
 # Se guarda el modelo para ser utilizado posteriormente
 
-with open('serialized_model.json', 'w') as fout:
+with open('serialized_model.json', 'w') as fout:  #El modelo se guarda como archivo json para ser usado posteriormente
     fout.write(model_to_json(m))  # Save model
 
 # Instruccciones para cargar el modelo si así se desea
