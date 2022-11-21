@@ -15,7 +15,7 @@ En desarrolo
 - 1 Resistor de 360ohms. (Naranja,Azul,Café,Dorado)
 - 1 Resistor de 10Kohms. (Café,Negro,Naranja,Dorado)
 - 1 BT137 (TRIAC)
-- 1 MOC3043 (Optoacoplador)
+- 1 [MOC3043, optoacoplador](https://www.datasheetq.com/MOC3043-doc-Motorola)
 - 1 Capacitor de 10nF (103)
 - 1 cable USB a USB mini.
 - Jumpers MM.
