@@ -12,7 +12,7 @@ En esta sección del proyecto **Habeetat** se construye el módulo encargado de 
 6. 1 resistencia de 10 kiloohms
 7. 1 cable microusb a USB
 
-# Software a utilizar
+## Software a utilizar
 
 Para implementar la programación de microcontrolador se requiere la siguiente lista de software (todo el software es gratuito y con licencia de uso libre).
 
@@ -29,23 +29,23 @@ Biblotecas de Arduino para programar el microontrolador y los sensores
 - [PubSubclient](https://github.com/knolleary/pubsubclient)
 - [DHT11](https://github.com/adafruit/DHT-sensor-library)
 
-# Material de referencia
+## Material de referencia
 
 
-# Servicios
+## Servicios
 
 Se requiere la creación de un bot de Telegram, para usar tal servicio se requiere seguir los siguientes pasos
 
-# Instrucciones para construir y programar el circuito de medición de temperatura, humedad y concentración de CO2
+## Instrucciones para construir y programar el circuito de medición de temperatura, humedad y concentración de CO2
 
 El circuito a crear es el siguiente
 ![mq135_DHT11_ESP32_bb](https://user-images.githubusercontent.com/72757419/196530284-8dddd8f8-5c5d-4881-b6c0-6d7075505e9f.png)
 
-Deben tomarse en cuenta las siguientes consideraciones
+Deben tomarse en cuenta las siguientes consideraciones para el armado del circuito
 
-Los pines del ESP32 se consideran así
+Los pines del ESP32 se consideran así de acuerdo a la siguiente nomenclatura
 
-![](../../../Fritzing/esp32-pinout-chip-ESP-WROOM-32.jpeg)
+![imagen](https://user-images.githubusercontent.com/72757419/200460988-6ad9b2ea-0108-404c-bbcd-777da94db86a.png)
 
 Los pines del sensor MQ135 son los siguientes
 
@@ -57,7 +57,10 @@ Los pines del sensor DHT11 son los siguientes
 
 - El sensor MQ135 debe conectarse al microcontrolador a través de los siguientes pines
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e6d3a7857dc1524fc6b9e0749f64292d47131b0c
 |ESP32|MQ135|
 |--|--|
 | Vcc (5V)|Vcc|
@@ -75,17 +78,46 @@ Los pines del sensor DHT11 son los siguientes
 
 La tierra y la corriente se pueden conectar en paralelo para ser comunes. 
 
+La siguiente imagen muestra el circuito del MQ135 y el DHT11 conectados al ESP32 WROOM
 
-# Instrucciones de uso
+Vista frontal
+![imagen](https://user-images.githubusercontent.com/72757419/200628857-9bebe0c3-615e-44cf-809f-d3c2b28c7766.png)
 
-# Resultados
+Vista Trasera
+![imagen](https://user-images.githubusercontent.com/72757419/200629030-be07c08a-5266-4a00-9715-e6927325ad53.png)
 
-# Evidencias
 
-# Preguntas frecuentes
+## Instrucciones para la programación del ESP32 WROOM
 
-# Compatibilidad
+El programa para leer los sensores se encuentra en la carpeta [Carpeta]. Este programama hace uso de las bibliotecas  WiFI, PubSubClient y DHT11 por lo que es necesario instalarlas en el IDE de Arduino antes de subir el programa al ESP32, así como de preparar todo el entorno en sistema operativo (Ubuntu) para que se conecte el ESP32 WROOM a la computadora (ver material de referencias de configuración del IDE de Arduino y ESP32). Una vez que se realizan las lecturas del sensor estás son publicadas en un broker local mediante el protocolo MQTT usando mosquitto por lo que hay que configurarlo también en la computadora (ver material de referencia de configuración). 
 
-# Bibliografía
+El programa del ESP32 WROOM permite las siguiente acciones:
 
-# Créditos
+- Conexión del microcontrolador a Wifi
+- Lectura del Voltaje analógico del sensor MQ-135 (concentración de CO2)
+- Lectura de Temperatura y Humedad con el sensor DHT11
+- Publicación y suscripción a tópicos en el broker local usando MQTT
+
+Notas del uso del programa:
+
+- Colocar el SSID y el password de la red Wifi a la que se conectará el ESP32 WROOM
+  - `const char* ssid = "NOMBRE DE LA RED";`
+  - `const char* password = "Contrasena";`
+
+
+
+
+
+## Resultados
+Captura de pantalla del monitor serial del IDE de arduino con los datos de salida de las lecturas de los sensores y el archivo json que se publica en el broker local
+![imagen](https://user-images.githubusercontent.com/72757419/200640844-e3ce6719-60ad-45df-b4fe-98c2a3800893.png)
+
+## Evidencias
+
+## Preguntas frecuentes
+
+## Compatibilidad
+
+## Bibliografía
+
+## Créditos
