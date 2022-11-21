@@ -28,7 +28,7 @@ Así que para el desarrollo del proyecto nos dimos a la tarea de **monitorear** 
 Llevar un **registro** de los valores detectados mediante la implementación de una base de datos en MySQL.
 Si en el registro y monitoreo de las variables se detectan valores atípicos o de riesgo mandar señales a actuadores para que se pongan en funcionamiento y regulen la variable que se encuentra en estado crítico o en caso de emergencia se detone una **llamada de alerta** a la persona propietaria o encargada de la colmena.
 
-Simplificar la **observación de los datos** mediante gráficas en tiempo real haciendo uso de Grafana y con todos los datos obtenidos, utilizar algoritmos de predicción que ayuden a diagnosticar que si las condiciones presentes seguiran manteniendo la salud o propiciarán la enfermedad de la colmena.
+Simplificar la **observación de los datos** mediante gráficas en tiempo real haciendo uso de Grafana y con todos los datos obtenidos, utilizar algoritmos de predicción que ayuden a diagnosticar que si las condiciones presentes seguirán manteniendo la salud o propiciarán la enfermedad de la colmena.
 
 En lo que respecta a la solución planteada, en esta parte del proyecto se muestra y decribe cómo realizar:
 
