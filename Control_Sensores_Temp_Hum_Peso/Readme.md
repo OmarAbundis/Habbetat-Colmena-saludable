@@ -10,7 +10,7 @@ Ya discutiendo como equipo y consultando las bases requeridas del proyecto, nos 
 
 ¿Por qué las abejas?
 
-Siguiendo con la discusión en equipo del proyecto, coicidimos que en muchas ocasiones en viajes a regiones propicias para la práctica de la apicultura, muchos habitantes de esas regiones combinan sus labores del campo con la práctica de la apicultura, simplemente siguiendo las enseñanzas heredadas y en muchas de ellas simplemente destinadas al fracaso, ya que solamente realizado el **cajón** utilizado como colmena, las dejan estar ahí acumulando la miel, pero realmente sin preocuparse de la salud de la colmena y por las observaciones hechas, pues prácticamente sin preocuparse del entorno que rodea a la colmena.
+Siguiendo con la discusión en equipo del proyecto, coincidimos que en muchas ocasiones en viajes a regiones propicias para la práctica de la apicultura, muchos habitantes de esas regiones combinan sus labores del campo con la práctica de la apicultura, simplemente siguiendo las enseñanzas heredadas y en muchas de ellas simplemente destinadas al fracaso, ya que solamente realizado el **cajón** utilizado como colmena, las dejan estar ahí acumulando la miel, pero realmente sin preocuparse de la salud de la colmena y por las observaciones hechas, pues prácticamente sin preocuparse del entorno que rodea a la colmena.
 
 Así que decidimos buscar una solución mediante el uso del IoT que garantice la salud de la colmena.
 
