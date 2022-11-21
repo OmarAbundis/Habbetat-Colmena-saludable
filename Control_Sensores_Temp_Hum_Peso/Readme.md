@@ -6,7 +6,7 @@ Dentro de los requisitos se busca que el proyecto repercuta en el desarrollo de 
 
 Teniendo en cuenta que hoy en día puedes encontrar hasta [cafeteras controladas por internet](https://www.home-connect.com/es/es/electrodomesticos-inteligentes/cafetera), no deberíamos tener problemas para elegir algo que realizar, pero nuevamente no se trata de conectar cualquier electrodoméstico a internet, sino que el proyecto sirva de **piedra angular** para el desarrollo de una área social y considerando que algo sobra en nuestro país, México, son problemas sociales.
 
-Ya discutiendo como equipo y consultando las bases requeridas del proyecto, nos llamo la atención el monitoreo de la flora y la fauna, aspectos en los cuales nuestro país es rico (por el momento), pero también sumamente descuidado en realizar una explotación sustentable. Y dentro las muchas especies que se pueden monitorear, nos decidimos por las abejas.
+Ya discutiendo como equipo y consultando las bases requeridas del proyecto, nos llamó la atención el monitoreo de la flora y la fauna, aspectos en los cuales nuestro país es rico (por el momento), pero también sumamente descuidado en realizar una explotación sustentable. Y dentro las muchas especies que se pueden monitorear, nos decidimos por las abejas.
 
 ¿Por qué las abejas?
 
