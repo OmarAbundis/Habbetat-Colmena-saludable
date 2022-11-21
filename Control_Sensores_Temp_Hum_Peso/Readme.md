@@ -18,7 +18,7 @@ Así que decidimos buscar una solución mediante el uso del IoT que garantice la
 
 Dentro de las malas prácticas de los apicultores novatos o simplemente aficionados, notamos que principalmente descuidan la temperatura, la humedad y el uso de los pesticidad o hierbicidas; cercanos a la colmena o ataques de hormigas (arrieras), avispas u otros depredadores que un breve momento pueden terminar con el enjambre de la colmena y que decir, de los incendios forestales intencionales o no intencional, que también acaban en un instante con las colmenas.
 
-Así que en proyecto nos dimos a la tarea de **monitorear** las principales variables que nos alertaran que la salud de la colmena está en franco peligro, y estás son:
+Así que para el desarrollo del proyecto nos dimos a la tarea de **monitorear** las principales variables que nos alertaran que la salud de la colmena está en franco peligro, y estás son:
 
 - Peso de la colmena.
 - Temperatura exterior e interior.
