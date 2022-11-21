@@ -9,14 +9,14 @@
  *    Integrantes del equipo:
  *    
  *          Abundis Noyola Omar
- *          García Corte Alejandro
+ *          García León Lizbeth
  *          Soto Soto Raymundo
  *          
  *    Profesor e instructor del curso de Código IoT      
  *    
  *          Hugo Vargas
  *          
- *    Fecha:  30 de septiembre del 2022
+ *    Fecha:  21 de noviembre del 2022
  * 
  *
       Notas del profesor para el correcto funcionamiento de MQTT
@@ -55,6 +55,11 @@
                      GPIO 12  ----------- SCK
                      GPIO 13  ----------- DT
  *                            
+ *          Pines del ESP32-CAM      Pines del MOC3043
+ *      
+                     GPIO 15  ----------- PIN 1
+                     GND      ----------- GND
+ *             
  *     Referencia de terminales DHT 11                       
  *     https://www.omniblug.com/sensor-temperatura-humedad-DHT11-DHT22.html
  */
@@ -250,19 +255,19 @@ void callback(char* topic, byte* message, unsigned int length)
     messageTemp += (char)message[i];
   }
 
-                                                               // Se comprueba que el mensaje se haya concatenado correctamente
+                                                                                // Se comprueba que el mensaje se haya concatenado correctamente
   
   Serial.println();
   Serial.print ("Mensaje concatenado en una sola variable: ");
   Serial.println (messageTemp);
 
-                                                              // En esta parte puedes agregar las funciones que requieras para actuar segun lo necesites al recibir un mensaje MQTT
+                                                                               // En esta parte puedes agregar las funciones que requieras para actuar segun lo necesites al recibir un mensaje MQTT
 
-                                                              // Ejemplo, en caso de recibir el mensaje true - false, se cambiará el estado del led soldado en la placa.
-                                                              // El ESP323CAM está suscrito al tema codigoIoT/ejemplo/mqttin se cambia a codigoIoT/G7/Habeetat_in
+                                                                               // Ejemplo, en caso de recibir el mensaje true - false, se cambiará el estado del led soldado en la placa.
+                                                                               // El ESP323CAM está suscrito al tema codigoIoT/ejemplo/mqttin se cambia a codigoIoT/G7/Habeetat_in
   
   if (String(topic) == "codigoIoT/G7/Habeetat_in") 
-    {                                                         // En caso de recibirse mensaje en el tema codigoIoT/G7/Habeetat
+    {                                                                         // En caso de recibirse mensaje en el tema codigoIoT/G7/Habeetat
       if(messageTemp == "true")
       {
         //Serial.println("Led encendido");
@@ -272,7 +277,7 @@ void callback(char* topic, byte* message, unsigned int length)
         digitalWrite(ActivaCarga, HIGH);
         digitalWrite(flashLedPin, HIGH);
       
-      }                                                       // fin del if (String(topic) == "")
+      }                                                                       // fin del if (String(topic) == "")
       
       else if(messageTemp == "false")
       {
@@ -283,7 +288,7 @@ void callback(char* topic, byte* message, unsigned int length)
         digitalWrite(ActivaCarga, LOW);
         digitalWrite(flashLedPin, LOW);
         
-      }                                                       // fin del else if(messageTemp == "false")
+      }                                                                     // fin del else if(messageTemp == "false")
       
     }                                                                                         // fin del if (String(topic) == "esp32/output")
     
