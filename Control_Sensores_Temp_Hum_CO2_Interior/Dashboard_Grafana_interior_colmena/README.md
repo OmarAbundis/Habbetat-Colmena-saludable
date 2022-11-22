@@ -1,0 +1,1 @@
+## Creación del dashbaord en grafana para mostrar los datos del interior de la colmena

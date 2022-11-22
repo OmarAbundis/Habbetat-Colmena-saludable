@@ -1,0 +1,1 @@
+## Creación del flow en Nodered para suscribirse, leer los datos enviados a tópicos en el broker local, guardarlos en la base de datos local y controlar el envío de mensajes con los datos de la colmena a telegram mediante un bot.  

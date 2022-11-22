@@ -1,0 +1,1 @@
+## Creación de la base de datos MySQL para los datos del interior de la colmena
