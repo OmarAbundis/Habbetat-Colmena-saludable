@@ -17,7 +17,7 @@
 
 // Datos Sensor DHT11
 #define DHTTYPE DHT11   // Definimos sensor DHT 11
-#define DHTPIN 14 //Pin digital conectado a el DHT 11
+#define DHTPIN 14 //Pin digital conectado al DHT 11
 
 DHT dht(DHTPIN, DHTTYPE);  // Iniciar sensor DHT11
 
@@ -226,12 +226,12 @@ void reconnect() {
     
     // Intentar reconexión
     
-    if (client.connect("ESP32CAMClient")) { //Pregunta por el resultado del intento de conexión
+    if (client.connect("ESP32Client")) { //Pregunta por el resultado del intento de conexión
       
       Serial.println("Conectado");
       client.subscribe("Habeetat/sensores/camara/entrada"); // Esta función realiza la suscripción al tema
     
-    }// fin del  if (client.connect("ESP32CAMClient"))
+    }// fin del  if (client.connect("ESP32Client"))
     
     else {  //en caso de que la conexión no se logre
       Serial.print("Conexion fallida, Error rc=");
