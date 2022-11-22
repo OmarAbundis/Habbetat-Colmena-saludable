@@ -1,0 +1,936 @@
+[
+    {
+        "id": "89fae0f7fd3b769d",
+        "type": "tab",
+        "label": "Copia -proyecto Habeetat",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7bc32d04c7f4208a",
+        "type": "mysql",
+        "z": "89fae0f7fd3b769d",
+        "mydb": "6091638ae3b1b287",
+        "name": "",
+        "x": 830,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "15b02059cd844605",
+        "type": "mqtt in",
+        "z": "89fae0f7fd3b769d",
+        "name": "",
+        "topic": "Habeetat/sensores/camara",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "48109835b69c2135",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 220,
+        "wires": [
+            [
+                "255eb71c0498f3c7"
+            ]
+        ]
+    },
+    {
+        "id": "255eb71c0498f3c7",
+        "type": "debug",
+        "z": "89fae0f7fd3b769d",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "035f5669f3c211cd",
+        "type": "mqtt out",
+        "z": "89fae0f7fd3b769d",
+        "name": "",
+        "topic": "Habeetat/sensores/camara/entrada",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "48109835b69c2135",
+        "x": 620,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "29d7765669a05a39",
+        "type": "debug",
+        "z": "89fae0f7fd3b769d",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "2bf885a562233b3a",
+        "type": "ui_switch",
+        "z": "89fae0f7fd3b769d",
+        "name": "",
+        "label": "switch de cámara",
+        "tooltip": "",
+        "group": "a838267f3452faf6",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 230,
+        "y": 880,
+        "wires": [
+            [
+                "035f5669f3c211cd"
+            ]
+        ]
+    },
+    {
+        "id": "e1089cdedfa6bdce",
+        "type": "mqtt in",
+        "z": "89fae0f7fd3b769d",
+        "name": "",
+        "topic": "Habeetat/sensores/dht11mqtt",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "48109835b69c2135",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 160,
+        "wires": [
+            [
+                "255eb71c0498f3c7",
+                "7b399184fcf3d78e",
+                "86ddb37cb48b517a",
+                "5b1b07c2f197a280",
+                "98b61e83cb02e44b",
+                "9873d3acea212099",
+                "542dfe2338e7a848",
+                "29d7765669a05a39"
+            ]
+        ]
+    },
+    {
+        "id": "86ddb37cb48b517a",
+        "type": "function",
+        "z": "89fae0f7fd3b769d",
+        "name": "VoltajeAnalogico",
+        "func": "msg.topic=msg.payload.id;\nmsg.payload=msg.payload.VoltajeAnalogico;\nglobal.set(\"VoltajeAnalogico\",msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5b1b07c2f197a280",
+        "type": "function",
+        "z": "89fae0f7fd3b769d",
+        "name": "Temperatura",
+        "func": "msg.topic = msg.payload.id;\nmsg.payload = msg.payload.Temperatura;\nglobal.set(\"Temperatura\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "98b61e83cb02e44b",
+        "type": "function",
+        "z": "89fae0f7fd3b769d",
+        "name": "Humedad",
+        "func": "msg.topic = msg.payload.id;\nmsg.payload = msg.payload.Humedad;\nglobal.set(\"Humedad\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9873d3acea212099",
+        "type": "function",
+        "z": "89fae0f7fd3b769d",
+        "name": "ID",
+        "func": "msg.topic = msg.payload.id;\nmsg.payload = msg.payload.id;\nglobal.set(\"id\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7b399184fcf3d78e",
+        "type": "function",
+        "z": "89fae0f7fd3b769d",
+        "name": "Conexion mysql",
+        "func": "\nmsg.topic = \"INSERT INTO Datos_Sensores (id_sensor, ValorAnalogico, VoltajeAnalogico, Temperatura, Humedad) VALUES ('\" + msg.payload.id + \"',\" + msg.payload.ValorAnalogico + \",\" + msg.payload.VoltajeAnalogico + \",\" + msg.payload.Temperatura + \",\" + msg.payload.Humedad +\");\"\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 320,
+        "wires": [
+            [
+                "7bc32d04c7f4208a"
+            ]
+        ]
+    },
+    {
+        "id": "fcd1e14b9e58bb51",
+        "type": "debug",
+        "z": "89fae0f7fd3b769d",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "9dfbd5df23fb0907",
+        "type": "inject",
+        "z": "89fae0f7fd3b769d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3600",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 270,
+        "y": 500,
+        "wires": [
+            [
+                "c2308e8fe2ec04c0"
+            ]
+        ]
+    },
+    {
+        "id": "c2308e8fe2ec04c0",
+        "type": "function",
+        "z": "89fae0f7fd3b769d",
+        "name": "enviar mensajes telegram",
+        "func": "\nmsg.payload = {}\nmsg.payload.chatId = -825211725, -775229224;\nmsg.payload.type = \"message\";\nvar espacio = \"\\n\";\nmsg.payload.content = \"\\u{1F41D}\" + \" Datos de la colmena \" + \"\\u{1F41D}\" + espacio + \"Nombre del sensor: \" + global.get('id') + espacio + \"\\u{1F321}\"+\"Temperatura: \"+ global.get(\"Temperatura\")+ \" °C\"+espacio + \"\\u{2614}\"+\"Humedad: \" + global.get(\"Humedad\") + \" %\"+ espacio + \"\\u{1F32B}\"+\"Concentración de CO2: \"+ global.get(\"VoltajeAnalogico\")+ \" PPM\"+\nespacio+\"Envia <consulta> para acceder a los datos más actuales de la colmena, envía <prediccion> para el pronostico del peso de la colmena, envía <imagen> para recibir una fotografía actual de la colmena\";\n\n//msg.payload.content = 'Prueba';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 500,
+        "wires": [
+            [
+                "14c94a23c8a11ac5"
+            ]
+        ]
+    },
+    {
+        "id": "8384da6736692ae6",
+        "type": "function",
+        "z": "89fae0f7fd3b769d",
+        "name": "VoltajeAnalogico",
+        "func": "msg.topic=msg.payload.id;\nmsg.payload=msg.payload.ValorAnalogico;\nglobal.set(\"ValorAnalogico\",msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "542dfe2338e7a848",
+        "type": "function",
+        "z": "89fae0f7fd3b769d",
+        "name": "enviar mensajes telegram advertencia",
+        "func": "\nif ((global.get(\"Temperatura\")>37.0 || global.get(\"Temperatura\")<20.0) || global.get(\"Humedad\") > 60.0  || global.get(\"VoltajeAnalogico\")>2500.0)\n{\n\nmsg.payload = {};\nmsg.payload.chatId = -825211725, -775229224;\nmsg.payload.type = \"message\";\nvar espacio = \" \\n\";\n    msg.payload.content = \"\\u{1F6A8}\" + \"Las condiciones de la colmena no son favorables\" + \"\\u{1F6A8}\"+espacio+ \"\\u{1F41D}\" + \" Datos de la colmena \" + \"\\u{1F41D}\" + espacio + \"Nombre del sensor: \" + global.get('id') + espacio + \"\\u{1F321}\"+\"Temperatura: \"+ \nglobal.get(\"Temperatura\")+ \" °C\"+espacio + \"\\u{2614}\"+\"Humedad: \" + global.get(\"Humedad\") + \" %\"+ espacio+\n\"\\u{1F32B}\"+\"Concentración de CO2: \"+ global.get(\"VoltajeAnalogico\")+ \" PPM\" +espacio+ \"Envia <consulta> para acceder a los datos más actuales de la colmena, envía <prediccion> para el pronostico del peso de la colmena, envía <imagen> para recibir una fotografía actual de la colmena\";\nreturn msg;\n\n} else {\n\n    msg.payload = {};\n\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 440,
+        "wires": [
+            [
+                "14c94a23c8a11ac5"
+            ]
+        ]
+    },
+    {
+        "id": "a178b361e673381a",
+        "type": "ui_template",
+        "z": "89fae0f7fd3b769d",
+        "group": "27c20ad0bc1c45cd",
+        "name": "Imagen de la cámara",
+        "order": 0,
+        "width": "13",
+        "height": "10",
+        "format": "<div style=\"margin-bottom: 10px;\">\n    <img src=\"http://192.168.100.114\" width=\"1500px\" height=\"750px\">\n</div>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 600,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0d14541af5e9c53c",
+        "type": "function",
+        "z": "89fae0f7fd3b769d",
+        "name": "Envío consulta Telegram",
+        "func": "if (msg.payload.content == \"consulta\" || msg.payload.content == \"Consulta\")\n{\n    msg.payload = {};\n    msg.payload.chatId = -825211725, -775229224 ;\n    msg.payload.type = 'message';\n    var espacio = \" \\n\";\n    msg.payload.content =\"\\u{1F41D}\" + \" Datos de la colmena \" + \"\\u{1F41D}\" + espacio + \"Nombre del sensor: \" + global.get('id') + espacio + \"\\u{1F321}\" + \"Temperatura: \" + global.get(\"Temperatura\") + \" °C\" + espacio + \"\\u{2614}\" + \"Humedad: \" + global.get(\"Humedad\") + \" %\" + espacio +\"\\u{1F32B}\" + \"Concentración de CO2: \" + espacio + global.get(\"VoltajeAnalogico\") + \" PPM\"+\n    espacio + \"Envia <consulta> para acceder a los datos más actuales de la colmena, envía <prediccion> para el pronostico del peso de la colmena, envía <imagen> para recibir una fotografía actual de la colmena\";\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 560,
+        "wires": [
+            [
+                "14c94a23c8a11ac5"
+            ]
+        ]
+    },
+    {
+        "id": "6d81b657bf4a1c93",
+        "type": "telegram receiver",
+        "z": "89fae0f7fd3b769d",
+        "name": "",
+        "bot": "25debded0acb48b5",
+        "saveDataDir": "",
+        "filterCommands": false,
+        "x": 250,
+        "y": 560,
+        "wires": [
+            [
+                "0d14541af5e9c53c"
+            ],
+            [
+                "0d14541af5e9c53c"
+            ]
+        ]
+    },
+    {
+        "id": "4c5686a68dd7f127",
+        "type": "telegram receiver",
+        "z": "89fae0f7fd3b769d",
+        "name": "",
+        "bot": "25debded0acb48b5",
+        "saveDataDir": "",
+        "filterCommands": false,
+        "x": 90,
+        "y": 660,
+        "wires": [
+            [
+                "fcd1e14b9e58bb51",
+                "e6ba005027d08eb8"
+            ],
+            [
+                "e6ba005027d08eb8"
+            ]
+        ]
+    },
+    {
+        "id": "14c94a23c8a11ac5",
+        "type": "telegram sender",
+        "z": "89fae0f7fd3b769d",
+        "name": "",
+        "bot": "25debded0acb48b5",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 810,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b21d6dd84d414357",
+        "type": "telegram sender",
+        "z": "89fae0f7fd3b769d",
+        "name": "",
+        "bot": "25debded0acb48b5",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 850,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4c6e01139cff6b30",
+        "type": "exec",
+        "z": "89fae0f7fd3b769d",
+        "command": "conda activate prediccion",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 590,
+        "y": 820,
+        "wires": [
+            [
+                "abea79cd269c5ca8"
+            ],
+            [
+                "abea79cd269c5ca8"
+            ],
+            [
+                "abea79cd269c5ca8"
+            ]
+        ]
+    },
+    {
+        "id": "38c20c0d8de65a4f",
+        "type": "inject",
+        "z": "89fae0f7fd3b769d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 320,
+        "y": 820,
+        "wires": [
+            [
+                "4c6e01139cff6b30"
+            ]
+        ]
+    },
+    {
+        "id": "abea79cd269c5ca8",
+        "type": "debug",
+        "z": "89fae0f7fd3b769d",
+        "name": "debug 9",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "6d529d10a7aa8cc5",
+        "type": "ui_template",
+        "z": "89fae0f7fd3b769d",
+        "group": "8ff04cf16c8050ea",
+        "name": "Tomar fotografía",
+        "order": 0,
+        "width": "13",
+        "height": "10",
+        "format": "<div style=\"margin-bottom: 10px;\">\n    <img src=\"http://192.168.100.114:81/capture\" width=\"1500px\" height=\"750px\">\n</div>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 380,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "37820ad14e3d8f09",
+        "type": "inject",
+        "z": "89fae0f7fd3b769d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 980,
+        "wires": [
+            [
+                "6d529d10a7aa8cc5",
+                "154f9645a4069d5e"
+            ]
+        ]
+    },
+    {
+        "id": "154f9645a4069d5e",
+        "type": "http request",
+        "z": "89fae0f7fd3b769d",
+        "name": "",
+        "method": "GET",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "http://192.168.100.114:81/capture",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 350,
+        "y": 1100,
+        "wires": [
+            [
+                "7e25e3431d5be4ad",
+                "8e045dc376a79941",
+                "a7d2f8218ab9be89"
+            ]
+        ]
+    },
+    {
+        "id": "7e25e3431d5be4ad",
+        "type": "jimp-image",
+        "z": "89fae0f7fd3b769d",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "ret": "img",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "payload",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 550,
+        "y": 1040,
+        "wires": [
+            [
+                "19add8d3c4878a59"
+            ]
+        ]
+    },
+    {
+        "id": "19add8d3c4878a59",
+        "type": "image viewer",
+        "z": "89fae0f7fd3b769d",
+        "name": "",
+        "width": 160,
+        "data": "payload",
+        "dataType": "msg",
+        "active": true,
+        "x": 850,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8e045dc376a79941",
+        "type": "jimp-image",
+        "z": "89fae0f7fd3b769d",
+        "name": "Guardar imagen de la cámara",
+        "data": "payload",
+        "dataType": "msg",
+        "ret": "img",
+        "parameter1": "i/home/raymundo/Documents/imagenes_habeetat/magen_actual.png",
+        "parameter1Type": "str",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "payload",
+        "sendPropertyType": "msg",
+        "parameterCount": 1,
+        "jimpFunction": "write",
+        "selectedJimpFunction": {
+            "name": "write",
+            "fn": "write",
+            "description": "Write to file. NOTE: You can specify an alternative file extension type to change the type. Currently support types are jpg, png, bmp.",
+            "parameters": [
+                {
+                    "name": "filename",
+                    "type": "str",
+                    "required": true,
+                    "hint": "Name of the file",
+                    "defaultType": "str"
+                }
+            ]
+        },
+        "x": 610,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a7d2f8218ab9be89",
+        "type": "file",
+        "z": "89fae0f7fd3b769d",
+        "name": "Guardar imagen",
+        "filename": "imagenes_habeetat/imagenactual.png",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 560,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "96a072abac0a33de",
+        "type": "function",
+        "z": "89fae0f7fd3b769d",
+        "name": "Envío imagen cámara Telegram",
+        "func": "if (msg.payload.content == \"imagen\" || msg.payload.content == \"Imagen\")\n{\n    \n    \n    msg.payload = {};\n    msg.payload.chatId = -825211725;\n    msg.payload.type = \"photo\";\n    var espacio = \" \\n\";\n    msg.payload.content = \"//home/raymundo/imagenes_habeetat/imagenactual.png\";\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 1320,
+        "wires": [
+            [
+                "b8efeef7a8d6ea5c",
+                "73fddece4943d76b"
+            ]
+        ]
+    },
+    {
+        "id": "a323f5a90ccc7b39",
+        "type": "telegram receiver",
+        "z": "89fae0f7fd3b769d",
+        "name": "",
+        "bot": "25debded0acb48b5",
+        "saveDataDir": "",
+        "filterCommands": false,
+        "x": 190,
+        "y": 1320,
+        "wires": [
+            [
+                "96a072abac0a33de",
+                "5b987894be28d433"
+            ],
+            [
+                "5b987894be28d433"
+            ]
+        ]
+    },
+    {
+        "id": "b8efeef7a8d6ea5c",
+        "type": "debug",
+        "z": "89fae0f7fd3b769d",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "73fddece4943d76b",
+        "type": "telegram sender",
+        "z": "89fae0f7fd3b769d",
+        "name": "",
+        "bot": "25debded0acb48b5",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 830,
+        "y": 1320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5b987894be28d433",
+        "type": "debug",
+        "z": "89fae0f7fd3b769d",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "e6ba005027d08eb8",
+        "type": "function",
+        "z": "89fae0f7fd3b769d",
+        "name": "Envío prediccionTelegram 2",
+        "func": "if (msg.payload.content == \"prediccion\" || msg.payload.content == \"Prediccion\")\n{\n    \n    \n    msg.payload = {};\n    msg.payload.chatId = -825211725, -775229224;\n    \n    \n    msg.payload.type = \"mediaGroup\";\nmsg.payload.content = [\n    {\n        type : \"photo\",\n        media : \"/home/raymundo/Documents/IOT/Archivos_proyecto/profeta/prediccion_1.png\",\n        caption : \"Tendencia y predicción de los datos de las últimas horas\"\n    },\n    \n    {\n        type : \"photo\",\n        media : \"/home/raymundo/Documents/IOT/Archivos_proyecto/profeta/analisis_tendencia.png\",\n        caption : \"Análisis de temporalidad de los datos\"\n    },\n    {\n        type : \"photo\",\n        media : \"/home/raymundo/Documents/IOT/Archivos_proyecto/profeta/zonas_cambios.png\",\n        caption : \"Análisis de los cambios más bruscos\"\n    }\n];\n\nreturn msg;\n    \n    \n    \n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 700,
+        "wires": [
+            [
+                "b21d6dd84d414357",
+                "fcd1e14b9e58bb51"
+            ]
+        ]
+    },
+    {
+        "id": "6091638ae3b1b287",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "localhost",
+        "port": "3306",
+        "db": "sensor_MQ_DHT",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "48109835b69c2135",
+        "type": "mqtt-broker",
+        "name": "camara",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "a838267f3452faf6",
+        "type": "ui_group",
+        "name": "Habeetat",
+        "tab": "2f5599a939ea177c",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "27c20ad0bc1c45cd",
+        "type": "ui_group",
+        "name": "Vista cámara web",
+        "tab": "f114a52f34f5651f",
+        "order": 1,
+        "disp": true,
+        "width": "13",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "25debded0acb48b5",
+        "type": "telegram bot",
+        "botname": "habeetat_bot",
+        "usernames": "",
+        "chatids": "-825211725",
+        "baseapiurl": "",
+        "updatemode": "polling",
+        "pollinterval": "300",
+        "usesocks": false,
+        "sockshost": "",
+        "socksprotocol": "socks5",
+        "socksport": "6667",
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbotport": "8443",
+        "publicbotport": "8443",
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    },
+    {
+        "id": "8ff04cf16c8050ea",
+        "type": "ui_group",
+        "name": "Fotografía",
+        "tab": "f114a52f34f5651f",
+        "order": 2,
+        "disp": true,
+        "width": "13",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2f5599a939ea177c",
+        "type": "ui_tab",
+        "name": "Habeetat",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f114a52f34f5651f",
+        "type": "ui_tab",
+        "name": "Habeetat - Cámara",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
