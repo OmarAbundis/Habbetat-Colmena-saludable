@@ -226,7 +226,8 @@ void reconnect() {
     
     // Intentar reconexión
     
-    if (client.connect("ESP32Client")) { //Pregunta por el resultado del intento de conexión
+    if (client.connect("ESP32Client")) { //Pregunta por el resultado del intento de conexión, si hay más de un dispositivo conectado al mismo tópico tiene que tener disntinto nombre
+                                          // Poner nombre distinto a ESP32Client
       
       Serial.println("Conectado");
       client.subscribe("Habeetat/sensores/camara/entrada"); // Esta función realiza la suscripción al tema
