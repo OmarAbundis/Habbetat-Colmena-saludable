@@ -98,6 +98,18 @@ El programa del ESP32 WROOM permite las siguiente acciones:
 - Lectura de Temperatura y Humedad con el sensor DHT11
 - Publicación y suscripción a tópicos en el broker local usando MQTT
 
+
+Una vez conectado el ESP32 adquiriendo los datos de temperatura, humedad y CO2 creamos un flow en NodeRed [Link del flow](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/tree/main/Control_Sensores_Temp_Hum_CO2_Interior/Flow_Nodered_monitoreo_interior_colmena) que realiza las siguientes acciones:
+
+  - Lectura y adquisición del archivo JSON con los datos desde el broker local hecho en MQTT para:
+      1. Guardar los datos en una base de datos local hecha con MySQL [Link detalles de la creación de base de datos](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/tree/main/Control_Sensores_Temp_Hum_CO2_Interior/Base_de_datos_My_SQL_interior_colmena)
+      2. Generar reportes con el bot de telegram desde nodered  [Link de los detalles para creación del bot de telegram con node red](https://flows.nodered.org/node/node-red-contrib-telegrambot)
+        - El bot envía reportes programados o permite realizar consultas de los datos más recientes
+      3. Envío de imágenes y vídeo con la esp32CAM y el bot de telegram desde nodered [link del programa del esp32CAM](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/tree/main/Control_Camara_Video_Interior)
+      4. El flow de node-red también tiene un panel donde podemos visualizar vídeo en tiempo real desde la colmena, está cámara se situa en el exterior de la colmena para vigilancia
+      4. Envío de la predicción del peso de la colmena en los siguientes días [Link del código de predicción](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/tree/main/Prediccion_Peso_Colmena)
+      
+
 Notas del uso del programa:
 
 - Colocar el SSID y el password de la red Wifi a la que se conectará el ESP32 WROOM
