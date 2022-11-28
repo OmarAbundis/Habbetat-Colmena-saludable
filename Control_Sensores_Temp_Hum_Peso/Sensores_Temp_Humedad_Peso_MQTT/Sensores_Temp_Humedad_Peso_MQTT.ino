@@ -69,7 +69,7 @@
 #include <WiFi.h>           // Biblioteca para el control de WiFi
 #include <PubSubClient.h>   //Biblioteca para conexion MQTT
 #include <DHT.h>            //Biblioteca para el control del DHT11
-#include <HX711.h>          //Biblioteca para el control del DHT11
+#include <HX711.h>          //Biblioteca para el control del HX711
 
 // Datos de WiFi
 
