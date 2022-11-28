@@ -110,11 +110,20 @@ Una vez conectado el ESP32 adquiriendo los datos de temperatura, humedad y CO2 c
       4. Envío de la predicción del peso de la colmena en los siguientes días ([Link del código de predicción](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/tree/main/Prediccion_Peso_Colmena))
       
 
-Notas del uso del programa:
+Notas del uso de los programas y del flow de node red:
 
-- Colocar el SSID y el password de la red Wifi a la que se conectará el ESP32 WROOM
-  - `const char* ssid = "NOMBRE DE LA RED";`
-  - `const char* password = "Contrasena";`
+- Colocar el SSID y el password de la red Wifi a la que se conectará el ESP32 WROOM al igual que la ESP32CAM
+  `const char* ssid = "NOMBRE DE LA RED";`
+  `const char* password = "Contrasena";`
+- Definir los datos de la ip del broker local, deben tener el siguiente formato
+   `const char* mqtt_server = "192.168.xxx.xx";`
+   `IPAddress server(192,168,xxx,xxx);`
+- El json que envía los datos con los sensores al broker mqtt local tiene el siguiente formato
+  - `String json = "{\"id\":\"MQ135_DHT11\",\"ValorAnalogico\":"+String(analogValue)+",\"VoltajeAnalogico\":"+String(analogVolts)+",\"Temperatura\":"+String(t)+",\"Humedad\":"+String(h)+"}";`
+  es importante que sea en este formato porque posteriormente en el flow de NodeRed se leerá el jason
+  - El tópico de MQTT donde se publican los datos es "Habeetat/sensores/dht11mqtt", en el programa de arduino corresponde a la instrucción `client.publish("Habeetat/sensores/dht11mqtt", char_array);`
+  
+
 
 
 
