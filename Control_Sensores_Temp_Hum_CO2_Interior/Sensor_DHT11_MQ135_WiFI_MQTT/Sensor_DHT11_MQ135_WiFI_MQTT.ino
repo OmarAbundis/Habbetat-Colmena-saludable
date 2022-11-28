@@ -1,4 +1,4 @@
-/*  Conexión del mq135 y DHT11 a MQTT usando ESP32CAM
+/*  
 *  En este programa se conecta el controlador ESP32 DevKit 1
 *  a los sensores MQ135 para medir la concentración de CO2 
 *  y al sensor DHT11 para medir la temperatura y humedad dentro de la colmena

@@ -117,7 +117,7 @@ Notas del uso de los programas y del flow de node red:
   - `const char* password = "Contrasena";`
 - Definir los datos de la ip del broker local, deben tener el siguiente formato
    - `const char* mqtt_server = "192.168.xxx.xx";`
-   - `IPAddress server(192,168,xxx,xxx);`
+   - `IPAddress server(192,168,xxx,xx);`
 - El json que envía los datos con los sensores al broker mqtt local tiene el siguiente formato
   - `String json = "{\"id\":\"MQ135_DHT11\",\"ValorAnalogico\":"+String(analogValue)+",\"VoltajeAnalogico\":"+String(analogVolts)+",\"Temperatura\":"+String(t)+",\"Humedad\":"+String(h)+"}";`
   es importante que sea en este formato porque posteriormente en el flow de NodeRed se leerá el jason
