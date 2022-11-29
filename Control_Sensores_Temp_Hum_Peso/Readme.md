@@ -76,25 +76,23 @@ Adicional a lo ya indicado en líneas superiores, también es necesario contar c
 
 **Nota:** Se recomienda revisar la información previamente citada, antes de comenzar con el armado del circuito electrónico, para reducir la probabilidad de realizar malas conexiones entre los dispositivos, fallas en la polarización y en consecuencia el daño permanente de los dispositivos o daño parcial o total de su equipo de cómputo.
 
-1.  Se debe de armar el circuito electrónico mostrado en la figura 1, teniendo cuidado de conectar a las terminales indicadas del ESP32-CAM, y cuidar la polaridad de los dispositivos.
-
-**Figura 1.** *Circuito Electrónico de Control y Adquisición de Peso, Temperatura y Humedad, y Control de Carga*.
+1.  Se debe de armar el circuito electrónico mostrado en la figura teniendo cuidado de conectar a las terminales indicadas del ESP32-CAM, y cuidar la polaridad de los dispositivos.
 
 ![Circuito de control](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/Circuito%20de%20control%20de%20peso_temperatura%20humedad%20y%20carga.png)
 
-En la tabla 1, se puede observar la correspondencia de las terminales que se deben de conectar entre el ESP32-CAM y el DHT11.
+*Circuito Electrónico de Control y Adquisición de Peso, Temperatura y Humedad, y Control de Carga*.
 
-**Tabla 1.** *Terminales de Conexión de ESP32-CAM a DHT11*.
+En las siguientes tablas, se puede observar la correspondencia de las terminales que se deben de conectar entre el ESP32-CAM y los distintos sensores y el actuador.
+
+
 
 | ESP32-CAM | DTH11|
 | ----------|------|
 | GPIO 2    | DATA |
 | 5V        | Vcc  |
 | GND       | GND  |
+*Terminales de Conexión de ESP32-CAM a DHT11*.
 
-En la tabla 2, se puede observar la correspondencia de las terminales que se deben de conectar entre el ESP32-CAM y el HX711.
-
-**Tabla 2.** *Terminales de Conexión de ESP32-CAM a HX711*.
 
 | ESP32-CAM | HX711 |
 |-----------|-------|
@@ -102,23 +100,22 @@ En la tabla 2, se puede observar la correspondencia de las terminales que se deb
 | GND       | GND   |
 | GPIO 12   | SCK   |
 | GPIO 13   | DT    |
+*Terminales de Conexión de ESP32-CAM a HX711*.
 
-En la tabla 3, se puede observar la correspondencia de las terminales que se deben de conectar entre el ESP32-CAM y el MOC3043.
-
-**Tabla 3.** *Terminales de Conexión de ESP32-CAM a MOC3043*.
 
 | ESP32-CAM | MOC3043 |
 |-----------|---------|
 | GPIO 15   | PIN 1   |
 | GND       | PIN 2   |
+*Terminales de Conexión de ESP32-CAM a MOC3043*.
 
 2. Se tiene que fijar la celda de carga de 20Kg.en una base sólida que evite el desequilibrio de la báscula, cuidando la posición de la celda de carga, la cual suele tener una flecha que debe señalar hacia la base inferior, para su correcta colocación, véase figura 2.
 
 **Figura 2.** *Forma Física de la Celda de Carga de 20kg. Utilizada.*
 
-![Celda de Carga](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/Celda%20de%20carga.PNG)
+![Celda de Carga](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A028.PNG)
 
-3. Fijar la base de la colmena en la parte superior de la celda, teniendo un registro previo del peso total de la colmena para poder destarar y ajustar el valor correspondiente al peso registrado.
+3. Fijar la base de la colmena en la parte superior de la celda, teniendo un registro previo del peso total de la colmena para poder destarar y ajustar el valor correspondiente al peso registrado. Ver figuras
 4. Cargar el [programa](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Sensores_Temp_Humedad_Peso_MQTT/Sensores_Temp_Humedad_Peso_MQTT.ino) de control y adquisición de peso, temperatura y humedad.
 
 ## Instrucciones de operación
