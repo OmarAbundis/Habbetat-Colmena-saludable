@@ -136,7 +136,7 @@ Para el control de cargas de alta potencia se necesita implementar una etapa de 
 
 En la siguiente imagen se muestra una representación del circuito electrónico de desacoplado y activación de carga interactuando con un microcontrolador ESP32-CAM.
 
-![A032](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A032.JPG)
+![A032](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A032.jpg)
 
 ***Representación del circuito de desacoplado y control.***
 
