@@ -132,7 +132,7 @@ Los datos son guardados en la base de datos que posteriormente será la fuente d
 
 (imagen_grafana__dashboard)
 
-El flow de Nodered se diseña para adquirir vídeo en tiempo real y al mismo tiempo tomar una imagen que se almacena de forma local y que posteriormente se puede enviar a través del chat de telegram haciendo la petición enviando la palabra **imagen**. El flow contiene un dashboard donde se ve el vídeo en tiempo real desde el ESP32CAM y la imagen capturada 
+El flow de Nodered se diseña para adquirir vídeo en tiempo real y al mismo tiempo tomar una imagen que se almacena de forma local y que posteriormente se puede enviar a través del chat de telegram haciendo la petición enviando la palabra **imagen**. El flow contiene un dashboard donde se ve el vídeo en tiempo real desde el ESP32CAM y la imagen capturada.
 
 (imagen_captura_mensaje_imagen)
 
@@ -149,6 +149,21 @@ En este proyecto se puede hacer consulta usando las siguientes opciones
 | consulta| Envía los datos más recientes de los sensores |
 | imagen | Envía una imagen reciente de la cámara en la colmena |
 |prediccion | Envía 3 imágenes con resultados de la predicción del peso de la colmena en los siguientes días|
+
+Ejemplo de la función para enviar datos de los sensores a través del __sender__
+
+`if (msg.payload.content == "consulta" || msg.payload.content == "Consulta")
+{
+    msg.payload = {};
+    msg.payload.chatId = -XXXXXXXXX;  // Aquí se coloca el ID del chat a usar para enviar mensajes
+    msg.payload.type = 'message';
+    var espacio = " \n";
+    msg.payload.content ="\u{1F41D}" + " Datos de la colmena " + "\u{1F41D}" + espacio + "Nombre del sensor: " + global.get('id') + espacio + "\u{1F321}" + "Temperatura: " + global.get("Temperatura") + " °C" + espacio + "\u{2614}" + "Humedad: " + global.get("Humedad") + " %" + espacio +"\u{1F32B}" + "Concentración de CO2: " + espacio + global.get("VoltajeAnalogico") + " PPM"+
+    espacio + "Envia <consulta> para acceder a los datos más actuales de la colmena, envía <prediccion> para el pronostico del peso de la colmena, envía <imagen> para recibir una fotografía actual de la colmena";
+    return msg;
+}`
+
+
 
 
 
