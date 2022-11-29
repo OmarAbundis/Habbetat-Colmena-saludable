@@ -128,6 +128,32 @@ En las siguientes tablas, se puede observar la correspondencia de las terminales
 
 ***Código de control cargado en el IDE de Arduino.***
 
+## 2.	Activación de un actuador que funcione con 127Vca y hasta 1500W de potencia
+
+Dentro de los requerimientos del proyecto Capstone, se solicita la activación de actuadores. En nuestro proyecto se decidió, utilizar la cámara implementada en el ESP32-CAM, para mandar una imagen de la colmena, como parte del reporte diario del estado de la colmena, o si así se requiere, se puede solicitar una imagen instantánea de la colmena, en el momento que el apicultor así lo decida; explicado en otro apartado del presente reporte. Para el segundo actuador, se decidió tener una etapa que permita controlar cargas de una alta potencia, hasta cerca de los 1500W (en comparación con el muy bajo consumo de potencia que tienen los microcontroladores, apenas de alrededor de 1W), y así poder activar un ventilador para regular un poco la temperatura cercana o interior a la colmena o activar una unidad que permita nebulizar algún medicamento para el control de las plagas o parásitos que atacan a las abejas.
+
+Para el control de cargas de alta potencia se necesita implementar una etapa de acoplado, la cual se explica más a detalle en [Etapa de desacoplado](https://github.com/OmarAbundis/Etapa-de-desacoplado-con-MOC-y-TRIAC-para-activacion-de-carga-a-127Vca).
+
+En la siguiente imagen se muestra una representación del circuito electrónico de desacoplado y activación de carga interactuando con un microcontrolador ESP32-CAM.
+
+![A032](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A032.JPG)
+
+***Representación del circuito de desacoplado y control.***
+
+En la siguiente figura, se muestra ya el circuito armado e interconectado a los sensores DHT11, HX711, FTDI y el ESP32-CAM; ya como parte del circuito de control.
+
+![A033](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A033.JPG)
+
+***Circuito electrónico armado y listo para su funcionamiento***
+
+En la siguiente figura, se muestra un ventilador (reciclado de un horno de microondas), como elemento actuador conectado a la etapa de acoplado y ya conectado al suministro eléctrico de 127Vca, a la espera de la señal de control.
+
+![A034](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A034.JPG)
+
+***Conexión del actuador al suministro eléctrico y el circuito de control.***
+
+
+
 ## Instrucciones de operación
 
 ## Resultados
