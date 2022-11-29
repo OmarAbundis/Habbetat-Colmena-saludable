@@ -72,7 +72,7 @@ Adicional a lo ya indicado en líneas superiores, también es necesario contar c
 
 [Telegram Messenger](https://telegram.org/?setln=es). Servicio de mensajería.
 
-## 1. La adquisición de la temperatura, humedad y peso
+### 1. La adquisición de la temperatura, humedad y peso
 
 **Nota:** Se recomienda revisar la información previamente citada, antes de comenzar con el armado del circuito electrónico, para reducir la probabilidad de realizar malas conexiones entre los dispositivos, fallas en la polarización y en consecuencia el daño permanente de los dispositivos o daño parcial o total de su equipo de cómputo.
 
@@ -128,7 +128,7 @@ En las siguientes tablas, se puede observar la correspondencia de las terminales
 
 ***Código de control cargado en el IDE de Arduino.***
 
-## 2.	Activación de un actuador que funcione con 127Vca y hasta 1500W de potencia
+### 2.	Activación de un actuador que funcione con 127Vca y hasta 1500W de potencia
 
 Dentro de los requerimientos del proyecto Capstone, se solicita la activación de actuadores. En nuestro proyecto se decidió, utilizar la cámara implementada en el ESP32-CAM, para mandar una imagen de la colmena, como parte del reporte diario del estado de la colmena, o si así se requiere, se puede solicitar una imagen instantánea de la colmena, en el momento que el apicultor así lo decida; explicado en otro apartado del presente reporte. Para el segundo actuador, se decidió tener una etapa que permita controlar cargas de una alta potencia, hasta cerca de los 1500W (en comparación con el muy bajo consumo de potencia que tienen los microcontroladores, apenas de alrededor de 1W), y así poder activar un ventilador para regular un poco la temperatura cercana o interior a la colmena o activar una unidad que permita nebulizar algún medicamento para el control de las plagas o parásitos que atacan a las abejas.
 
