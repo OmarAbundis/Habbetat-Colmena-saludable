@@ -32,13 +32,13 @@ Simplificar la **observación de los datos** mediante gráficas en tiempo real h
 
 En lo que respecta a la solución planteada, en esta parte del proyecto se muestra y decribe cómo realizar:
 
-- La adquisición de la temperatura, humedad y peso.
-- Implementación de una base de datos en MySQL para llevar un registro de las variables.
-- Interfaz gráfica y de control en NodeRed.
-- Graficado de variables registradas en Grafana.
-- Activación de un actuador que funcione con 127Vca.
-- Envío de mensaje de alerta por Telegram.
-- Solicitud de estado de las condiciones de las variables en tiempo real por mensaje en Telegram.
+1. La adquisición de la temperatura, humedad y peso.
+2. Activación de un actuador que funcione con 127Vca.
+3. Implementación de una base de datos en MySQL para llevar un registro de las variables.
+4. Interfaz gráfica y de control en NodeRed.
+5. Graficado de variables registradas en Grafana.
+6. Envío de mensaje de alerta por Telegram.
+7. Solicitud de estado de las condiciones de las variables en tiempo real por mensaje en Telegram.
 
 A continuación se describen las distintas soluciones.
 
@@ -102,7 +102,7 @@ Adicional a lo ya indicado en líneas superiores, también es necesario contar c
 
 [HiveMQ](https://www.hivemq.com/public-mqtt-broker/). Es un broker público y que no demanda de contar con una cuenta.
 
-## Instrucciones para realizar el control del circuito de sensado de variables
+## 1. La adquisición de la temperatura, humedad y peso
 
 **Nota:** Se recomienda revisar la información previamente citada, antes de comenzar con el armado del circuito electrónico, para reducir la probabilidad de realizar malas conexiones entre los dispositivos, fallas en la polarización y en consecuencia el daño permanente de los dispositivos o daño parcial o total de su equipo de cómputo.
 
