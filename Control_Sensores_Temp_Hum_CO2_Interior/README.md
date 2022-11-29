@@ -34,7 +34,7 @@ Biblotecas de Arduino para programar el microontrolador y los sensores
 
 ## Servicios
 
-[telegram bot API](https://core.telegram.org/bots/api)
+[Telegram bot API](https://core.telegram.org/bots/api)
 
 ## Instrucciones para construir y programar el circuito de medición de temperatura, humedad y concentración de CO2
 
@@ -169,10 +169,9 @@ La línea __http://192.168.100.xxx:81/capture__ debe incluir la ip completa que 
 
 Nodo __imagen de la cámara__
 
-`<div style="margin-bottom: 10px;">
-    <img src="http://192.168.100.xxx" width="1500px" height="750px">
-</div>
-`
+ ´<div  style="margin-bottom: 10px;"> <img  src="http://192.168.100.xxx"  width="1500px"  height="750px"></div>´
+
+
 La línea __http://192.168.100.xxx__ debe incluir la ip completa que nos envía el monitor serial de arduino cuando programamos el ESP32 CAM
 
 
