@@ -124,7 +124,12 @@ Notas del uso de los programas y del flow de node red:
   - El tópico de MQTT donde se publican los datos es "Habeetat/sensores/dht11mqtt", en el programa de arduino corresponde a la instrucción
   - `client.publish("Habeetat/sensores/dht11mqtt", char_array);`
 
-  Para leer los datos desde el broker en Nodered y guardarlos en la base de datos local se configura un nodo MQTT que se suscriba al tópico `Habeetat/sensores/dht11mqtt`, se programa la función que nos permita guardar en la
+  Para leer los datos desde el broker en Nodered y guardarlos en la base de datos local se configura un nodo MQTT que se suscriba al tópico `Habeetat/sensores/dht11mqtt` y se programa la función que nos permita guardar en la base de datos local, el código para la función *conexión mysql* es
+
+  `msg.topic = "INSERT INTO Datos_Sensores (id_sensor, ValorAnalogico, VoltajeAnalogico, Temperatura, Humedad) VALUES ('" + msg.payload.id + "'," + msg.payload.ValorAnalogico + "," + msg.payload.VoltajeAnalogico + "," + msg.payload.Temperatura + "," + msg.payload.Humedad +");"
+
+
+return msg;`
 
 
 
