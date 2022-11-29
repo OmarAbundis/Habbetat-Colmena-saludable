@@ -130,10 +130,13 @@ Notas del uso de los programas y del flow de node red:
 
   `msg.topic = "INSERT INTO Datos_Sensores (id_sensor, ValorAnalogico, VoltajeAnalogico, Temperatura, Humedad) VALUES ('" + msg.payload.id + "'," + msg.payload.ValorAnalogico + "," + msg.payload.VoltajeAnalogico + "," + msg.payload.Temperatura + "," + msg.payload.Humedad +");return msg;`
 
-(imagen_node_red_01)
+(imagen_node_red_flow_base_de_datos)
 
 Los datos son guardados en la base de datos que posteriormente será la fuente de datos para el panel de grafana.
 
+(imagen_grafana__dashboard)
+
+El flow de Nodered se diseña para adquirir vídeo en tiempo real y al mismo tiempo tomar una imagen que se almacena de forma local y que posteriormente se puede enviar a través del chat de telegram haciendo la petición enviando la palabra **imagen**
 
 
 
