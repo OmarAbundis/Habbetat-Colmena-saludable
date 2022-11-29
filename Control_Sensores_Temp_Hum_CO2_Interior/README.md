@@ -144,7 +144,9 @@ La imagen se recibe en el chat de telegram elegido
 
 Se guarda la imagen cada minuto para su envío cuando se consulta por telegram, los nodos encargados de la captura, guardado de la imagen y publicación del vídeo en el dashboard de node red son los siguientes:
 
-![imagen](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_env%C3%ADo_imagenes_04.jpg)
+<p align="center">
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_env%C3%ADo_imagenes_04.jpg />
+</p>
 
 El dashboard con el vídeo y la fotografía se muestran a continuación
 
@@ -169,7 +171,7 @@ Nodo _tomar fotografía_
 
 La línea `http://192.168.100.xxx:81/capture` debe incluir la ip completa que nos envía el monitor serial de arduino cuando programamos el ESP32 CAM
 
-Nodo __imagen de la cámara__
+Nodo _imagen de la cámara_
 
 ~~~
 <div style="margin-bottom: 10px;">
@@ -200,14 +202,6 @@ Ejemplo de la función para enviar datos de los sensores a través del __sender_
     espacio + "Envia <consulta> para acceder a los datos más actuales de la colmena, envía <prediccion> para el pronostico del peso de la colmena, envía <imagen> para recibir una fotografía actual de la colmena";
     return msg;
 }`
-
-
-
-
-
-
-
-
 
 
 ## Resultados
