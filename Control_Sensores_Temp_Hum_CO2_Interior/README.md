@@ -107,7 +107,9 @@ Una vez conectado el ESP32 adquiriendo los datos de temperatura, humedad y CO2 c
         - El bot envía reportes programados o permite realizar consultas de los datos más recientes
       3. Envío de imágenes y vídeo con la esp32CAM y el bot de telegram desde nodered ([link del programa del esp32CAM](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/tree/main/Control_Camara_Video_Interior))
       4. El flow de node-red también tiene un panel donde podemos visualizar vídeo en tiempo real desde la colmena, está cámara se situa en el exterior de la colmena para vigilancia
-      4. Envío de la predicción del peso de la colmena en los siguientes días ([Link del código de predicción](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/tree/main/Prediccion_Peso_Colmena))
+      5. Envío de la predicción del peso de la colmena en los siguientes días ([Link del código de predicción](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/tree/main/Prediccion_Peso_Colmena))
+      6. Cuando las condiciones de Temperatura, humedad o concentración de CO2 no son las favorables para la colmena también se envía un mensaje de alerta.
+
       
 
 Notas del uso de los programas y del flow de node red:
@@ -126,10 +128,11 @@ Notas del uso de los programas y del flow de node red:
 
   Para leer los datos desde el broker en Nodered y guardarlos en la base de datos local se configura un nodo MQTT que se suscriba al tópico `Habeetat/sensores/dht11mqtt` y se programa la función que nos permita guardar en la base de datos local, el código para la función *conexión mysql* es
 
-  `msg.topic = "INSERT INTO Datos_Sensores (id_sensor, ValorAnalogico, VoltajeAnalogico, Temperatura, Humedad) VALUES ('" + msg.payload.id + "'," + msg.payload.ValorAnalogico + "," + msg.payload.VoltajeAnalogico + "," + msg.payload.Temperatura + "," + msg.payload.Humedad +");`
+  `msg.topic = "INSERT INTO Datos_Sensores (id_sensor, ValorAnalogico, VoltajeAnalogico, Temperatura, Humedad) VALUES ('" + msg.payload.id + "'," + msg.payload.ValorAnalogico + "," + msg.payload.VoltajeAnalogico + "," + msg.payload.Temperatura + "," + msg.payload.Humedad +");return msg;`
 
+(imagen_node_red_01)
 
-return msg;`
+Los datos son guardados en la base de datos que posteriormente será la fuente de datos para el panel de grafana.
 
 
 
