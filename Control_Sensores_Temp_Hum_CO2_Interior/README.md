@@ -126,7 +126,7 @@ Notas del uso de los programas y del flow de node red:
 
   `msg.topic = "INSERT INTO Datos_Sensores (id_sensor, ValorAnalogico, VoltajeAnalogico, Temperatura, Humedad) VALUES ('" + msg.payload.id + "'," + msg.payload.ValorAnalogico + "," + msg.payload.VoltajeAnalogico + "," + msg.payload.Temperatura + "," + msg.payload.Humedad +");return msg;`
 
-<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_nodo_mqtt_01.jpg" width="200" height="200" />
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_nodo_mqtt_01.jpg" width="1000" height="200" />
 
 Los datos son guardados en la base de datos que posteriormente será la fuente de datos para el panel de grafana.
 
