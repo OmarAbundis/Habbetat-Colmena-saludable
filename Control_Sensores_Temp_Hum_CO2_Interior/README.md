@@ -167,7 +167,7 @@ Nodo _tomar fotografía_
 </div>
 ~~~
 
-La línea __http://192.168.100.xxx:81/capture__ debe incluir la ip completa que nos envía el monitor serial de arduino cuando programamos el ESP32 CAM
+La línea `http://192.168.100.xxx:81/capture` debe incluir la ip completa que nos envía el monitor serial de arduino cuando programamos el ESP32 CAM
 
 Nodo __imagen de la cámara__
 
@@ -177,7 +177,7 @@ Nodo __imagen de la cámara__
 </div>
 ~~~
 
-La línea __http://192.168.100.xxx__ debe incluir la ip completa que nos envía el monitor serial de arduino cuando programamos el ESP32 CAM
+La línea `http://192.168.100.xxx` debe incluir la ip completa que nos envía el monitor serial de arduino cuando programamos el ESP32 CAM
 
 
 En este proyecto se puede hacer consulta usando las siguientes opciones
