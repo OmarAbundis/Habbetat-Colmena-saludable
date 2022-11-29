@@ -202,6 +202,10 @@ Ejemplo de la función para enviar datos de los sensores a través del __sender_
 }`
 
 
+La predicción del comportamiento del peso de la colmena se realiza usando una biblioteca llamada _Prophet_ desarrollada por el equipo de Facebook y de acuerdo a la [Página oficial de Prophet](https://facebook.github.io/prophet/),_Prophet es un procedimiento para pronosticar datos de series temporales basado en un modelo aditivo en el que las tendencias no lineales se ajustan a la estacionalidad anual, semanal y diaria, además de los efectos de los datos faltantes. Funciona mejor con series temporales que tienen fuertes efectos estacionales y varias temporadas de datos históricos. Prophet es resistente a los datos faltantes y los cambios en la tendencia, y por lo general maneja bien los valores atípicos._ Esto tipo de comportamientos son comunes en sistemas donde se miden variables climáticas, además es relativamente fácil de implementar en Python. Dado que no se cuenta todavía con datos reales para hacer la implementación de la predicción, se toma un conjunto de datos reales que han sido medidos _in situ_ en colmenas ([Dataset usado para la predicción](https://www.kaggle.com/datasets/se18m502/bee-hive-metrics)), de tal forma que los datos esperados en nuestras mediciones tengan características similares a este data set. 
+
+
+
 ## Resultados
 Captura de pantalla del monitor serial del IDE de arduino con los datos de salida de las lecturas de los sensores y el archivo json que se publica en el broker local
 ![imagen](https://user-images.githubusercontent.com/72757419/200640844-e3ce6719-60ad-45df-b4fe-98c2a3800893.png)
