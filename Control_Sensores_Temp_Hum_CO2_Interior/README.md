@@ -34,7 +34,7 @@ Biblotecas de Arduino para programar el microontrolador y los sensores
 
 ## Servicios
 
-Se requiere la creación de un bot de Telegram, para usar tal servicio se requiere seguir los siguientes pasos
+[telegram bot API](https://core.telegram.org/bots/api)
 
 ## Instrucciones para construir y programar el circuito de medición de temperatura, humedad y concentración de CO2
 
@@ -108,7 +108,7 @@ Una vez conectado el ESP32 adquiriendo los datos de temperatura, humedad y CO2 c
 
       
 
-Notas del uso de los programas y del flow de node red:
+## Notas del uso de los programas y del flow de node red:
 
 - Colocar el SSID y el password de la red Wifi a la que se conectará el ESP32 WROOM al igual que la ESP32CAM
   - `const char* ssid = "NOMBRE DE LA RED";`
@@ -156,6 +156,26 @@ El paquete de Nodered que nos permite enviar y recibir con un bot de telegram es
 <img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_chat_sender_telegram_02.jpg" width="1000" height="300" />
 </p>
 
+
+Se configuran dos nodos __template__ de node red para poder ver el vídeo y la fotografía en el dashboard, el código de los nodos es el siguiente:
+
+Nodo _tomar fotografía_
+
+`<div style="margin-bottom: 10px;">
+    <img src="http://192.168.100.xxx:81/capture" width="1500px" height="750px">
+</div>
+`
+La línea __http://192.168.100.xxx:81/capture__ debe incluir la ip completa que nos envía el monitor serial de arduino cuando programamos el ESP32 CAM
+
+Nodo __imagen de la cámara__
+
+`<div style="margin-bottom: 10px;">
+    <img src="http://192.168.100.xxx" width="1500px" height="750px">
+</div>
+`
+La línea __http://192.168.100.xxx__ debe incluir la ip completa que nos envía el monitor serial de arduino cuando programamos el ESP32 CAM
+
+
 En este proyecto se puede hacer consulta usando las siguientes opciones
 
 |Palabra a través del chat |Acción del bot|
@@ -176,6 +196,7 @@ Ejemplo de la función para enviar datos de los sensores a través del __sender_
     espacio + "Envia <consulta> para acceder a los datos más actuales de la colmena, envía <prediccion> para el pronostico del peso de la colmena, envía <imagen> para recibir una fotografía actual de la colmena";
     return msg;
 }`
+
 
 
 
