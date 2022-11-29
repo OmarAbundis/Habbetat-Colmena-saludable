@@ -114,7 +114,7 @@ En las siguientes tablas, se puede observar la correspondencia de las terminales
 
 3. Fijar la base de la colmena en la parte superior de la celda, teniendo un registro previo del peso total de la colmena para poder destarar y ajustar el valor correspondiente al peso registrado. Ver figuras
 
-![A029](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A029.gif)
+![A029](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A029.JPG)
 ***Vista frontal del acoplado de la celda de carga entre la base y la colmena.***
 
 ![A030](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A030.gif)
