@@ -145,6 +145,7 @@ El paquete de Nodered que nos permite enviar y recibir con un bot de telegram es
 En este proyecto se puede hacer consulta usando las siguientes opciones
 
 |Palabra a través del chat |Acción del bot|
+|--|--|
 | consulta| Envía los datos más recientes de los sensores |
 | imagen | Envía una imagen reciente de la cámara en la colmena |
 |prediccion | Envía 3 imágenes con resultados de la predicción del peso de la colmena en los siguientes días|
