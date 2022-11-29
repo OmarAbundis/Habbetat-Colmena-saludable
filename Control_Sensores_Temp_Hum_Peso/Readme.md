@@ -78,9 +78,9 @@ Adicional a lo ya indicado en líneas superiores, también es necesario contar c
 
 1.  Se debe de armar el circuito electrónico mostrado en la figura teniendo cuidado de conectar a las terminales indicadas del ESP32-CAM, y cuidar la polaridad de los dispositivos.
 
-![A027l]()
+![A027l](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A027.gif)
 
-*Circuito Electrónico de Control y Adquisición de Peso, Temperatura y Humedad, y Control de Carga*.
+***Circuito Electrónico de Control y Adquisición de Peso, Temperatura y Humedad, y Control de Carga***.
 
 En las siguientes tablas, se puede observar la correspondencia de las terminales que se deben de conectar entre el ESP32-CAM y los distintos sensores y el actuador.
 
