@@ -130,7 +130,7 @@ Notas del uso de los programas y del flow de node red:
 
 Los datos son guardados en la base de datos que posteriormente será la fuente de datos para el panel de grafana.
 
-(imagen_grafana__dashboard)
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_grafana_panel_03.jpg" width="1000" height="500" />
 
 El flow de Nodered se diseña para adquirir vídeo en tiempo real y al mismo tiempo tomar una imagen que se almacena de forma local y que posteriormente se puede enviar a través del chat de telegram haciendo la petición enviando la palabra **imagen**. El flow contiene un dashboard donde se ve el vídeo en tiempo real desde el ESP32CAM y la imagen capturada.
 
