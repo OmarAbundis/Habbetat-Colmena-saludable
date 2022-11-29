@@ -161,16 +161,21 @@ Se configuran dos nodos __template__ de node red para poder ver el vídeo y la f
 
 Nodo _tomar fotografía_
 
-`<div style="margin-bottom: 10px;">
+~~~
+<div style="margin-bottom: 10px;">
     <img src="http://192.168.100.xxx:81/capture" width="1500px" height="750px">
 </div>
-`
+~~~
+
 La línea __http://192.168.100.xxx:81/capture__ debe incluir la ip completa que nos envía el monitor serial de arduino cuando programamos el ESP32 CAM
 
 Nodo __imagen de la cámara__
 
- ´<div  style="margin-bottom: 10px;"> <img  src="http://192.168.100.xxx"  width="1500px"  height="750px"></div>´
-
+~~~
+<div style="margin-bottom: 10px;">
+    <img src="http://192.168.100.xxx" width="1500px" height="750px">
+</div>
+~~~
 
 La línea __http://192.168.100.xxx__ debe incluir la ip completa que nos envía el monitor serial de arduino cuando programamos el ESP32 CAM
 
