@@ -78,8 +78,8 @@ const char* password = "4520297937";      // Aquí debes poner la contraseña de
 
 //Datos del broker MQTT
 
-const char* mqtt_server = "192.168.1.64"; // Si estas en una red local, coloca la IP asignada, en caso contrario, coloca la IP publica
-IPAddress server(192,168,1,64);
+const char* mqtt_server = "192.168.1.66"; // Si estas en una red local, coloca la IP asignada, en caso contrario, coloca la IP publica
+IPAddress server(192,168,1,66);
 
 // Datos para el control de la balanza
 
@@ -119,6 +119,7 @@ void setup()
   pinMode (flashLedPin, OUTPUT);
   pinMode (statusLedPin, OUTPUT);
   pinMode (ActivaCarga, OUTPUT);
+  
   digitalWrite (flashLedPin, LOW);
   digitalWrite (ActivaCarga, LOW);
   digitalWrite (statusLedPin, HIGH);
@@ -278,7 +279,7 @@ void callback(char* topic, byte* message, unsigned int length)
         digitalWrite(flashLedPin, HIGH);
       
       }                                                                       // fin del if (String(topic) == "")
-      
+
       else if(messageTemp == "false")
       {
         //Serial.println("Led apagado");
@@ -291,7 +292,7 @@ void callback(char* topic, byte* message, unsigned int length)
       }                                                                     // fin del else if(messageTemp == "false")
       
     }                                                                                         // fin del if (String(topic) == "esp32/output")
-    
+   
 }                                                                                             // fin del void callback
 
 // Función para reconectarse
