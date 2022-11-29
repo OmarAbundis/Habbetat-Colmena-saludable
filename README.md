@@ -1,7 +1,5 @@
 # Habeetat: Colmena saludable
 
-Capstone project
-
 ## Introducción
 
 Como parte de las actividades del curso de internet de las cosas (IoT), implementado en la plataforma de [edu.codigoiot.com](https://www.codigoiot.com/), se solicita a manera de conclusión realizar un proyecto en donde se ponga en práctica lo aprendido a lo largo del curso e invita participar en lo que se denomina el [proyecto Capstone](https://edu.codigoiot.com/mod/resource/view.php?id=3463).
