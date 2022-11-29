@@ -118,7 +118,7 @@ Una vez conectado el ESP32 adquiriendo los datos de temperatura, humedad y CO2 c
    - `IPAddress server(192,168,xxx,xx);`
 - El json que envía los datos con los sensores al broker mqtt local tiene el siguiente formato
   - `String json = "{\"id\":\"MQ135_DHT11\",\"ValorAnalogico\":"+String(analogValue)+",\"VoltajeAnalogico\":"+String(analogVolts)+",\"Temperatura\":"+String(t)+",\"Humedad\":"+String(h)+"}";`
-  es importante que sea en este formato porque posteriormente en el flow de NodeRed se leerá el jason
+  es importante que sea en este formato porque posteriormente en el flow de NodeRed se leerá el json
   - El tópico de MQTT donde se publican los datos es "Habeetat/sensores/dht11mqtt", en el programa de arduino corresponde a la instrucción
   - `client.publish("Habeetat/sensores/dht11mqtt", char_array);`
 
