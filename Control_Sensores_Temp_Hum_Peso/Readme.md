@@ -69,6 +69,7 @@ También se recomienda el estudio de las siguientes páginas, donde se explican 
 Adicional a lo ya indicado en líneas superiores, también es necesario contar con los siguientes servicios:
 
 [HiveMQ](https://www.hivemq.com/public-mqtt-broker/). Es un broker público y que no demanda de contar con una cuenta.
+
 [Telegram Messenger](https://telegram.org/?setln=es). Servicio de mensajería.
 
 ## 1. La adquisición de la temperatura, humedad y peso
