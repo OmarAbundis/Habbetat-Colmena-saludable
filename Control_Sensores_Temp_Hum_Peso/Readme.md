@@ -1,16 +1,14 @@
 ## Introducción
 
-En lo que respecta a la solución planteada, en esta parte del proyecto se muestra y decribe cómo realizar:
+En este apartado sobre el desarrollo del proyecto Capstone, Habeetat Colmena saludable, se describe cómo se implementaron los siguientes puntos:
 
-1. La adquisición de la temperatura, humedad y peso.
-2. Activación de un actuador que funcione con 127Vca.
-3. Implementación de una base de datos en MySQL para llevar un registro de las variables.
+1. La adquisición de la temperatura, humedad y peso; circundantes a la colmena.
+2. Activación de un actuador que funcione con 127Vca y hasta 1500W de potencia.
+3. Implementación de una base de datos en MySQL para llevar un registro de las variables detectadas.
 4. Interfaz gráfica y de control en NodeRed.
 5. Graficado de variables registradas en Grafana.
-6. Envío de mensaje de alerta por Telegram.
-7. Solicitud de estado de las condiciones de las variables en tiempo real por mensaje en Telegram.
-
-A continuación se describen las distintas soluciones.
+6. Envío de mensaje de alerta por el servicio de mensajería Telegram.
+7. Solicitud de estado de las condiciones de las variables en tiempo real por mensaje de un Bot en Telegram.
 
 ## Material necesario
 
