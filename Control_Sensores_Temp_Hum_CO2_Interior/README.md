@@ -57,10 +57,6 @@ Los pines del sensor DHT11 son los siguientes
 
 - El sensor MQ135 debe conectarse al microcontrolador a través de los siguientes pines
 
-<<<<<<< HEAD
-
-=======
->>>>>>> e6d3a7857dc1524fc6b9e0749f64292d47131b0c
 |ESP32|MQ135|
 |--|--|
 | Vcc (5V)|Vcc|
