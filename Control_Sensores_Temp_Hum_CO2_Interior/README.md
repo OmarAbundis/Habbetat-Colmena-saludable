@@ -132,7 +132,23 @@ Los datos son guardados en la base de datos que posteriormente será la fuente d
 
 (imagen_grafana__dashboard)
 
-El flow de Nodered se diseña para adquirir vídeo en tiempo real y al mismo tiempo tomar una imagen que se almacena de forma local y que posteriormente se puede enviar a través del chat de telegram haciendo la petición enviando la palabra **imagen**
+El flow de Nodered se diseña para adquirir vídeo en tiempo real y al mismo tiempo tomar una imagen que se almacena de forma local y que posteriormente se puede enviar a través del chat de telegram haciendo la petición enviando la palabra **imagen**. El flow contiene un dashboard donde se ve el vídeo en tiempo real desde el ESP32CAM y la imagen capturada 
+
+(imagen_captura_mensaje_imagen)
+
+(imagen_captura_dashboard_ESP32_CAM)
+
+El paquete de Nodered que nos permite enviar y recibir con un bot de telegram es [node-red-contrib-telegrambot](https://flows.nodered.org/node/node-red-contrib-telegrambot), para poder ser usado debe crearse un bot desde la aplicación de Telegram, usar la API key, conseguir el ID del chat donde se publicara, configurar los nodos __receiver__ con ayuda de un nodo __funcion__ para que acepten una palabra clave y despues el nodo __sender__ envíe la información solicitada.
+
+(Capturas_nodo_receiver_sender)
+
+En este proyecto se puede hacer consulta usando las siguientes opciones
+
+|Palabra a través del chat |Acción del bot|
+| consulta| Envía los datos más recientes de los sensores |
+| imagen | Envía una imagen reciente de la cámara en la colmena |
+|prediccion | Envía 3 imágenes con resultados de la predicción del peso de la colmena en los siguientes días|
+
 
 
 
