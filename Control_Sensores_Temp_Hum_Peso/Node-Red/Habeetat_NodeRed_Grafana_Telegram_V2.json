@@ -1,0 +1,767 @@
+[
+    {
+        "id": "173e8d1844a7f519",
+        "type": "tab",
+        "label": "Habeetat Sesores",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9ee06ae6d30171d1",
+        "type": "mqtt in",
+        "z": "173e8d1844a7f519",
+        "name": "",
+        "topic": "codigoIoT/G7/Habeetat",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "d191d34239fdbca3",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 160,
+        "wires": [
+            [
+                "189b5f269c46b3ea",
+                "268ffddb2cd02285",
+                "22a1163daefb00cf"
+            ]
+        ]
+    },
+    {
+        "id": "189b5f269c46b3ea",
+        "type": "ui_text",
+        "z": "173e8d1844a7f519",
+        "group": "4561cb748213f12f",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Sensores de la Colmena",
+        "format": "Temperatura Humedad Peso",
+        "layout": "col-center",
+        "className": "",
+        "x": 430,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "268ffddb2cd02285",
+        "type": "debug",
+        "z": "173e8d1844a7f519",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "22a1163daefb00cf",
+        "type": "json",
+        "z": "173e8d1844a7f519",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 430,
+        "y": 240,
+        "wires": [
+            [
+                "60678be87a8e6562",
+                "cd68a87ba2f63020",
+                "83a5a052f5e9e1da",
+                "7a6d78e7b50f23aa",
+                "fa9b31ec7a4ac5c9",
+                "fbd597732f010dd1",
+                "79d34a735c8b211b",
+                "00743324b431afc2",
+                "cc353ff39daa994a"
+            ]
+        ]
+    },
+    {
+        "id": "60678be87a8e6562",
+        "type": "function",
+        "z": "173e8d1844a7f519",
+        "name": "Temperatura",
+        "func": "msg.payload = msg.payload.temp;\nglobal.set (\"temperatura\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 160,
+        "wires": [
+            [
+                "06c1f227830fa078"
+            ]
+        ]
+    },
+    {
+        "id": "cd68a87ba2f63020",
+        "type": "function",
+        "z": "173e8d1844a7f519",
+        "name": "humedad",
+        "func": "msg.payload = msg.payload.hum;\nglobal.set (\"humedad\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 100,
+        "wires": [
+            [
+                "6548df46646a65a1"
+            ]
+        ]
+    },
+    {
+        "id": "83a5a052f5e9e1da",
+        "type": "function",
+        "z": "173e8d1844a7f519",
+        "name": "ID",
+        "func": "msg.topic = msg.payload.id;\nmsg.payload = msg.payload.id;\nglobal.set(\"id\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 40,
+        "wires": [
+            [
+                "6461814043332265"
+            ]
+        ]
+    },
+    {
+        "id": "6461814043332265",
+        "type": "ui_text",
+        "z": "173e8d1844a7f519",
+        "group": "4561cb748213f12f",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Id",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 970,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "6548df46646a65a1",
+        "type": "ui_text",
+        "z": "173e8d1844a7f519",
+        "group": "4561cb748213f12f",
+        "order": 6,
+        "width": 6,
+        "height": 2,
+        "name": "",
+        "label": "Humedad [%]",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1000,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "06c1f227830fa078",
+        "type": "ui_text",
+        "z": "173e8d1844a7f519",
+        "group": "4561cb748213f12f",
+        "order": 4,
+        "width": 6,
+        "height": 2,
+        "name": "",
+        "label": "temperatura [°C]",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1000,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "7a6d78e7b50f23aa",
+        "type": "function",
+        "z": "173e8d1844a7f519",
+        "name": "Peso",
+        "func": "msg.payload = msg.payload.peso;\nglobal.set (\"peso\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 220,
+        "wires": [
+            [
+                "63c95867ea4dafa5",
+                "ee53cc3bff2ff9d0"
+            ]
+        ]
+    },
+    {
+        "id": "63c95867ea4dafa5",
+        "type": "ui_text",
+        "z": "173e8d1844a7f519",
+        "group": "4561cb748213f12f",
+        "order": 5,
+        "width": 6,
+        "height": 2,
+        "name": "",
+        "label": "Peso [g.]",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 980,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "fa9b31ec7a4ac5c9",
+        "type": "function",
+        "z": "173e8d1844a7f519",
+        "name": "Hist. Temp",
+        "func": "msg.label = \"Temepratura\";\nmsg.topic = \"temperatura\";\nmsg.payload = msg.payload.temp;\nreturn msg;\n\n\n//msg.topic = msg.payload.id;\n//msg.payload = msg.payload.temp;\n//return msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 300,
+        "wires": [
+            [
+                "8bef375580512dcc"
+            ]
+        ]
+    },
+    {
+        "id": "fbd597732f010dd1",
+        "type": "function",
+        "z": "173e8d1844a7f519",
+        "name": "Hist. Humedad",
+        "func": "msg.label = \"Humedad\";\nmsg.topic = \"Humedad\";\nmsg.payload = msg.payload.hum;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 360,
+        "wires": [
+            [
+                "8bef375580512dcc"
+            ]
+        ]
+    },
+    {
+        "id": "8bef375580512dcc",
+        "type": "ui_chart",
+        "z": "173e8d1844a7f519",
+        "name": "OmarAb",
+        "group": "667dcfb7cec66985",
+        "order": 2,
+        "width": 12,
+        "height": 4,
+        "label": "Hist. Temperatura [°C] -- humedad [%]",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "90",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#4e9a06",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 980,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "79d34a735c8b211b",
+        "type": "function",
+        "z": "173e8d1844a7f519",
+        "name": "Hist. Peso",
+        "func": "msg.label = \"Peso\";\nmsg.topic = \"Peso\";\nmsg.payload = msg.payload.peso;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 420,
+        "wires": [
+            [
+                "7fd65055e8fe8b93"
+            ]
+        ]
+    },
+    {
+        "id": "7fd65055e8fe8b93",
+        "type": "ui_chart",
+        "z": "173e8d1844a7f519",
+        "name": "",
+        "group": "667dcfb7cec66985",
+        "order": 1,
+        "width": 12,
+        "height": 4,
+        "label": "Peso (g.)",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "15000",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": "100",
+        "useOneColor": true,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#edd400",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 980,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ee53cc3bff2ff9d0",
+        "type": "ui_gauge",
+        "z": "173e8d1844a7f519",
+        "name": "",
+        "group": "4561cb748213f12f",
+        "order": 2,
+        "width": 6,
+        "height": 8,
+        "gtype": "donut",
+        "title": "Peso [g.]",
+        "label": "g.",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "15000",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "1000",
+        "seg2": "3000",
+        "className": "",
+        "x": 980,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "00743324b431afc2",
+        "type": "function",
+        "z": "173e8d1844a7f519",
+        "name": "Enciende > 28°C",
+        "func": "if (msg.payload.temp > 28){\n    msg.payload = \"true\";\n}\nelse{\n    msg.payload = \"false\";\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 480,
+        "wires": [
+            [
+                "7c5e512d670a64a8"
+            ]
+        ]
+    },
+    {
+        "id": "7c5e512d670a64a8",
+        "type": "mqtt out",
+        "z": "173e8d1844a7f519",
+        "name": "",
+        "topic": "codigoIoT/G7/Habeetat_in",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d191d34239fdbca3",
+        "x": 1030,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "cc353ff39daa994a",
+        "type": "function",
+        "z": "173e8d1844a7f519",
+        "name": "Query",
+        "func": "msg.topic = \"INSERT INTO Habeetat_SExt (Nombre,Temperatura,Humedad,Peso) VALUES ('\" + msg.payload.id + \"',\" + msg.payload.temp+ \",\" + msg.payload.hum + \",\" + msg.payload.peso + \");\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 540,
+        "wires": [
+            [
+                "95654e1c4dfd6fab"
+            ]
+        ]
+    },
+    {
+        "id": "95654e1c4dfd6fab",
+        "type": "mysql",
+        "z": "173e8d1844a7f519",
+        "mydb": "3d5a27b023274846",
+        "name": "Habeetat Sensores Externos",
+        "x": 1040,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "147405583648d950",
+        "type": "ui_template",
+        "z": "173e8d1844a7f519",
+        "group": "93f7ef4239ea03b2",
+        "name": "Habeetat Sensores Externos en Grafana",
+        "order": 1,
+        "width": 24,
+        "height": 4,
+        "format": "<iframe src=\"http://localhost:3000/d-solo/RTqKJ4H4k/habeetat_test?orgId=1&from=1669640554274&to=1669643501337&panelId=6\" width=\"1800\" height=\"400\" frameborder=\"0\"></iframe>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 240,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7c533008bd74dbb6",
+        "type": "comment",
+        "z": "173e8d1844a7f519",
+        "name": "Panel de Grafana",
+        "info": "",
+        "x": 160,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "f54c87f0c8d8f394",
+        "type": "comment",
+        "z": "173e8d1844a7f519",
+        "name": "Tx de datos a Telegram",
+        "info": "",
+        "x": 180,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "988ddda63cc26eba",
+        "type": "telegram sender",
+        "z": "173e8d1844a7f519",
+        "name": "",
+        "bot": "1b3a64d8c9ceabf2",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 830,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e3fe705ab20c9a9f",
+        "type": "inject",
+        "z": "173e8d1844a7f519",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "900",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 740,
+        "wires": [
+            [
+                "d9bb5d2dda14d993"
+            ]
+        ]
+    },
+    {
+        "id": "d9bb5d2dda14d993",
+        "type": "function",
+        "z": "173e8d1844a7f519",
+        "name": "function para Tx de mensajes",
+        "func": "/*msg.payload = {\n    \"chatId\": -775229224,\n    \"type\": \"message\",\n    \"content\": \"Prueba desde NodeRed\"\n}\nreturn msg;*/\n\nmsg.payload = {};\nmsg.payload.chatId = -825211725//-775229224, -825211725;\nmsg.payload.type = \"message\";\nvar espacio = \"\\n\";\nmsg.payload.content = \"\\u{1F41D}\" + \" Datos de la colmena \" + \"\\u{1F41D}\" + espacio + \"Datos desde: \" + global.get('id') + espacio + \"\\u{1F321}\"+\"Temperatura: \"+ global.get(\"temperatura\")+ \" °C\"+espacio + \"\\u{2614}\"+\"Humedad: \" + global.get(\"humedad\") + \" %\"+ espacio + \"\\u{2696}\"+\"Peso de la Colmena: \"+ global.get(\"peso\")+ \" grms.\"+ espacio+\"Envia <consulta> para acceder a los datos más actuales de la colmena.\"\n\n\n\n//msg.payload.content = 'Prueba';\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 740,
+        "wires": [
+            [
+                "988ddda63cc26eba"
+            ]
+        ]
+    },
+    {
+        "id": "e308cce99e144e55",
+        "type": "telegram receiver",
+        "z": "173e8d1844a7f519",
+        "name": "Recepción de Mensajes",
+        "bot": "1b3a64d8c9ceabf2",
+        "saveDataDir": "",
+        "filterCommands": false,
+        "x": 160,
+        "y": 820,
+        "wires": [
+            [
+                "4163e33f5b234bcc",
+                "2d61559c80c52772"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "4163e33f5b234bcc",
+        "type": "function",
+        "z": "173e8d1844a7f519",
+        "name": "function para consulta de datos",
+        "func": "if (msg.payload.content == \"Consulta\" || msg.payload.content == \"consulta\")\n{\n    msg.payload = {};\n    msg.payload.chatId = -825211725//-775229224, -825211725;\n    msg.payload.type = 'message';\n    var espacio = \" \\n\";\n    msg.payload.content = \"\\u{1F41D}\" + \" Datos de la colmena \" + \"\\u{1F41D}\" + espacio + \"Datos desde: \" + global.get('id') + espacio + \"\\u{1F321}\"+\"Temperatura: \"+ global.get(\"temperatura\")+ \" °C\"+espacio + \"\\u{2614}\"+\"Humedad: \" + global.get(\"humedad\") + \" %\"+ espacio + \"\\u{2696}\"+\"Peso de la Colmena: \"+ global.get(\"peso\")+ \" g.\"+ \"\";\n    //msg.payload.content = \"datos\"\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 820,
+        "wires": [
+            [
+                "a4c44d1001bbd62c",
+                "0fe314a191d378d0"
+            ]
+        ]
+    },
+    {
+        "id": "a4c44d1001bbd62c",
+        "type": "telegram sender",
+        "z": "173e8d1844a7f519",
+        "name": "",
+        "bot": "1b3a64d8c9ceabf2",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 830,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2d61559c80c52772",
+        "type": "debug",
+        "z": "173e8d1844a7f519",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "0fe314a191d378d0",
+        "type": "debug",
+        "z": "173e8d1844a7f519",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "d191d34239fdbca3",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "4561cb748213f12f",
+        "type": "ui_group",
+        "name": "Sensores Colmena",
+        "tab": "6f4bed16441c2925",
+        "order": 1,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "667dcfb7cec66985",
+        "type": "ui_group",
+        "name": "Histórico Temp/hum/peso",
+        "tab": "6f4bed16441c2925",
+        "order": 2,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3d5a27b023274846",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "Habeetat_SensoresExt",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "93f7ef4239ea03b2",
+        "type": "ui_group",
+        "name": "Grafana",
+        "tab": "6f4bed16441c2925",
+        "order": 3,
+        "disp": true,
+        "width": 24,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1b3a64d8c9ceabf2",
+        "type": "telegram bot",
+        "botname": "HabeetatSenExt_bot",
+        "usernames": "",
+        "chatids": "-775229224, -825211725",
+        "baseapiurl": "",
+        "updatemode": "polling",
+        "pollinterval": "300",
+        "usesocks": false,
+        "sockshost": "",
+        "socksprotocol": "socks5",
+        "socksport": "6667",
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbotport": "8443",
+        "publicbotport": "8443",
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    },
+    {
+        "id": "6f4bed16441c2925",
+        "type": "ui_tab",
+        "name": "Habeetat Sensores",
+        "icon": "dashboard",
+        "order": 11,
+        "disabled": false,
+        "hidden": false
+    }
+]
