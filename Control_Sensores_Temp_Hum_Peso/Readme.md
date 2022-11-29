@@ -91,6 +91,7 @@ En las siguientes tablas, se puede observar la correspondencia de las terminales
 | GPIO 2    | DATA |
 | 5V        | Vcc  |
 | GND       | GND  |
+
 *Terminales de Conexión de ESP32-CAM a DHT11*.
 
 
@@ -100,6 +101,7 @@ En las siguientes tablas, se puede observar la correspondencia de las terminales
 | GND       | GND   |
 | GPIO 12   | SCK   |
 | GPIO 13   | DT    |
+
 *Terminales de Conexión de ESP32-CAM a HX711*.
 
 
@@ -107,6 +109,7 @@ En las siguientes tablas, se puede observar la correspondencia de las terminales
 |-----------|---------|
 | GPIO 15   | PIN 1   |
 | GND       | PIN 2   |
+
 *Terminales de Conexión de ESP32-CAM a MOC3043*.
 
 2. Se tiene que fijar la celda de carga de 20Kg.en una base sólida que evite el desequilibrio de la báscula, cuidando la posición de la celda de carga, la cual suele tener una flecha que debe señalar hacia la base inferior, para su correcta colocación, véase figura 2.
