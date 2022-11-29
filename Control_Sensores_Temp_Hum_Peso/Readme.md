@@ -124,6 +124,10 @@ En las siguientes tablas, se puede observar la correspondencia de las terminales
 
 4. Cargar el [programa](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Sensores_Temp_Humedad_Peso_MQTT/Sensores_Temp_Humedad_Peso_MQTT.ino) de control y adquisición de peso, temperatura y humedad.
 
+![A031](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A031.JPG)
+
+***Código de control cargado en el IDE de Arduino.***
+
 ## Instrucciones de operación
 
 ## Resultados
