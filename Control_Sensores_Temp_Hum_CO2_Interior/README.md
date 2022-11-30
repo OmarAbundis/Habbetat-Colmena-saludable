@@ -152,6 +152,28 @@ El dashboard con el vídeo y la fotografía se muestran a continuación
 
 El paquete de Nodered que nos permite enviar y recibir con un bot de telegram es [node-red-contrib-telegrambot](https://flows.nodered.org/node/node-red-contrib-telegrambot), para poder ser usado debe crearse un bot desde la aplicación de Telegram, usar la API key, conseguir el ID del chat donde se publicara, configurar los nodos __receiver__ con ayuda de un nodo __funcion__ para que acepten una palabra clave y despues el nodo __sender__ envíe la información solicitada.
 
+En este proyecto se puede hacer consulta usando las siguientes opciones:
+
+|Palabra a través del chat |Acción del bot|
+|--|--|
+| consulta| Envía los datos más recientes de los sensores |
+| imagen | Envía una imagen reciente de la cámara en la colmena |
+|prediccion | Envía 3 imágenes con resultados de la predicción del peso de la colmena en los siguientes días|
+
+Ejemplo de la función para enviar datos de los sensores a través del __sender__
+
+`if (msg.payload.content == "consulta" || msg.payload.content == "Consulta")
+{
+    msg.payload = {};
+    msg.payload.chatId = -XXXXXXXXX;  // Aquí se coloca el ID del chat a usar para enviar mensajes
+    msg.payload.type = 'message';
+    var espacio = " \n";
+    msg.payload.content ="\u{1F41D}" + " Datos de la colmena " + "\u{1F41D}" + espacio + "Nombre del sensor: " + global.get('id') + espacio + "\u{1F321}" + "Temperatura: " + global.get("Temperatura") + " °C" + espacio + "\u{2614}" + "Humedad: " + global.get("Humedad") + " %" + espacio +"\u{1F32B}" + "Concentración de CO2: " + espacio + global.get("VoltajeAnalogico") + " PPM"+
+    espacio + "Envia <consulta> para acceder a los datos más actuales de la colmena, envía <prediccion> para el pronostico del peso de la colmena, envía <imagen> para recibir una fotografía actual de la colmena";
+    return msg;
+}`
+
+
 <p align="center">
 <img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_chat_sender_telegram_02.jpg" width="1000" height="300" />
 </p>
@@ -180,26 +202,6 @@ Nodo _imagen de la cámara_
 La línea `http://192.168.100.xxx` debe incluir la ip completa que nos envía el monitor serial de arduino cuando programamos el ESP32 CAM.
 
 
-En este proyecto se puede hacer consulta usando las siguientes opciones:
-
-|Palabra a través del chat |Acción del bot|
-|--|--|
-| consulta| Envía los datos más recientes de los sensores |
-| imagen | Envía una imagen reciente de la cámara en la colmena |
-|prediccion | Envía 3 imágenes con resultados de la predicción del peso de la colmena en los siguientes días|
-
-Ejemplo de la función para enviar datos de los sensores a través del __sender__
-
-`if (msg.payload.content == "consulta" || msg.payload.content == "Consulta")
-{
-    msg.payload = {};
-    msg.payload.chatId = -XXXXXXXXX;  // Aquí se coloca el ID del chat a usar para enviar mensajes
-    msg.payload.type = 'message';
-    var espacio = " \n";
-    msg.payload.content ="\u{1F41D}" + " Datos de la colmena " + "\u{1F41D}" + espacio + "Nombre del sensor: " + global.get('id') + espacio + "\u{1F321}" + "Temperatura: " + global.get("Temperatura") + " °C" + espacio + "\u{2614}" + "Humedad: " + global.get("Humedad") + " %" + espacio +"\u{1F32B}" + "Concentración de CO2: " + espacio + global.get("VoltajeAnalogico") + " PPM"+
-    espacio + "Envia <consulta> para acceder a los datos más actuales de la colmena, envía <prediccion> para el pronostico del peso de la colmena, envía <imagen> para recibir una fotografía actual de la colmena";
-    return msg;
-}`
 
 
 La predicción del comportamiento del peso de la colmena se realiza usando una biblioteca llamada _Prophet_ desarrollada por el equipo de Facebook y de acuerdo a la [Página oficial de Prophet ](https://facebook.github.io/prophet/), _Prophet es un procedimiento para pronosticar datos de series temporales basado en un modelo aditivo en el que las tendencias no lineales se ajustan a la estacionalidad anual, semanal y diaria, además de los efectos de los datos faltantes. Funciona mejor con series temporales que tienen fuertes efectos estacionales y varias temporadas de datos históricos. Prophet es resistente a los datos faltantes y los cambios en la tendencia, y por lo general maneja bien los valores atípicos._ Esto tipo de comportamientos son comunes en sistemas donde se miden variables climáticas, además es relativamente fácil de implementar en Python. Dado que no se cuenta todavía con datos reales para hacer la implementación de la predicción, se toma un conjunto de datos reales que han sido medidos _in situ_ en colmenas ([Dataset usado para la predicción](https://www.kaggle.com/datasets/se18m502/bee-hive-metrics)), de tal forma que los datos esperados en nuestras mediciones tengan características similares a este data set. 
