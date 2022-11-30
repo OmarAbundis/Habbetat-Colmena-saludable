@@ -212,9 +212,10 @@ Para hacer la petición de la predicción de los datos de peso de la colmena se 
 Se muestra a continuación un ejemplo de la petición
 
 <p align="center">
-<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_prediccion_07.jpg" width="600" height="700" />
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_prediccion_07.jpg" width="800" height="700" />
 </p>
 
+El programa de la predición se realizó en Python y se ejecuta autamáticamente usando un administrador de procesos en segundo plano para Linux llamado **crontab** que ejecuta procesos, programas o scripts a intervalos regulares de tiempo, es decir, con crontab podemos elegir en qué momento ejecutar algo.
 
 ## Resultados
 Captura de pantalla del monitor serial del IDE de arduino con los datos de salida de las lecturas de los sensores y el archivo json que se publica en el broker local
