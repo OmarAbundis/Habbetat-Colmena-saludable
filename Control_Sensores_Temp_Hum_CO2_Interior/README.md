@@ -143,8 +143,8 @@ En este proyecto se puede hacer consulta usando las siguientes opciones:
 |prediccion | Envía 3 imágenes con resultados de la predicción del peso de la colmena en los siguientes días|
 
 Ejemplo de la función para enviar datos de los sensores a través del __sender__
-
-`if (msg.payload.content == "consulta" || msg.payload.content == "Consulta")
+~~~
+if (msg.payload.content == "consulta" || msg.payload.content == "Consulta")
 {
     msg.payload = {};
     msg.payload.chatId = -XXXXXXXXX;  // Aquí se coloca el ID del chat a usar para enviar mensajes
@@ -153,8 +153,8 @@ Ejemplo de la función para enviar datos de los sensores a través del __sender_
     msg.payload.content ="\u{1F41D}" + " Datos de la colmena " + "\u{1F41D}" + espacio + "Nombre del sensor: " + global.get('id') + espacio + "\u{1F321}" + "Temperatura: " + global.get("Temperatura") + " °C" + espacio + "\u{2614}" + "Humedad: " + global.get("Humedad") + " %" + espacio +"\u{1F32B}" + "Concentración de CO2: " + espacio + global.get("VoltajeAnalogico") + " PPM"+
     espacio + "Envia <consulta> para acceder a los datos más actuales de la colmena, envía <prediccion> para el pronostico del peso de la colmena, envía <imagen> para recibir una fotografía actual de la colmena";
     return msg;
-}`
-
+}
+~~~
 
 <p align="center">
 <img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_chat_sender_telegram_02.jpg" width="1000" height="300" />
