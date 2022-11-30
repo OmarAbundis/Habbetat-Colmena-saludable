@@ -212,7 +212,7 @@ Para hacer la petición de la predicción de los datos de peso de la colmena se 
 Se muestra a continuación un ejemplo de la petición
 
 <p align="center">
-<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_prediccion_07.jpg" width="1000" height="300" />
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_prediccion_07.jpg" width="600" height="700" />
 </p>
 
 
