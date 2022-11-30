@@ -132,24 +132,6 @@ Los datos son guardados en la base de datos que posteriormente será la fuente d
 
 <img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_grafana_panel_03.jpg" width="1000" height="500" />
 
-El flow de Nodered se diseña para adquirir vídeo en tiempo real y al mismo tiempo tomar una imagen que se almacena de forma local y que posteriormente se puede enviar a través del chat de telegram haciendo la petición enviando la palabra **imagen**. El flow contiene un dashboard donde se ve el vídeo en tiempo real desde el ESP32CAM y la imagen capturada.
-
-Nodos que envía la imagen con el bot de telegram
-
-![imagen](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_env%C3%ADo_imagen_05.jpg)
-
-La imagen se recibe en el chat de telegram elegido
-
-<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_imagen_06.jpg" width="1000" height="600" />
-
-Se guarda la imagen cada minuto para su envío cuando se consulta por telegram, los nodos encargados de la captura, guardado de la imagen y publicación del vídeo en el dashboard de node red son los siguientes:
-
-![imagen](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_env%C3%ADo_imagenes_04.jpg)
-
-El dashboard con el vídeo y la fotografía se muestran a continuación
-
-<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_node_red_dashboard_08.jpg" width="1000" height="600" />
-
 El paquete de Nodered que nos permite enviar y recibir con un bot de telegram es [node-red-contrib-telegrambot](https://flows.nodered.org/node/node-red-contrib-telegrambot), para poder ser usado debe crearse un bot desde la aplicación de Telegram, usar la API key, conseguir el ID del chat donde se publicara, configurar los nodos __receiver__ con ayuda de un nodo __funcion__ para que acepten una palabra clave y despues el nodo __sender__ envíe la información solicitada.
 
 En este proyecto se puede hacer consulta usando las siguientes opciones:
@@ -179,6 +161,27 @@ Ejemplo de la función para enviar datos de los sensores a través del __sender_
 </p>
 
 
+
+El flow de Nodered se diseña para adquirir vídeo en tiempo real y al mismo tiempo tomar una imagen que se almacena de forma local y que posteriormente se puede enviar a través del chat de telegram haciendo la petición enviando la palabra **imagen**. El flow contiene un dashboard donde se ve el vídeo en tiempo real desde el ESP32CAM y la imagen capturada.
+
+Nodos que envía la imagen con el bot de telegram
+
+![imagen](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_env%C3%ADo_imagen_05.jpg)
+
+La imagen se recibe en el chat de telegram elegido
+
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_imagen_06.jpg" width="1000" height="600" />
+
+Se guarda la imagen cada minuto para su envío cuando se consulta por telegram, los nodos encargados de la captura, guardado de la imagen y publicación del vídeo en el dashboard de node red son los siguientes:
+
+![imagen](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_env%C3%ADo_imagenes_04.jpg)
+
+El dashboard con el vídeo y la fotografía se muestran a continuación
+
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_node_red_dashboard_08.jpg" width="1000" height="600" />
+
+
+
 Se configuran dos nodos __template__ de node red para poder ver el vídeo y la fotografía en el dashboard, el código de los nodos es el siguiente:
 
 Nodo _tomar fotografía_
@@ -200,8 +203,6 @@ Nodo _imagen de la cámara_
 ~~~
 
 La línea `http://192.168.100.xxx` debe incluir la ip completa que nos envía el monitor serial de arduino cuando programamos el ESP32 CAM.
-
-
 
 
 La predicción del comportamiento del peso de la colmena se realiza usando una biblioteca llamada _Prophet_ desarrollada por el equipo de Facebook y de acuerdo a la [Página oficial de Prophet ](https://facebook.github.io/prophet/), _Prophet es un procedimiento para pronosticar datos de series temporales basado en un modelo aditivo en el que las tendencias no lineales se ajustan a la estacionalidad anual, semanal y diaria, además de los efectos de los datos faltantes. Funciona mejor con series temporales que tienen fuertes efectos estacionales y varias temporadas de datos históricos. Prophet es resistente a los datos faltantes y los cambios en la tendencia, y por lo general maneja bien los valores atípicos._ Esto tipo de comportamientos son comunes en sistemas donde se miden variables climáticas, además es relativamente fácil de implementar en Python. Dado que no se cuenta todavía con datos reales para hacer la implementación de la predicción, se toma un conjunto de datos reales que han sido medidos _in situ_ en colmenas ([Dataset usado para la predicción](https://www.kaggle.com/datasets/se18m502/bee-hive-metrics)), de tal forma que los datos esperados en nuestras mediciones tengan características similares a este data set. 
