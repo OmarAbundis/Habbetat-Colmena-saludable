@@ -168,10 +168,6 @@ Nodos que envía la imagen con el bot de telegram
 
 ![imagen](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_env%C3%ADo_imagen_05.jpg)
 
-La imagen se recibe en el chat de telegram elegido
-
-<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_imagen_06.jpg" width="1000" height="600" />
-
 Se guarda la imagen cada minuto para su envío cuando se consulta por telegram, los nodos encargados de la captura, guardado de la imagen y publicación del vídeo en el dashboard de node red son los siguientes:
 
 ![imagen](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_env%C3%ADo_imagenes_04.jpg)
