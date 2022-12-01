@@ -128,6 +128,25 @@ En las siguientes tablas, se puede observar la correspondencia de las terminales
 
 ***Código de control cargado en el IDE de Arduino.***
 
+5. Hasta el momento, en está parte del proyecto el circuito electrónico es capaz de detectar el peso de la colmena, la temperatura y humedad; al exterior y cercanas a la colmena. Para comprobarlo, se puede abrir el *Serial Monitor*, que es una herramienta integrada al IDE de Arduino, que nos permite observar los datos que mandemos a imprimir, en nuestro caso las variables de interés. La impresión de las variables están en formato JSON.
+
+
+![A032](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A032.JPG)
+
+***Observación de los datos impresos en el monitor serial del IDE de Arduino.***
+
+Ya comprobada la adquisición y debido procesamiento de las variables, podemos comprobar la comunicación al Bróker Mosquitto, realizando una subscripción al tópico creado, desconectando el cable USB a USB mini, de la computadora y observando los valores que se imprimen en la consola.
+
+![A033](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A033.JPG)
+
+***Subscripción al tópico: codigoIoT/G7/Habeetat. Desde la consola de Ubuntu 20.04***
+
+
+![A034](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A034.JPG)
+
+***Observación de la impresión de los valores en la consola de Ubuntu 20.04.***
+ 
+
 ### 2.	Activación de un actuador que funcione con 127Vca y hasta 1500W de potencia
 
 Dentro de los requerimientos del proyecto Capstone, se solicita la activación de actuadores. En nuestro proyecto se decidió, utilizar la cámara implementada en el ESP32-CAM, para mandar una imagen de la colmena, como parte del reporte diario del estado de la colmena, o si así se requiere, se puede solicitar una imagen instantánea de la colmena, en el momento que el apicultor así lo decida; explicado en otro apartado del presente reporte. Para el segundo actuador, se decidió tener una etapa que permita controlar cargas de una alta potencia, hasta cerca de los 1500W (en comparación con el muy bajo consumo de potencia que tienen los microcontroladores, apenas de alrededor de 1W), y así poder activar un ventilador para regular un poco la temperatura cercana o interior a la colmena o activar una unidad que permita nebulizar algún medicamento para el control de las plagas o parásitos que atacan a las abejas.
