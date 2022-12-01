@@ -171,6 +171,8 @@ En la siguiente figura, se muestra un ventilador (reciclado de un horno de micro
 
 ***Conexión del actuador al suministro eléctrico y el circuito de control.***
 
+¡Listo! Ya se puede seguir avanzando en el escalado del proyecto.
+
 ## 3. Implementación de una base de datos en MySQL para llevar un registro de las variables detectadas
 
 
