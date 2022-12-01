@@ -139,7 +139,7 @@ Ya comprobada la adquisición y debido procesamiento de las variables, podemos c
 
 ![A036](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A036.JPG)
 
-***Subscripción al tópico: codigoIoT/G7/Habeetat. Desde la consola de Ubuntu 20.04***
+***Subscripción al tópico: codigoIoT/G7/Habeetat. Desde la consola de Ubuntu 20.04.***
 
 
 ![A037](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A037.JPG)
