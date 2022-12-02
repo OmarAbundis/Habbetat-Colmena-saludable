@@ -191,7 +191,7 @@ Estos son los pasos por seguir:
 ~~~
 sudo mysql
 ~~~
-Te solicitará tu contraseña, la escribes sin preocuparte de que no se muestre, por seguridad, pulsa ENTER e ingresaras a MySQL.
+Te solicitará tu contraseña, la escribes sin preocuparte de que no se muestre, es por seguridad, pulsa ENTER e ingresaras a MySQL.
 
 ![A038](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A038.JPG)
 
