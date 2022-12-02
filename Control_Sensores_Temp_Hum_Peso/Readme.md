@@ -234,11 +234,11 @@ select * from Habeetat_SExt;
 ~~~
 Y te mostrará tu tabla con los campos creados.
 
-![A041](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A038.JPG)
+![A041](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A041.JPG)
 
 **Escritura de comando en la consola de Ubuntu 20.04**
 
-![A042](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A038.JPG)
+![A042](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A042.JPG)
 
 **Ejemplo de la tabla con datos ya almacenados.**
 
