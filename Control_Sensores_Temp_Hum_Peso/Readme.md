@@ -301,19 +301,19 @@ Y el entorno está listo para comenzar con el diseño de su *Flow*
 
 3.	Se recomienda importar el Flow de Habeetat SensoresExt para comprobar la solución planteada, y el flujo se observará de la siguiente manera.
 
-![A042](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A042.JPG)
+![A046](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A046.JPG)
 
 **Flow de control de Habeetat SensoresExt**
 
 4.	En la página de NodeRed se hace desplegado del *Dashboard*, dando clic en el cuadrito con flecha en diagonal apuntando hacia arriba, y se desplegará la interfaz gráfica.
 
-![A043](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A043.JPG)
+![A047](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A047.JPG)
 
 **Apertura del Dashboard.**
 
 5.	Ya todo en operación el *Dashboard* muestra de arriba hacia abajo y de izquierda a derecha el grupo muestra el registro de medidas en tiempo real que provienen de los sensores ya procesadas y transmitidas por el microcontrolador ESP32-CAM vía Wi-Fi, haciendo uso del Bróker Mosquitto. En el segundo grupo se muestra el histórico de los valores detectados y en la parte inferior se muestra de forma embebida las gráficas realizadas en Grafana (a continuación se explicará) con los datos guardados en la base de datos **Habeetat_SensoresExt** de MySQL.
 
-![A044](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A044.JPG)
+![A048](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A048.JPG)
 
 **Ejemplo de vista del Dashboard**
 
