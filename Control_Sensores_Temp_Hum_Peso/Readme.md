@@ -265,6 +265,16 @@ GRANT ALL PRIVILEGES ON *.* TO ‘PanchoLopez’@’localhost’;
 
 ¡Listo! Ya está la base de datos para el almacenamiento de los parámetros conrrespondientes a la variables temperatura, humedad y peso de la colmena.
 
+# 4. Interfaz gráfica y de control en NodeRed
+
+Hasta el momento, ya está implementado el circuito electrónico de control, ya se detectan las variables de interés temperatura, humedad y peso acumulado de la colmena, ya se cuenta con transmisión de los datos en formato JSON utilizando Bróker Mosquitto y se tiene implementada una base de datos en MySQL, para generar el almacenamiento del registro de los datos de la variable; pero aún le faltan implementaciones. Le falta una interfaz gráfica en donde cualquier usuario pueda leer de una manera simple, precisa y exacta las variables de interés, le falta incluir algunas estructuras de control, para la activación de los actuadores y poder mandar alertas y mensajes sobre la salud de la colmena.
+
+Para estás implementaciones previamente señaladas, se va a utilizar Node-Red, que es una herramienta de desarrollo basada en flujo para programación visual, que permite conectar dispositivos de hardware, API y servicios en línea.
+
+A continuación se indica cómo se realiza la implementación.
+
+
+
 ## Instrucciones de operación
 
 ## Resultados
