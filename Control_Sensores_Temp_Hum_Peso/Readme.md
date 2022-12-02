@@ -175,10 +175,11 @@ En la siguiente figura, se muestra un ventilador (reciclado de un horno de micro
 
 ## 3. Implementación de una base de datos en MySQL para llevar un registro de las variables detectadas
 
-Hasta este momento, se tiene resuelto la detección de las variables de interés, peso de la colmena, temperatura y humedad ambientales cercanas a la colmena y la activación de un actuador que se pueda conectar al suministro eléctrico (127 Vca a 60Hz, estándar en México), pero todavía le faltan más implementaciones para que sea considerado como parte del ecosistema del Internet de las cosas. Por ejemplo, ya desde hace mucho tiempo si estas subscrito a alguna plataforma de *streaming*, que entre más haces uso de ella empieza después de un determinado tiempo, a sugeriste temas de tú interés, aunque tú no hayas empezado alguna búsqueda. ¿Cómo se realiza?
+Hasta este momento, se tiene resuelto la detección de las variables de interés, peso de la colmena, temperatura y humedad ambientales cercanas a la colmena y la activación de un actuador que se pueda conectar al suministro eléctrico (127 Vca a 60Hz, estándar en México), pero todavía le faltan más implementaciones para que sea considerado como parte del ecosistema del Internet de las cosas. Por ejemplo, ya desde hace mucho tiempo si estas subscrito a alguna plataforma de *streaming*, habras notados que entre más haces uso de ella empieza después de un determinado tiempo, a sugeriste temas de tú interés, aunque tú no hayas empezado alguna búsqueda. ¿Cómo se realiza?
+
 Estos sistemas de *streaming*, además de que tienen modelos de predicción o algoritmos de inteligencia artificial (que también se incluye en nuestro proyecto un ejemplo de implementación), para que funcionen necesitan de datos y entre más tiempo este recopilando datos, se puede hacer una mejor predicción, en el caso de los *streaming*, de tus gustos.
 
-Para poder implementar un modelo predictivo, entonces necesitamos recopilar datos, provenientes del peso, temperatura, humedad y CO2; de la colmena y almacenarlos para su posterior procesamiento.
+En resumen, para implementar un modelo predictivo, entonces necesitamos recopilar datos, provenientes del peso, temperatura, humedad y CO2; de la colmena y almacenarlos para su posterior procesamiento con algún algoritmo de predicción..
 
 A continuación, se muestra, cómo se puede implementar una rápida y sencilla base de datos utilizando MySQL, que es un software libre y que fácilmente se puede implementar en Ubuntu 20.04, nuestro sistema operativo en utilización.
 
