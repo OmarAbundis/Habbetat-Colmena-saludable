@@ -193,6 +193,10 @@ sudo mysql
 ~~~
 Te solicitará tu contraseña, la escribes sin preocuparte de que no se muestre, por seguridad, pulsa ENTER e ingresaras a MySQL.
 
+![A038](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A038.JPG)
+
+**Imagen de la consola cuando ya accedió a MySQL.**
+
 2.	Creas una base de datos
 
 CREATED DATABASE “Nombre que quieres para tu base de datos”;
@@ -206,10 +210,20 @@ CREATED DATABASE Habeetat_SensoresExt
 ~~~
 SHOW databases;
 ~~~~
+
+![A039](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A039.JPG)
+
+**Nombres de las bases de datos existentes en MySQL.**
+
 4.	Seleccionas tu base de datos creada con el comando
 ~~~
 USE Habeetat_SensoresExt;
 ~~~
+
+![A040](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A040.JPG)
+
+**Indicación de que cambió la base de datos por defecto.**
+
 5.	Creas una tabla que contenga los campos deseados
 ~~~
 create table Habeetat_SExt (id INT (6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP, Nombre CHAR (248) NOT NULL, Temperatura FLOAT (4,2), Humedad INT (3), Peso INT (4));
@@ -219,6 +233,14 @@ create table Habeetat_SExt (id INT (6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, fech
 select * from Habeetat_SExt;
 ~~~
 Y te mostrará tu tabla con los campos creados.
+
+![A041](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A038.JPG)
+
+**Escritura de comando en la consola de Ubuntu 20.04**
+
+![A042](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A038.JPG)
+
+**Ejemplo de la tabla con datos ya almacenados.**
 
 7.	Ahora a darle privilegios.
 
@@ -239,7 +261,7 @@ GRANT ALL PRIVILEGES ON *.* TO ‘PanchoLopez’@’localhost’;
 
 ***Nota***: Guarda bien el usuario y la contraseña para su posterior uso.
 
-
+¡Listo! Ya está la base de datos para el almacenamiento de los parámetros conrrespondientes a la variables temperatura, humedad y peso de la colmena.
 
 ## Instrucciones de operación
 
