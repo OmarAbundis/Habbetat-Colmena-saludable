@@ -273,6 +273,49 @@ Para estás implementaciones previamente señaladas, se va a utilizar Node-Red, 
 
 A continuación se indica cómo se realiza la implementación.
 
+1.	Ya teniendo instalado Node-Red, desde la consola de Ubuntu 20.04 se escribe el comando 
+
+~~~
+node-red
+~~~
+
+el cual pone en marcha la herramienta de desarrollo.
+
+![A043](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A043.JPG)
+
+**Inicialización de Node Red.**
+
+2.	Ya puesta en marcha la herramienta, abra un navegador y escriba el comando
+
+~~~
+localhost:1880/
+~~~
+
+![A044](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A044.JPG)
+
+**Ingreso a Node RED**
+
+Y el entorno está listo para comenzar con el diseño de su *Flow*
+
+![A045](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A045.JPG)
+
+3.	Se recomienda importar el Flow de Habeetat SensoresExt para comprobar la solución planteada, y el flujo se observará de la siguiente manera.
+
+![A042](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A042.JPG)
+
+**Flow de control de Habeetat SensoresExt**
+
+4.	En la página de NodeRed se hace desplegado del *Dashboard*, dando clic en el cuadrito con flecha en diagonal apuntando hacia arriba, y se desplegará la interfaz gráfica.
+
+![A043](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A043.JPG)
+
+**Apertura del Dashboard.**
+
+5.	Ya todo en operación el *Dashboard* muestra de arriba hacia abajo y de izquierda a derecha el grupo muestra el registro de medidas en tiempo real que provienen de los sensores ya procesadas y transmitidas por el microcontrolador ESP32-CAM vía Wi-Fi, haciendo uso del Bróker Mosquitto. En el segundo grupo se muestra el histórico de los valores detectados y en la parte inferior se muestra de forma embebida las gráficas realizadas en Grafana (a continuación se explicará) con los datos guardados en la base de datos **Habeetat_SensoresExt** de MySQL.
+
+![A044](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A044.JPG)
+
+**Ejemplo de vista del Dashboard**
 
 
 ## Instrucciones de operación
