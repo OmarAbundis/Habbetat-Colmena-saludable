@@ -222,7 +222,7 @@ USE Habeetat_SensoresExt;
 
 ![A040](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A040.JPG)
 
-**Indicación de que cambió la base de datos por defecto.**
+**Indicación de que cambió la base de datos que se tenía por defecto.**
 
 5.	Creas una tabla que contenga los campos deseados
 ~~~
