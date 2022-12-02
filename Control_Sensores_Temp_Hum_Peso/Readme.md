@@ -248,13 +248,14 @@ Si por ejemplo
 
 Usuario es: PanchoLopez
 
-Password: 1234
-El comando quedaría como:
+Password es: 1234
+
+El comando quedaría como
 
 ~~~
 CREATE USER ‘PanchoLopez’@’localhost’ IDENTIFIED BY ‘1234’;
 ~~~
-Inmediatamente después,
+inmediatamente después,
 
 ~~~
 GRANT ALL PRIVILEGES ON *.* TO ‘PanchoLopez’@’localhost’;
