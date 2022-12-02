@@ -187,6 +187,12 @@ A continuación, se muestra, cómo se puede implementar una rápida y sencilla b
 
 Estos son los pasos por seguir:
 
+1.	Ya teniendo instalado MySQL, en la consola de Ubuntu 20.04, escribe el comando
+~~~
+sudo mysql
+~~~
+Te solicitará tu contraseña, la escribes sin preocuparte de que no se muestre, por seguridad, pulsa ENTER e ingresaras a MySQL.
+
 
 
 ## Instrucciones de operación
