@@ -252,12 +252,12 @@ Password: 1234
 El comando quedaría como:
 
 ~~~
-CREATE USER ‘**PanchoLopez**’@’localhost’ IDENTIFIED BY ‘**1234**’;
+CREATE USER ‘PanchoLopez’@’localhost’ IDENTIFIED BY ‘1234’;
 ~~~
 Inmediatamente después,
 
 ~~~
-GRANT ALL PRIVILEGES ON *.* TO ‘**PanchoLopez**’@’localhost’;
+GRANT ALL PRIVILEGES ON *.* TO ‘PanchoLopez’@’localhost’;
 ~~~
 
 ***Nota***: Guarda bien el usuario y la contraseña para su posterior uso.
