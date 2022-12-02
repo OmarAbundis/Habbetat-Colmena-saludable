@@ -193,6 +193,52 @@ sudo mysql
 ~~~
 Te solicitará tu contraseña, la escribes sin preocuparte de que no se muestre, por seguridad, pulsa ENTER e ingresaras a MySQL.
 
+2.	Creas una base de datos
+
+CREATED DATABASE “Nombre que quieres para tu base de datos”;
+
+Ejemplo:
+~~~
+CREATED DATABASE Habeetat_SensoresExt
+~~~
+
+3.	Corrobora su creación con el comando
+~~~
+SHOW databases;
+~~~~
+4.	Seleccionas tu base de datos creada con el comando
+~~~
+USE Habeetat_SensoresExt;
+~~~
+5.	Creas una tabla que contenga los campos deseados
+~~~
+create table Habeetat_SExt (id INT (6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP, Nombre CHAR (248) NOT NULL, Temperatura FLOAT (4,2), Humedad INT (3), Peso INT (4));
+~~~
+6.	Para comprobar usas el comando
+~~~
+select * from Habeetat_SExt;
+~~~
+Y te mostrará tu tabla con los campos creados.
+
+7.	Ahora a darle privilegios.
+
+Si por ejemplo
+
+Usuario es: PanchoLopez
+Password: 1234
+El comando quedaría como:
+
+~~~
+CREATE USER ‘PanchoLopez’@’localhost’ IDENTIFIED BY ‘1234’;
+~~~
+Inmediatamente después,
+
+~~~
+GRANT ALL PRIVILEGES ON *.* TO ‘PanchoLopez’@’localhost’;
+~~~
+
+***Nota***: Guarda bien el usuario y la contraseña para su posterior uso.
+
 
 
 ## Instrucciones de operación
