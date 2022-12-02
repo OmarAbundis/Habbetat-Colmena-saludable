@@ -299,7 +299,7 @@ Y el entorno está listo para comenzar con el diseño de su *Flow*
 
 ![A045](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A045.JPG)
 
-3.	Se recomienda importar el Flow de Habeetat SensoresExt para comprobar la solución planteada, y el flujo se observará de la siguiente manera.
+3.	Se recomienda importar el [Flow de Habeetat SensoresExt](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Node-Red/Habeetat_NodeRed_Grafana_Telegram_V2.json) para comprobar la solución planteada, y el flujo se observará de la siguiente manera.
 
 ![A046](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A046.JPG)
 
