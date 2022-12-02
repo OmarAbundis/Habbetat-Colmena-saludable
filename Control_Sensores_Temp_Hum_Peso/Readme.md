@@ -317,6 +317,9 @@ Y el entorno está listo para comenzar con el diseño de su *Flow*
 
 **Ejemplo de vista del Dashboard**
 
+Y, ¿cómo se hace interactuar Grafana con Node Red para visualizar los datos gráficos?
+
+## 5. Graficado de variables registradas en Grafana
 
 ## Instrucciones de operación
 
