@@ -323,7 +323,7 @@ Y, ¿cómo se hace interactuar Grafana con Node Red para visualizar los datos gr
 
 La intención de nuestro proyecto es que todos los datos recopilados y almacenados sean fácilmente interpretables y que mejor si se visualizan de manera gráfica. Para ello hemos utilizado Grafana, que es un software libre que permite la visualización y el formato de datos ya recopilados desde una base de datos, como MySQL.
 
-**Nota:** Se aconseja revisar el material de referencia indicado o se pueden consultar los siguientes vídeos realizador por el profesor del curso Hugo Vargas, en donde a detalle se explica cómo realizar la configuración, vinculado con una base de datos, el *Query* para el manejo de datos y el embebido de las gráficas en Node Red.
+**Nota:** Se aconseja revisar el material de referencia indicado o se pueden consultar los siguientes vídeos realizados por el profesor del curso Hugo Vargas, en donde a detalle se explica cómo realizar la configuración, vinculado con una base de datos, el *Query* para el manejo de datos y el embebido de las gráficas en Node Red.
 
 [Diplomado IoT - SIC-2022-G7 - Plataformas del IoT - Grafana](https://www.youtube.com/watch?v=4y-WazppL6U&list=PLPz4YNz_pz1UwKweh8bRR9uWFp7DYv9ca&index=42)
 
