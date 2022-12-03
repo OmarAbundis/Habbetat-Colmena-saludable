@@ -351,7 +351,7 @@ localhost:3000/
 
 ![A050](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A050.JPG)
 
-***Inicialización de Grafana.**
+***Inicialización de Grafana.***
 
 4. Elegimos la base de datos a utilizar.
 
