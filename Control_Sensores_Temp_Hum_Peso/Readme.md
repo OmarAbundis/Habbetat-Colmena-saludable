@@ -428,11 +428,11 @@ ORDER BY fecha
 
 ***Nodo HTML.***
 
-9.	Se realiza ***Deploy***
-
 ![A060](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A060.JPG)
 
-***Ejecución de Deploy.***
+***Configuración hecha.***
+
+9.	Se realiza ***Deploy*** al *Flow*.
 
 10.	Y queda lista la incrustación en el *Dasboard*.
 
