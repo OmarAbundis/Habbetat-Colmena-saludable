@@ -422,7 +422,7 @@ ORDER BY fecha
 
 ***Panel.***
 
-8.	Se configura el nodo HTML
+8.	Se configura el nodo HTML en Node Red
 
 ![A059](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A059.JPG)
 
