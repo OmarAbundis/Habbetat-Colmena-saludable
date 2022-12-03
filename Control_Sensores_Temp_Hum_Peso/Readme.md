@@ -321,6 +321,128 @@ Y, ¿cómo se hace interactuar Grafana con Node Red para visualizar los datos gr
 
 ## 5. Graficado de variables registradas en Grafana
 
+La intención de nuestro proyecto es que todos los datos recopilados y almacenados sean fácilmente interpretables y que mejor si se visualizan de manera gráfica. Para ello hemos utilizado Grafana, que es un software libre que permite la visualización y el formato de datos ya recopilados desde una base de datos, como MySQL.
+
+**Nota:**Se aconseja revisar el material de referencia indicado o se pueden consultar los siguientes vídeos realizador por el profesor del curso Hugo Vargas, en donde a detalle se explica cómo realizar la configuración, vinculado con una base de datos, el *Query* para el manejo de datos y el embebido de las gráficas en Node Red.
+
+[Diplomado IoT - SIC-2022-G7 - Plataformas del IoT - Grafana](https://www.youtube.com/watch?v=4y-WazppL6U&list=PLPz4YNz_pz1UwKweh8bRR9uWFp7DYv9ca&index=42)
+
+[Diplomado IoT - SIC-2022-G7 - Plataformas del IoT - Grafana: Insertar paneles](https://www.youtube.com/watch?v=r9HMQ4m5jYU&list=PLPz4YNz_pz1UwKweh8bRR9uWFp7DYv9ca&index=43)
+
+[Diplomado IoT - SIC-2022-G7 - Plataformas del IoT - Grafana: Insertar paneles 2](https://www.youtube.com/watch?v=Xnm0O074qXE&list=PLPz4YNz_pz1UwKweh8bRR9uWFp7DYv9ca&index=44)
+
+1. Activamos Grafana desde la consola de Ubuntu 20.04 con el siguiente comando
+
+~~~
+sudo /bin/systemctl start grafana-server
+~~~
+
+![A049](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A049.JPG)
+
+***Comando para iniciar Grafana desde la consola de Ubuntu 20.04.***
+
+2. Abrimos un explorador y escribimos:
+
+~~~
+localhost:3000/
+~~~
+
+3. Registramos nuestros datos en donde se solicita.
+
+![A050](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A050.JPG)
+
+***Inicialización de Grafana.**
+
+4. Elegimos la base de datos a utilizar.
+
+![A051](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A051.JPG)
+
+***Elección de la base de datos.***
+
+
+5.	Ya habiendo realizado toda la configuración, vinculación de la base de datos y elegido el tipo de gráfico que mejor se ajusta para el desplegado histórico de los datos recopilados, se procede a escribir los *query* correspondientes.
+
+**Query de temperatura**
+
+~~~
+SELECT
+  fecha AS "time",
+  Temperatura
+FROM Habeetat_SensoresExt.Habeetat_SExt
+ORDER BY fecha
+~~~
+
+![A052](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A052.JPG)
+
+***Configuración de Query de Temperatura.***
+
+**Query de Humedad**
+
+~~~
+SELECT
+  fecha AS "time",
+  Humedad
+FROM Habeetat_SensoresExt.Habeetat_SExt
+ORDER BY fecha
+~~~
+
+![A053](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A053.JPG)
+
+***Configuración de Query de Humedad.***
+
+**Query de Peso.**
+
+~~~
+SELECT
+  fecha AS "time",
+  Peso
+FROM Habeetat_SensoresExt.Habeetat_SExt
+ORDER BY fecha
+~~~
+
+![A054](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A054.JPG)
+
+***Configuración de Query de Peso.***
+
+6.	Se aplican y se salvan todas las configuraciones hechas.
+
+![A054](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A054.JPG)
+
+***Aplicación de configuraciones.***
+
+![A055](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A055.JPG)
+![A056](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A056.JPG)
+![A057](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A058.JPG)
+
+***Gráficos correspondientes a los Query configurados.***
+
+7.	Se busca y se copia la ***Embed HTML*** para incrustarla en Node RED
+
+![A058](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A058.JPG)
+
+***Panel.***
+
+8.	Se configura el nodo HTML
+
+![A059](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A059.JPG)
+
+***Nodo HTML.***
+
+9.	Se realiza ***Deploy***
+
+![A060](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A060.JPG)
+
+***Ejecución de Deploy.***
+
+10.	Y queda lista la incrustación en el *Dasboard*.
+
+![A061](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A061.JPG)
+
+***Dasboard con gráficos incrustados.***
+
+Y se ha completado el *Dasboard* para visualizar los valores de las variables que ayudan a verificar la salud de la colmena.
+
+
 ## Instrucciones de operación
 
 ## Resultados
