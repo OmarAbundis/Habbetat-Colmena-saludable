@@ -292,6 +292,14 @@ A partir de estas gráficas se pueden tomar decisiones sobre la salud de la colm
 
 ## Evidencias
 
+Videos de youtube
+
+1. Funcionamiento de los sensores con MQTT, NodeRed y la base de datos MySQL.
+
+[![Alt text](https://img.youtube.com/vi/seBQrWVgVqA.jpg)](https://www.youtube.com/watch?v=seBQrWVgVqA)
+
+2. Funcionamiento del chat de Telegram
+
 ## Preguntas frecuentes
 
 ## Compatibilidad
