@@ -71,6 +71,10 @@ Adicional a lo ya indicado en líneas superiores, también es necesario contar c
 
 [Telegram Messenger](https://telegram.org/?setln=es). Servicio de mensajería.
 
+## Desarrollo
+
+En los siguientes puntos se describen las distintas etapas de la elaboración de la parte señalada del proyecto.
+
 ### 1. La adquisición de la temperatura, humedad y peso
 
 **Nota:** Se recomienda revisar la información previamente citada, antes de comenzar con el armado del circuito electrónico, para reducir la probabilidad de realizar malas conexiones entre los dispositivos, fallas en la polarización y en consecuencia el daño permanente de los dispositivos o daño parcial o total de su equipo de cómputo.
