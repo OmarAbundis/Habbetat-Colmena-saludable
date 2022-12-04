@@ -219,7 +219,9 @@ El programa de la predición se realizó en Python y se ejecuta autamáticamente
 
 El archivo crontab editado para este proyecto se ve así
 
-
+<p align="center">
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_cron_archivo_11.jpg" width="800" height="700" />
+</p>
 
 
 
