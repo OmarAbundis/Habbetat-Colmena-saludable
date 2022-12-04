@@ -128,6 +128,25 @@ En las siguientes tablas, se puede observar la correspondencia de las terminales
 
 ***Código de control cargado en el IDE de Arduino.***
 
+5. Hasta el momento, en está parte del proyecto el circuito electrónico es capaz de detectar el peso de la colmena, la temperatura y humedad; al exterior y cercanas a la colmena. Para comprobarlo, se puede abrir el *Serial Monitor*, que es una herramienta integrada al IDE de Arduino, que nos permite observar los datos que mandemos a imprimir, en nuestro caso las variables de interés. La impresión de las variables están en formato JSON.
+
+
+![A035](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A035.JPG)
+
+***Observación de los datos impresos en el monitor serial del IDE de Arduino.***
+
+Ya comprobada la adquisición y debido procesamiento de las variables, podemos comprobar la comunicación al Bróker Mosquitto, realizando una subscripción al tópico creado, desconectando el cable USB a USB mini, de la computadora y observando los valores que se imprimen en la consola.
+
+![A036](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A036.JPG)
+
+***Subscripción al tópico: codigoIoT/G7/Habeetat. Desde la consola de Ubuntu 20.04.***
+
+
+![A037](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A037.JPG)
+
+***Observación de la impresión de los valores en la consola de Ubuntu 20.04.***
+ 
+
 ### 2.	Activación de un actuador que funcione con 127Vca y hasta 1500W de potencia
 
 Dentro de los requerimientos del proyecto Capstone, se solicita la activación de actuadores. En nuestro proyecto se decidió, utilizar la cámara implementada en el ESP32-CAM, para mandar una imagen de la colmena, como parte del reporte diario del estado de la colmena, o si así se requiere, se puede solicitar una imagen instantánea de la colmena, en el momento que el apicultor así lo decida; explicado en otro apartado del presente reporte. Para el segundo actuador, se decidió tener una etapa que permita controlar cargas de una alta potencia, hasta cerca de los 1500W (en comparación con el muy bajo consumo de potencia que tienen los microcontroladores, apenas de alrededor de 1W), y así poder activar un ventilador para regular un poco la temperatura cercana o interior a la colmena o activar una unidad que permita nebulizar algún medicamento para el control de las plagas o parásitos que atacan a las abejas.
@@ -152,9 +171,276 @@ En la siguiente figura, se muestra un ventilador (reciclado de un horno de micro
 
 ***Conexión del actuador al suministro eléctrico y el circuito de control.***
 
+¡Listo! Ya se puede seguir avanzando en el escalado del proyecto.
+
 ## 3. Implementación de una base de datos en MySQL para llevar un registro de las variables detectadas
 
+Hasta este momento, se tiene resuelto la detección de las variables de interés, peso de la colmena, temperatura y humedad ambientales cercanas a la colmena y la activación de un actuador que se pueda conectar al suministro eléctrico (127 Vca a 60Hz, estándar en México), pero todavía le faltan más implementaciones para que sea considerado como parte del ecosistema del Internet de las cosas. Por ejemplo, ya desde hace mucho tiempo si estas subscrito a alguna plataforma de *streaming*, habras notados que entre más haces uso de ella empieza después de un determinado tiempo, a sugeriste temas de tú interés, aunque tú no hayas empezado alguna búsqueda. ¿Cómo se realiza?
 
+Estos sistemas de *streaming*, además de que tienen modelos de predicción o algoritmos de inteligencia artificial (que también se incluye en nuestro proyecto un ejemplo de implementación), para que funcionen necesitan de datos y entre más tiempo este recopilando datos, se puede hacer una mejor predicción, en el caso de los *streaming*, de tus gustos.
+
+En resumen, para implementar un modelo predictivo, entonces necesitamos recopilar datos, provenientes del peso, temperatura, humedad y CO2; de la colmena y almacenarlos para su posterior procesamiento con algún algoritmo de predicción..
+
+A continuación, se muestra, cómo se puede implementar una rápida y sencilla base de datos utilizando MySQL, que es un software libre y que fácilmente se puede implementar en Ubuntu 20.04, nuestro sistema operativo en utilización.
+
+**Nota:** No olvide estudiar las referencias indicadas, ya que ahí se describe como instalar MySQL en Ubuntu 20.04.
+
+Estos son los pasos por seguir:
+
+1.	Ya teniendo instalado MySQL, en la consola de Ubuntu 20.04, escribe el comando
+~~~
+sudo mysql
+~~~
+Te solicitará tu contraseña, la escribes sin preocuparte de que no se muestre, es por seguridad, pulsa ENTER e ingresaras a MySQL.
+
+![A038](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A038.JPG)
+
+**Imagen de la consola cuando ya accedió a MySQL.**
+
+2.	Creas una base de datos
+
+CREATED DATABASE “Nombre que quieres para tu base de datos”;
+
+Ejemplo:
+~~~
+CREATED DATABASE Habeetat_SensoresExt
+~~~
+
+3.	Corrobora su creación con el comando
+~~~
+SHOW databases;
+~~~~
+
+![A039](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A039.JPG)
+
+**Nombres de las bases de datos existentes en MySQL.**
+
+4.	Seleccionas tu base de datos creada con el comando
+~~~
+USE Habeetat_SensoresExt;
+~~~
+
+![A040](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A040.JPG)
+
+**Indicación de que cambió la base de datos que se tenía por defecto.**
+
+5.	Creas una tabla que contenga los campos deseados
+~~~
+create table Habeetat_SExt (id INT (6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP, Nombre CHAR (248) NOT NULL, Temperatura FLOAT (4,2), Humedad INT (3), Peso INT (4));
+~~~
+6.	Para comprobar usas el comando
+~~~
+select * from Habeetat_SExt;
+~~~
+Y te mostrará tu tabla con los campos creados.
+
+![A041](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A041.JPG)
+
+**Escritura de comando en la consola de Ubuntu 20.04**
+
+![A042](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A042.JPG)
+
+**Ejemplo de la tabla con datos ya almacenados.**
+
+7.	Ahora a darle privilegios.
+
+Si por ejemplo
+
+Usuario es: PanchoLopez
+
+Password es: 1234
+
+El comando quedaría como
+
+~~~
+CREATE USER ‘PanchoLopez’@’localhost’ IDENTIFIED BY ‘1234’;
+~~~
+inmediatamente después,
+
+~~~
+GRANT ALL PRIVILEGES ON *.* TO ‘PanchoLopez’@’localhost’;
+~~~
+
+***Nota***: Guarda bien el usuario y la contraseña para su posterior uso.
+
+¡Listo! Ya está la base de datos para el almacenamiento de los parámetros conrrespondientes a la variables temperatura, humedad y peso de la colmena.
+
+# 4. Interfaz gráfica y de control en NodeRed
+
+Hasta el momento, ya está implementado el circuito electrónico de control, ya se detectan las variables de interés temperatura, humedad y peso acumulado de la colmena, ya se cuenta con transmisión de los datos en formato JSON utilizando Bróker Mosquitto y se tiene implementada una base de datos en MySQL, para generar el almacenamiento del registro de los datos de la variable; pero aún le faltan implementaciones. Le falta una interfaz gráfica en donde cualquier usuario pueda leer de una manera simple, precisa y exacta las variables de interés, le falta incluir algunas estructuras de control, para la activación de los actuadores y poder mandar alertas y mensajes sobre la salud de la colmena.
+
+Para estás implementaciones previamente señaladas, se va a utilizar Node-Red, que es una herramienta de desarrollo basada en flujo para programación visual, que permite conectar dispositivos de hardware, API y servicios en línea.
+
+A continuación se indica cómo se realiza la implementación.
+
+1.	Ya teniendo instalado Node-Red, desde la consola de Ubuntu 20.04 se escribe el comando 
+
+~~~
+node-red
+~~~
+
+el cual pone en marcha la herramienta de desarrollo.
+
+![A043](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A043.JPG)
+
+**Inicialización de Node Red.**
+
+2.	Ya puesta en marcha la herramienta, abra un navegador y escriba el comando
+
+~~~
+localhost:1880/
+~~~
+
+![A044](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A044.JPG)
+
+**Ingreso a Node RED**
+
+Y el entorno está listo para comenzar con el diseño de su *Flow*
+
+![A045](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A045.JPG)
+
+3.	Se recomienda importar el [Flow de Habeetat SensoresExt](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Node-Red/Habeetat_NodeRed_Grafana_Telegram_V2.json) para comprobar la solución planteada, y el flujo se observará de la siguiente manera.
+
+![A046](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A046.JPG)
+
+**Flow de control de Habeetat SensoresExt**
+
+4.	En la página de NodeRed se hace desplegado del *Dashboard*, dando clic en el cuadrito con flecha en diagonal apuntando hacia arriba, y se desplegará la interfaz gráfica.
+
+![A047](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A047.JPG)
+
+**Apertura del Dashboard.**
+
+5.	Ya todo en operación el *Dashboard* muestra de arriba hacia abajo y de izquierda a derecha el grupo muestra el registro de medidas en tiempo real que provienen de los sensores ya procesadas y transmitidas por el microcontrolador ESP32-CAM vía Wi-Fi, haciendo uso del Bróker Mosquitto. En el segundo grupo se muestra el histórico de los valores detectados y en la parte inferior se muestra de forma embebida las gráficas realizadas en Grafana (a continuación se explicará) con los datos guardados en la base de datos **Habeetat_SensoresExt** de MySQL.
+
+![A048](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A048.JPG)
+
+**Ejemplo de vista del Dashboard**
+
+Y, ¿cómo se hace interactuar Grafana con Node Red para visualizar los datos gráficos?
+
+## 5. Graficado de variables registradas en Grafana
+
+La intención de nuestro proyecto es que todos los datos recopilados y almacenados sean fácilmente interpretables y que mejor si se visualizan de manera gráfica. Para ello hemos utilizado Grafana, que es un software libre que permite la visualización y el formato de datos ya recopilados desde una base de datos, como MySQL.
+
+**Nota:** Se aconseja revisar el material de referencia indicado o se pueden consultar los siguientes vídeos realizados por el profesor del curso Hugo Vargas, en donde a detalle se explica cómo realizar la configuración, vinculado con una base de datos, el *Query* para el manejo de datos y el embebido de las gráficas en Node Red.
+
+[Diplomado IoT - SIC-2022-G7 - Plataformas del IoT - Grafana](https://www.youtube.com/watch?v=4y-WazppL6U&list=PLPz4YNz_pz1UwKweh8bRR9uWFp7DYv9ca&index=42)
+
+[Diplomado IoT - SIC-2022-G7 - Plataformas del IoT - Grafana: Insertar paneles](https://www.youtube.com/watch?v=r9HMQ4m5jYU&list=PLPz4YNz_pz1UwKweh8bRR9uWFp7DYv9ca&index=43)
+
+[Diplomado IoT - SIC-2022-G7 - Plataformas del IoT - Grafana: Insertar paneles 2](https://www.youtube.com/watch?v=Xnm0O074qXE&list=PLPz4YNz_pz1UwKweh8bRR9uWFp7DYv9ca&index=44)
+
+1. Activamos Grafana desde la consola de Ubuntu 20.04 con el siguiente comando
+
+~~~
+sudo /bin/systemctl start grafana-server
+~~~
+
+![A049](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A049.JPG)
+
+***Comando para iniciar Grafana desde la consola de Ubuntu 20.04.***
+
+2. Abrimos un explorador y escribimos:
+
+~~~
+localhost:3000/
+~~~
+
+3. Registramos nuestros datos en donde se solicita.
+
+![A050](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A050.JPG)
+
+***Inicialización de Grafana.***
+
+4. Elegimos la base de datos a utilizar.
+
+![A051](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A051.JPG)
+
+***Elección de la base de datos.***
+
+
+5.	Ya habiendo realizado toda la configuración, vinculación de la base de datos y elegido el tipo de gráfico que mejor se ajusta para el desplegado histórico de los datos recopilados, se procede a escribir los *query* correspondientes.
+
+**Query de temperatura**
+
+~~~
+SELECT
+  fecha AS "time",
+  Temperatura
+FROM Habeetat_SensoresExt.Habeetat_SExt
+ORDER BY fecha
+~~~
+
+![A052](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A052.JPG)
+
+***Configuración de Query de Temperatura.***
+
+**Query de Humedad**
+
+~~~
+SELECT
+  fecha AS "time",
+  Humedad
+FROM Habeetat_SensoresExt.Habeetat_SExt
+ORDER BY fecha
+~~~
+
+![A053](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A053.JPG)
+
+***Configuración de Query de Humedad.***
+
+**Query de Peso.**
+
+~~~
+SELECT
+  fecha AS "time",
+  Peso
+FROM Habeetat_SensoresExt.Habeetat_SExt
+ORDER BY fecha
+~~~
+
+![A054](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A054.JPG)
+
+***Configuración de Query de Peso.***
+
+6.	Se aplican y se salvan todas las configuraciones hechas.
+
+![A054](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A054.JPG)
+
+***Aplicación de configuraciones.***
+
+![A055](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A055.JPG)
+![A056](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A056.JPG)
+![A057](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A057.JPG)
+
+***Gráficos correspondientes a los Query configurados.***
+
+7.	Se busca y se copia la ***Embed HTML*** para incrustarla en Node RED
+
+![A058](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A058.JPG)
+
+***Panel.***
+
+8.	Se configura el nodo HTML en Node Red
+
+![A059](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A059.JPG)
+
+***Nodo HTML.***
+
+![A060](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A060.JPG)
+
+***Configuración hecha.***
+
+9.	Se realiza ***Deploy*** al *Flow*.
+
+10.	Y queda lista la incrustación en el *Dasboard*.
+
+![A061](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A061.JPG)
+
+***Dasboard con gráficos incrustados.***
+
+Y se ha completado el *Dasboard* para visualizar los valores de las variables que ayudan a verificar la salud de la colmena.
 
 
 ## Instrucciones de operación
