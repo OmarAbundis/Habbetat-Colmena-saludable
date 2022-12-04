@@ -250,7 +250,7 @@ Los datos del sensor son enviados al broker mosquitto al tópico _Habeetat/senso
 
 
 <p align="center">
-<img src=" "  />
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_node_red_base_de_datos_15.jpg" width="1000" />
 </p>
 
 
