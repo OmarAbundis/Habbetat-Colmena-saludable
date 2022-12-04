@@ -26,8 +26,8 @@ const char* ssid = "TOTALPLAY_49C538";  // Aquí debes poner el nombre de tu red
 const char* password = "T0T42W1WS1";  // Aquí debes poner la contraseña de tu red
 
 //Datos del broker MQTT
-const char* mqtt_server = "192.168.100.97"; // Se coloca la dirección IP de la computadora donde estamos trabajando
-IPAddress server(192,168,100,97); // Se vuelve a escribir la dirección IP 
+const char* mqtt_server = "192.168.100.130"; // Se coloca la dirección IP de la computadora donde estamos trabajando
+IPAddress server(192,168,100,130); // Se vuelve a escribir la dirección IP 
 
 // Objetos
 WiFiClient espClient; // Manejo de los datos de conexion WiFi
@@ -140,7 +140,7 @@ void loop() {
 
   Serial.print(F("Humedad: "));  // Impresión de valor de Humedad
   Serial.print(h);
-  Serial.print(F(" %  Temperatura: ")); Impresión de valor de Humedad
+  Serial.print(F(" %  Temperatura: ")); //Impresión de valor de Humedad
   Serial.print(t);
   Serial.print(F("°C "));
   Serial.println(" ");
