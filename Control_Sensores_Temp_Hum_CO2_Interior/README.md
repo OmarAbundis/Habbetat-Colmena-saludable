@@ -251,7 +251,7 @@ Los datos del sensor son enviados al broker mosquitto al tópico _Habeetat/senso
 
 <p align="center">
 <img src=" "  />
-
+</p>
 
 
 ## Evidencias
