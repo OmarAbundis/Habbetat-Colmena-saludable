@@ -7,8 +7,7 @@ En este apartado sobre el desarrollo del proyecto Capstone, Habeetat Colmena sal
 3. Implementación de una base de datos en MySQL para llevar un registro de las variables detectadas.
 4. Interfaz gráfica y de control en NodeRed.
 5. Graficado de variables registradas en Grafana.
-6. Envío de mensaje de alerta por el servicio de mensajería Telegram.
-7. Solicitud de estado de las condiciones de las variables en tiempo real por mensaje de un Bot en Telegram.
+6. Solicitud de estado de las condiciones de las variables en tiempo real por mensaje de un Bot en Telegram.
 
 ## Material necesario
 
@@ -442,6 +441,104 @@ ORDER BY fecha
 
 Y se ha completado el *Dasboard* para visualizar los valores de las variables que ayudan a verificar la salud de la colmena.
 
+## 6. Solicitud de estado de las condiciones de las variables en tiempo real por mensaje de un Bot en Telegram
+
+
+### ¿Podríamos consultar los datos de la colmena haciendo una petición de un mensaje de texto por algún servicio de mensajería?
+
+La respuesta es sí, se pueden solicitar los datos de las variables temperatura, humedad, peso y CO2; relacionadas con la colmena e incluso una imagen de su estado y en base a la información recopilada, una predicción esperada del peso de la colmena para los siguientes dos día.
+
+### ¿Y cómo se hace?
+
+Al estar utilizando Node Red, se le pueden agregar **Nodos** que te permiten hacer uso de Telegram para el envió y recepción de mensajes.
+
+A continuación se agregan dos referencias. La primera es un tanto informal, pero te ayudarán a realizarlo de manera simple. La segunda te enlaza a las hojas de especificaciones de Telegram, para que hagas un estudio formal de lo que son los **Bots** y su utilidad.
+
+[Envío de mensaje de alerta por el servicio de mensajería Telegram.](https://www.youtube.com/watch?v=09XK3eeEHSU)
+
+[Bots: An introduction for developers](https://core.telegram.org/bots)
+
+Para mandar mensajes la configuración queda de la siguiente manera:
+
+1.	Interconectar los nodos, en Node Red, como se muestra en la figura.
+
+![A062](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A062.JPG)
+
+***Nodos para hacer uso de Telegram.***
+
+2.	Se configura el *node function* con el siguiente código.
+
+~~~
+msg.payload = {};
+msg.payload.chatId = -825211725//-775229224, -825211725;
+msg.payload.type = "message";
+var espacio = "\n";
+//msg.payload.content = "\u{1F41D}" + " Datos de la colmena " + "\u{1F41D}" + espacio + "Datos desde: " + global.get('id') + espacio + "\u{1F321}"+"Temperatura: "+ global.get("temperatura")+ " °C"+espacio + "\u{2614}"+"Humedad: " + global.get("humedad") + " %"+ espacio + "\u{2696}"+"Peso de la Colmena: "+ global.get("peso")+ " grms."+ espacio+"Envia <consulta> para acceder a los datos más actuales de la colmena."
+msg.payload.content = "\u{1F41D}" + " Datos de la colmena " + "\u{1F41D}" + espacio + "Datos desde: " + global.get('id') + espacio + "\u{1F321}"+"Temperatura: "+ global.get("temperatura")+ " °C"+espacio + "\u{2614}"+"Humedad: " + global.get("humedad") + " %"+ espacio + "\u{2696}"+"Peso de la Colmena: "+ global.get("peso")+ " grms."+ espacio+""
+return msg;
+~~~
+
+![A063](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A063.JPG)
+
+***Configuración de Edit function node.***
+
+3.	Se configura el *sender node*
+
+![A064](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A064.JPG)
+
+***Configuración de Edit sender node.***
+
+4.	 Se interconectan los nodos de recepción de datos de la siguiente manera
+
+![A065](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A065.JPG)
+
+***Nodos de recepción de mensaje.***
+
+5.	Se configura el *receiver node*
+
+![A066](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A066.JPG)
+
+***Configuración de Edit receiver node.***
+
+6.	Se configura el *function node* para el receptor con el siguiente código.
+~~~
+if (msg.payload.content == "Consulta" || msg.payload.content == "consulta")
+{
+    msg.payload = {};
+    msg.payload.chatId = -825211725//-775229224, -825211725;
+    msg.payload.type = 'message';
+    var espacio = " \n";
+    msg.payload.content = "\u{1F41D}" + " Datos de la colmena " + "\u{1F41D}" + espacio + "Datos desde: " + global.get('id') + espacio + "\u{1F321}"+"Temperatura: "+ global.get("temperatura")+ " °C"+espacio + "\u{2614}"+"Humedad: " + global.get("humedad") + " %"+ espacio + "\u{2696}"+"Peso de la Colmena: "+ global.get("peso")+ " g."+ "";
+    //msg.payload.content = "datos"
+    return msg;
+}
+~~~
+
+![A067](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A067.JPG)
+
+***Configuración de Edit function node.***
+
+
+7.	Se configura el *sender node*
+
+![A068](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A068.JPG)
+
+***Configuración de Edit sender node.***
+
+
+8.	Y ya funcionando se observa en Telegram de la siguiente manera, la consulta de valores.
+
+![A069](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A069.JPG)
+
+***Datos recibidos en Telegram.***
+
+9.	Y la consulta de predicción de la siguiente manera.
+
+![A070](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A069.JPG)
+
+***Gráfica de predicción del peso de la colmena por Telegram.***
+
+Y ha quedado funcional la parte del proyecto encargada de la detección de la temperatura, humedad y peso de la colmena, control de carga conectada al suministro eléctrico, configuración en Node Red, el Dashboard para la visualización de datos, el respaldo de la información en una base de datos en MySQL, graficado en Grafana, incrustado en el Dasboard de las gráficas obtenidas en Grafana y envío y recepción de mensajes por Telegram.
 
 ## Instrucciones de operación
 
