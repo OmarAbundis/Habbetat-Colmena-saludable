@@ -249,9 +249,14 @@ A continuación se muestran un informe gráfico de los resultados de todo el pro
 Los datos del sensor son enviados al broker mosquitto al tópico _Habeetat/sensores/dht11mqtt__ donde un nodo mqtt lee los datos y los publica en la base de datos __Sensor_MQ_DHT__ en la tabla _Datos_sensores_, a continuación se muestra la sección del flow que realiza la acción de publicar en la base de datos y la lectura 
 
 
+En esta imagen se puede observar el tópico en donde el flow lee en el tópico de mosquitto, descargar el json y publica los datos en la base de datos con ayuda de una función 
 <p align="center">
 <img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_node_red_base_de_datos_15.jpg" width="1000" />
 </p>
+
+Los datos guardados en la base de datos local se pueden leer usando la terminal de linux 
+
+
 
 
 ## Evidencias
