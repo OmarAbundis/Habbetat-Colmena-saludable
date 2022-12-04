@@ -260,11 +260,15 @@ Los datos guardados en la base de datos local se pueden leer usando la terminal 
 <img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_base_de_datos_sensores_16.jpg" width="1000" />
 </p>
 
+### 
+
 ### Resultados de la predicción del peso de la colmena
 
 En este trabajo se predice el peso de la colmena dado que es un factor que indica directamente cuál es el estado de salud de la colmena, para esto usamos el modelo matematico **Prophet** propuesto en el [artículo de Taylor, S. J., & Letham](https://peerj.com/preprints/3190.pdf), investigadores de equipo de ciencia de datos de Facebook. 
 
-El modelo es útil para nuestros datos ya que son datos que muestran comportamientos no lineales, además de que tienen ciertos componentes periódicos y además puede darse el caso de que haya datos faltantes o valores atípicos. El modelo toma en cuenta todo lo anterior para generar una línea de tendencia y predecir los valores en periodos de tiempo que nosotros decidamos. De acuerdo a la página oficial del proyecto **Prophet** el modelo es rápido y preciso, completamente automáticos y los pronósticos son ajustables, es decir, hay parámetros que podemos ajustar para predecir con mayor precisión.   Este modelo se ha usado para predecir precio de acciones, demanda de servicios, etc. Incluso Amazon Web Services lo tiene dentro de su documentación como un algoritmos de predicción [link a AWS](https://docs.aws.amazon.com/es_es/forecast/latest/dg/aws-forecast-recipe-prophet.html).
+El modelo es útil para nuestros datos ya que son datos que muestran comportamientos no lineales, además de que tienen ciertos componentes periódicos y además puede darse el caso de que haya datos faltantes o valores atípicos. El modelo toma en cuenta todo lo anterior para generar una línea de tendencia y predecir los valores en periodos de tiempo que nosotros decidamos. De acuerdo a la página oficial del proyecto **Prophet** el modelo es rápido y preciso, completamente automáticos y los pronósticos son ajustables, es decir, hay parámetros que podemos ajustar para predecir con mayor precisión.   Este modelo se ha usado para predecir precio de acciones, demanda de servicios, etc. Incluso Amazon Web Services lo tiene dentro de su documentación como un algoritmo de predicción [link a AWS](https://docs.aws.amazon.com/es_es/forecast/latest/dg/aws-forecast-recipe-prophet.html).
+
+Esta predicción se realiza cada 8 días de forma automática en segundo plano usando _Cron_ como se describió anteriormente.
 
 La implementación del modelo para nuestro conjunto de datos nos permite obtener tres gráficas:
 
