@@ -546,6 +546,67 @@ Y ha quedado funcional la parte del proyecto encargada de la detección de la te
 
 ## Instrucciones de operación
 
+En lo que respecta a esta parte de la implementación del proyecto, no es muy complicada de utilizar, una vez que todas sus partes han sido armadas y programadas. Solo hay que seguir los siguientes pasos:
+
+1.	Inicializar su máquina virtual en donde tiene instalado Ubuntu 20.04.
+
+2.	Ya corriendo el sistema operativo Ubuntu 20.04, se abre una terminal y se escribe el comando 
+~~~
+node-red
+~~~
+para inicializar esta herramienta de programación.
+
+![A071](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A071.JPG)
+
+***Inicialización de Node Red.***
+
+3.	En otra consola de Ubuntu 20.04, se escribe el comando
+
+~~~
+sudo /bin/systemctl start grafana-server
+~~~
+
+para activar Grafana. En este paso socita la contraseña de administrador, después de escribirla, ya está activada la herramienta.
+
+![A072](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A072.JPG)
+
+***Inicialización de Grafana.***
+
+4.	Conectar el FTDI mediante un cable USM a USB mini a una fuente de voltaje, por ejemplo la que utiliza para suministrar carga a la batería de su smartphone.
+
+5.	Se abre una página de un explorador de internet y se escribe
+~~~
+localhost:1880/
+~~~
+para ingresar a Node Red.
+
+![A073](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A073.JPG)
+
+***Ingreso a Node Red.***
+
+6.	Se abre otra pestaña del navegador y se escribe
+~~~
+localhost:3000/
+~~~
+para activar Grafana, en donde hay que escribir el nombre del usuario y contraseña.
+
+![A074](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A074.JPG)
+
+***Ingreso a Grafana.***
+
+7.	Desde Node Red se activa el Dashboard y ya se pueden visualizar las medidas de temperatura y humedad ambientales cercanas a la colmena así como su peso que va acumulando.
+
+![A075](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A075.JPG)
+
+***Inicialización del Dasboard.***
+
+![A076](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A076.JPG)
+
+***Visualización de datos y gráficas en el Dasboard.***
+
+Y ya también está listo para recibir el estado del sistema por mensaje de Telegram.
+
+
 ## Resultados
 
 ## Evidencias
