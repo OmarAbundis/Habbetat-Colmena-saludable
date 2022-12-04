@@ -230,8 +230,11 @@ A continuación se muestran un informe gráfico de los resultados de todo el pro
 
 # Resultado programación de los sensores en Arduino
 
+ En esta imagen se muestra los valores obtenidos por los sensores DHT11 y MQ135, se observan los valores de temperatura, humedad obtenidos con el DHT11 y el valor de voltaje analógico obtenido con el sensor MQ135. Eso valores se formatean para crear un json y publicarlos en el broker local y posteriormente leerlos en node-red para publicarlos en la base de datos local.
 
-
+<p align="center">
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_salida_monitor_serial_arduino-dht11mq135.jpg"  />
+</p>
 
 
 
