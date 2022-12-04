@@ -223,11 +223,19 @@ El archivo crontab editado para este proyecto se ve así
 <img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_cron_archivo_11.jpg" width="1000" height="400" />
 </p>
 
-
+La última línea es la que específica la hora y día en que se ejecutará el comando que invoca el script de python para la predicción.  
 
 ## Resultados
-Captura de pantalla del monitor serial del IDE de arduino con los datos de salida de las lecturas de los sensores y el archivo json que se publica en el broker local
-![imagen](https://user-images.githubusercontent.com/72757419/200640844-e3ce6719-60ad-45df-b4fe-98c2a3800893.png)
+A continuación se muestran un informe gráfico de los resultados de todo el proceso de creación de los sensores internos de la colmena inteligente:
+
+# Resultado programación de los sensores en Arduino
+
+
+
+
+
+
+
 
 ## Evidencias
 
