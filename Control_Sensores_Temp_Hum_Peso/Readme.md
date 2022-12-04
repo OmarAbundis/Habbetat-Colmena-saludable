@@ -105,11 +105,11 @@ En las siguientes tablas, se puede observar la correspondencia de las terminales
 | GPIO 15   | PIN 1   |
 | GND       | PIN 2   |
 
-2. Se tiene que fijar la celda de carga de 20Kg.en una base sólida que evite el desequilibrio de la báscula, cuidando la posición de la celda de carga, la cual suele tener una flecha que debe señalar hacia la base inferior, para su correcta colocación, véase figura.
+2. Se tiene que fijar la celda de carga de 20Kg., en una base sólida que evite el desequilibrio de la báscula, cuidando la posición de la celda de carga, la cual suele tener una flecha que debe señalar hacia la base inferior, para su correcta colocación, véase figura.
 
 ![A028](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A028.PNG)
 
-***Forma Física de la Celda de Carga de 20kg. Utilizada.***
+***Forma Física de la Celda de Carga de 20kg., utilizada.***
 
 3. Fijar la base de la colmena en la parte superior de la celda, teniendo un registro previo del peso total de la colmena para poder destarar y ajustar el valor correspondiente al peso registrado. Ver figuras
 
