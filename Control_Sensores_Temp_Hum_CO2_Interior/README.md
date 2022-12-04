@@ -268,7 +268,17 @@ El modelo es útil para nuestros datos ya que son datos que muestran comportamie
 
 La implementación del modelo para nuestro conjunto de datos nos permite obtener tres gráficas:
 
-- Grafica 1. 
+- Gráfica 1 (Figure 1). Muestra los datos del peso de la colmena de 1 mes anterior y la predicción de 2 días adelante. En esta gráfica se muestran los datos obtenidos con los sensores (puntos negros), la línea de tendencia (línea azul) y el intervalo de incertidumbre de la prediccción (franja azul).
+
+- Gráfica 2 (Figure 2). En el gráfico superior se muestra la línea de tendencia del modelo y la prediccción, el el gráfico inferior un análisis estadístico de la variación del peso de acuerdo a la hora del día en todo el intervalo de tiempo de los datos considerados para el análisis.
+
+- Gráfica 3 (Figure 3). Muestra los días en el que se observa una mayor variación del peso, esto es útil porque muestra los días donde hay un cambio en las tendencias de los datos.
+
+A partir de estas gráficas se pueden tomar decisiones sobre la salud de la colmena. 
+
+<p align="center">
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_prediccion_profeta_17.jpg" width="1000" />
+</p>
 
 ## Evidencias
 
