@@ -215,7 +215,13 @@ Se muestra a continuación un ejemplo de la petición
 <img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_prediccion_07.jpg" width="800" height="700" />
 </p>
 
-El programa de la predición se realizó en Python y se ejecuta autamáticamente usando un administrador de procesos en segundo plano para Linux llamado **crontab** que ejecuta procesos, programas o scripts a intervalos regulares de tiempo, es decir, con crontab podemos elegir en qué momento ejecutar algo.
+El programa de la predición se realizó en Python y se ejecuta autamáticamente usando un administrador de procesos en segundo plano para Linux llamado **Cron** que ejecuta procesos, programas o scripts a intervalos regulares de tiempo, es decir, con crontab podemos elegir en qué momento ejecutar algo. Las tareas de Cron se registran y administran en un archivo especial llamado **_crontab_**. Cada perfil de usuario del sistema LInux puede tener su propio crontab para programar tareas, que se almacenan en __/var/spool/cron/crontabs__. En este proyecto se programaron las tareas para que se ejecute la predicción de forma automatica cada 8 días los lunes a las 00:00 horas y que los datos estén disponibles para toda la semana en el momento que el usuario invoque la predicción. Una vez editado el archivo crontab se guarda, se cierra y estará trabajando en segundo plano hasta que se desactive.
+
+El archivo crontab editado para este proyecto se ve así
+
+
+
+
 
 ## Resultados
 Captura de pantalla del monitor serial del IDE de arduino con los datos de salida de las lecturas de los sensores y el archivo json que se publica en el broker local
