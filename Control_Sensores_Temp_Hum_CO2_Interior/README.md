@@ -223,7 +223,7 @@ El archivo crontab editado para este proyecto se ve así
 <img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_cron_archivo_11.jpg" width="1000" height="400" />
 </p>
 
-La última línea es la que específica la hora y día en que se ejecutará el comando que invoca el script de python para la predicción.  En nuestrop caso, la última línea indica que se active un ambiente virtual llamado _profeta_ y ajecute el archivo .py con el programa para la predicción
+La última línea es la que específica la hora y día en que se ejecutará el comando que invoca el script de python para la predicción.  En nuestrop caso, la última línea indica que se active un ambiente virtual llamado _profeta_ y ajecute el archivo .py con el programa para la predicción.
 
 ## Resultados
 A continuación se muestran un informe gráfico de los resultados de todo el proceso de creación de los sensores internos de la colmena inteligente:
@@ -260,7 +260,9 @@ Los datos guardados en la base de datos local se pueden leer usando la terminal 
 <img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_base_de_datos_sensores_16.jpg" width="1000" />
 </p>
 
-### Resultados de la predicción
+### Resultados de la predicción del peso de la colmena
+
+En este trabajo se predice el peso de la colmena dado que es un factor que indica directamente cuál es el estado de salud de la colmena, para esto usamos el modelo matematico propuesto en el [artículo de Taylor, S. J., & Letham](https://peerj.com/preprints/3190.pdf), investigadores de Facebook. El modelo 
 
 ## Evidencias
 
@@ -269,5 +271,7 @@ Los datos guardados en la base de datos local se pueden leer usando la terminal 
 ## Compatibilidad
 
 ## Bibliografía
+
+1. Taylor, S. J., & Letham, B. (2018). Forecasting at scale. The American Statistician, 72(1), 37-45.
 
 ## Créditos
