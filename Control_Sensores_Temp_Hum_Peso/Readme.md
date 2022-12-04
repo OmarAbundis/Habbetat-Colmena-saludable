@@ -534,7 +534,7 @@ if (msg.payload.content == "Consulta" || msg.payload.content == "consulta")
 
 9.	Y la consulta de predicción de la siguiente manera.
 
-![A070](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A069.JPG)
+![A070](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A070.JPG)
 
 ***Gráfica de predicción del peso de la colmena por Telegram.***
 
