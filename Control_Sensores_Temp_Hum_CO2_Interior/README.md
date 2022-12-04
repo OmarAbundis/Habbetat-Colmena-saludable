@@ -296,7 +296,27 @@ Videos de youtube
 
 1. Funcionamiento de los sensores con MQTT, NodeRed y la base de datos MySQL.
 
-https://www.youtube.com/watch?v=seBQrWVgVqA
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Poner video de YouTube.com</title>
+</head>
+<body>
+
+<h1>Poner vídeo de YouTube.com</h1>
+
+
+<object width="425" height="350">
+<param name="movie" value="https://www.youtube.com/watch?v=seBQrWVgVqA"></param>
+<param name="wmode" value="transparent"></param>
+<embed src="https://www.youtube.com/watch?v=seBQrWVgVqA" type="application/x-shockwave-flash" wmode="transparent" width="425" height="350">
+</embed>
+
+</body>
+</html>
+
+
 
 
 
