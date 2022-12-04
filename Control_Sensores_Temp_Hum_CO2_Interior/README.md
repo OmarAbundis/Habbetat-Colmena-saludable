@@ -234,7 +234,7 @@ A continuación se muestran un informe gráfico de los resultados de todo el pro
 ~~~
 {"id":"MQ135_DHT11","ValorAnalogico":1017,"VoltajeAnalogico":960,"Temperatura":18.80,"Humedad":54.00}
 ~~~
-- id del sensor
+- id del sensor (MQ135_DHT11)
 - Valor analógico
 - Valor digital (está es una medida directa del valor de concentración de CO2 en PPM)
 - Temperatura (ºC)
@@ -244,8 +244,13 @@ A continuación se muestran un informe gráfico de los resultados de todo el pro
 <img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_salida_monitor_serial_arduino-dht11mq135.jpg"  />
 </p>
 
+### Resultados del flow de nodered
+
+Los datos del sensor son enviados al broker mosquitto al tópico _Habeetat/sensores/dht11mqtt__ donde un nodo mqtt lee los datos y los publica en la base de datos __Sensor_MQ_DHT__ en la tabla _Datos_sensores_, a continuación se muestra la sección del flow que realiza la acción de publicar en la base de datos y la lectura 
 
 
+<p align="center">
+<img src=" "  />
 
 
 
