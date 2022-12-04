@@ -260,7 +260,13 @@ Los datos guardados en la base de datos local se pueden leer usando la terminal 
 <img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_base_de_datos_sensores_16.jpg" width="1000" />
 </p>
 
-### 
+### Resualtados de la medición en panel de Grafana
+
+Los datos históricos guardados en la base de datos se pueden revisar en el panel de Grafana creado para este propósito, además, se pueden visualizar los datos actuales obtenidos por los sensores.
+
+<p align="center">
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_panel_grafana_resultados_18.jpg" width="1000" />
+</p>
 
 ### Resultados de la predicción del peso de la colmena
 
