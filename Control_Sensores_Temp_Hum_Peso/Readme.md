@@ -42,11 +42,11 @@ En la experimentación de está práctica se debe de contar con el siguiente sof
 
 Previamente a la realización de está práctica, ha sido necesario el estudio de distitos temas, que se encuentran en la plataforma [edu.codigoiot.com](https://www.codigoiot.com/), en donde se explican conceptos y configuraciones necesarias, tales como:
 
-- Instalación de virtual Box y Ubuntu 20.04
-- Configuración de Arduino IDE para ESP32CAM
-- Instalación de NodeRed
-- Introducción a NodeRed
-- Instalación de Mosquitto MQTT
+- Instalación de virtual Box y Ubuntu 20.04.
+- Configuración de Arduino IDE para ESP32CAM.
+- Instalación de NodeRed.
+- Introducción a NodeRed.
+- Instalación de Mosquitto MQTT.
 
 En los siguientes enlaces se decriben de manera partícular los trabajos que dan soporte a está etapa del proyecto.
 
