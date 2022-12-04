@@ -223,7 +223,7 @@ El archivo crontab editado para este proyecto se ve así
 <img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_cron_archivo_11.jpg" width="1000" height="400" />
 </p>
 
-La última línea es la que específica la hora y día en que se ejecutará el comando que invoca el script de python para la predicción.  
+La última línea es la que específica la hora y día en que se ejecutará el comando que invoca el script de python para la predicción.  En nuestrop caso, la última línea indica que se active un ambiente virtual llamado _profeta_ y ajecute el archivo .py con el programa para la predicción
 
 ## Resultados
 A continuación se muestran un informe gráfico de los resultados de todo el proceso de creación de los sensores internos de la colmena inteligente:
