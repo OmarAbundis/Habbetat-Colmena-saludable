@@ -228,13 +228,22 @@ La última línea es la que específica la hora y día en que se ejecutará el c
 ## Resultados
 A continuación se muestran un informe gráfico de los resultados de todo el proceso de creación de los sensores internos de la colmena inteligente:
 
-# Resultado programación de los sensores en Arduino
+### Resultado programación de los sensores en Arduino
 
- En esta imagen se muestra los valores obtenidos por los sensores DHT11 y MQ135, se observan los valores de temperatura, humedad obtenidos con el DHT11 y el valor de voltaje analógico obtenido con el sensor MQ135. Eso valores se formatean para crear un json y publicarlos en el broker local y posteriormente leerlos en node-red para publicarlos en la base de datos local.
+ En esta imagen se muestra los valores obtenidos por los sensores DHT11 y MQ135, se observan los valores de temperatura, humedad obtenidos con el DHT11 y el valor de voltaje analógico obtenido con el sensor MQ135. Eso valores se formatean para crear un json y publicarlos en el broker local y posteriormente leerlos en node-red para publicarlos en la base de datos local. El json creado tiene los siguientes datos:
+~~~
+{"id":"MQ135_DHT11","ValorAnalogico":1017,"VoltajeAnalogico":960,"Temperatura":18.80,"Humedad":54.00}
+~~~
+- id del sensor
+- Valor analógico
+- Valor digital (está es una medida directa del valor de concentración de CO2 en PPM)
+- Temperatura (ºC)
+- Humedad (%)
 
 <p align="center">
 <img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_salida_monitor_serial_arduino-dht11mq135.jpg"  />
 </p>
+
 
 
 
