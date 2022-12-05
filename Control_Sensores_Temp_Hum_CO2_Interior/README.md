@@ -294,7 +294,7 @@ A partir de estas gráficas se pueden tomar decisiones sobre la salud de la colm
 
 Videos de youtube
 
-1. Funcionamiento de los sensores con MQTT, NodeRed y la base de datos MySQL.
+1. Funcionamiento de los sensores con MQTT, Nodered y la base de datos MySQL.
 
 https://www.youtube.com/watch?v=seBQrWVgVqA
 
@@ -302,12 +302,37 @@ https://www.youtube.com/watch?v=seBQrWVgVqA
 
 https://www.youtube.com/watch?v=s4fPHFBnQRI 
 
+3. Panel de Grafana y Dashboard de Nodered
+
+https://youtu.be/pgujhDJBkKk
+
+
 ## Preguntas frecuentes
+
+P:¿Qué hacer si al conectar el esp32 cam o el esp32 WROOM no existe comunicación serial?
+
+- Revisar que los cables para conexión USB sirven para transmitir datos y no son sólo de carga
+- Checar si la computadora tiene instalados los drivers para establecer comunicación entre el IDE de arduino y el microcontrolador
+- Revisar haber elegido el puerto adecuado en el IDE de arduino
+
+P: ¿Por qué veo símbolos el monitor serial de arduino que no corresponden a los datos de los sensores?
+
+- Revisa que la velocidad de los baudios esté en el valor correcto, cambiarlos de mayor a menor hasta observar el valor adecuado
+
+P: ¿Cómo se calibra el sensor MQ135?
+
+- La calibración del sensor deben de realizarse en condiciones controladas y muy específicas, una guía para una buena calibración está en este [link](https://naylampmechatronics.com/blog/42_tutorial-sensores-de-gas-mq2-mq3-mq7-y-mq135.html)
+
 
 ## Compatibilidad
 
+En este proyecto se usaron los microcontroladores ESP32-CAM y ESP32 WROOM, se puede usar Arduino Uno haciendo algunos cambios en las conexiones 
+
 ## Bibliografía
 
-1. Taylor, S. J., & Letham, B. (2018). Forecasting at scale. The American Statistician, 72(1), 37-45.
+Para el uso e implementación del algoritmo de predicción _Prophet_ revisar el siguiente articulo
+
+1. Taylor, S. J., & Letham, B. (2018). Forecasting at scale. The American Statistician, 72(1), 37-45. [Link](file:///D:/Descargas%202022/peerj-preprints-3190.pdf)
 
 ## Créditos
+
