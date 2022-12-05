@@ -30,7 +30,7 @@ Bibliotecas de Arduino para programar el ESPCAM y convertirlo en un servidor web
 El circuito a crear es el siguiente
 
 <p align="center">
-<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_ESP32_CAM_19.jpg"  />
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_ESP32_CAM_19.jpg" width="1000" height="400" />
 </p>
 
 
