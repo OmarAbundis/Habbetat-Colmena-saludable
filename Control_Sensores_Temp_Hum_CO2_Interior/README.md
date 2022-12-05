@@ -1,8 +1,8 @@
-# Resumen
+## Resumen
 
 En esta sección del proyecto **Habeetat** se construye el módulo encargado de medir la temperatura, humedad y concentración de CO2 dentro de la colmena. Se usa un microcontrolador ESP32-WROOM, un sensor de temperatura-Humedad DHT11 y un sensor de gases MQ135. El microcontrolador se programa para que mida las 3 variables y publique mediante el protocolo MQTT en un broker local, al mismo tiempo, se crea una base de datos con MySQL donde se guardan las lecturas de los sensores usando un flow creado en NodeRed; este flow nos ayuda a guardar las lecturas de los sensores en la base de datos y enviar notificaciones a un chat de Telegram usando un bot, el bot se programa para que reciba instrucciones y regrese consultas de la bases de datos, además de enviar notificaciones del estado de la colmena (alertas y datos) cada cierto periodo de tiempo. Los datos históricos y actuales recopilados son mostrados en gráficos en un dashboard de Grafana. 
 
-# Material necesario
+## Material necesario
 1. Computadora 
 2. 1 microcontrolador ESP32-WROOM
 2. 1 sensor DHT11
@@ -31,13 +31,14 @@ Biblotecas de Arduino para programar el microontrolador y los sensores
 
 ## Material de referencia
 
+- [Guía de instalación de Nodos de Telegram para Nodered](https://flows.nodered.org/node/node-red-contrib-telegrambot)
 
 ## Servicios
 
 - [Telegram bot API](https://core.telegram.org/bots/api)
-- [Nodos de Telegram para Nodered](https://flows.nodered.org/node/node-red-contrib-telegrambot)
 
-## Instrucciones para construir y programar el circuito de medición de temperatura, humedad y concentración de CO2
+
+## Instrucciones para construir el circuito de medición de temperatura, humedad y concentración de CO2
 
 El circuito a crear es el siguiente
 ![mq135_DHT11_ESP32_bb](https://user-images.githubusercontent.com/72757419/196530284-8dddd8f8-5c5d-4881-b6c0-6d7075505e9f.png)
@@ -109,7 +110,7 @@ Una vez conectado el ESP32 adquiriendo los datos de temperatura, humedad y CO2 c
 
       
 
-## Notas del uso de los programas y del flow de node red:
+## Notas del uso de los programas y del flow de node red
 
 - Colocar el SSID y el password de la red Wifi a la que se conectará el ESP32 WROOM al igual que la ESP32CAM
   - `const char* ssid = "NOMBRE DE LA RED";`
@@ -261,7 +262,7 @@ Los datos guardados en la base de datos local se pueden leer usando la terminal 
 <img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_base_de_datos_sensores_16.jpg" width="1000" />
 </p>
 
-### Resualtados de la medición en panel de Grafana
+### Resultados de la medición en panel de Grafana
 
 Los datos históricos guardados en la base de datos se pueden revisar en el panel de Grafana creado para este propósito, además, se pueden visualizar los datos actuales obtenidos por los sensores.
 
@@ -343,5 +344,4 @@ Este proyecto se realizó gracias al apoyo de los profesores
 - Lizbeth García León [Github](https://github.com/lizgarcialeon)
 - Hugo Escalpelo [Github](https://github.com/hugoescalpelo/detector-sintomas-covid)
 - Omar Abundis Noyola [Github](https://github.com/OmarAbundis)
-
 - Raymundo Soto Soto [Github](https://github.com/raymundosoto)
