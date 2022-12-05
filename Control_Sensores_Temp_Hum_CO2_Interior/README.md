@@ -343,4 +343,5 @@ Este proyecto se realizó gracias a los consejos del profesor
 Y al apoyo de los profesores
 
 - Lizbeth García León [Github](https://github.com/lizgarcialeon)
+
 - Omar Abundis Noyola [Github](https://github.com/OmarAbundis)
