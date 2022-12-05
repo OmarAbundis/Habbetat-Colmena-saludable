@@ -27,8 +27,14 @@ Bibliotecas de Arduino para programar el ESPCAM y convertirlo en un servidor web
 
 
 # Instrucciones para construir el circuito del ESP32 CAM
+El circuito a crear es el siguiente
 
-Imagen 
+<p align="center">
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_ESP32_CAM_19.jpg"  />
+</p>
+
+
+
 # Instrucciones para programar el ESP32 CAM
 # Notas del uso del programa del ESP32 CAM y del flow de node red
 # Resultados
