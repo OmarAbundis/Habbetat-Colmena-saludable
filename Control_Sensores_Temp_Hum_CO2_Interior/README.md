@@ -340,5 +340,5 @@ Este proyecto se realizó gracias a los consejos del profesor Hugo Escalpelo [Gi
 
 Y al apoyo de los profesores
 
-Lizbet García León [Github](https://github.com/lizgarcialeon)
+Lizbeth García León [Github](https://github.com/lizgarcialeon)
 Omar Abundis Noyola [Github](https://github.com/OmarAbundis)
