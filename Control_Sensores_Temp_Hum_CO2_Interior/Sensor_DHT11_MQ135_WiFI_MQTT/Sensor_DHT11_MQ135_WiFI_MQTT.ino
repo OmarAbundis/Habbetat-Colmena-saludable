@@ -122,7 +122,7 @@ void loop() {
       int R0=2108;
       float RS = 1000*((5000 - analogVolts)/analogVolts);
 
-      analogVolts = 220.47*pow(RS/R0, -2.862);  // Calculo de las partes por millon de CO2 pero se deja como analogVolts para gudara en base de datos
+      analogVolts = 1100.47*pow(RS/R0, -2.862);  // Calculo de las partes por millon de CO2 pero se deja como analogVolts para gudara en base de datos
     
       
    // Secuencia que se asegura de que la conexión con el sensor MQ135 exista
