@@ -10,6 +10,7 @@ En esta sección del proyecto Habeetat se construye el modulo que se encarga del
 # Software a utilizar
 - [IDE de Arduino 1.8.20](https://www.arduino.cc/en/software)
 - [NodeRed v3.0.2](https://nodered.org/)
+
 Bibliotecas de Arduino para programar el ESPCAM y convertirlo en un servidor web de imágenes (todas están incluidas en la biblioteca estándar del IDE de Arduino
 - esp_camera
 - WiFi
