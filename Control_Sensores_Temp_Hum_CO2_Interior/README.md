@@ -336,12 +336,15 @@ Para el uso e implementación del algoritmo de predicción _Prophet_ revisar el 
 
 ## Créditos
 
-Este proyecto se realizó gracias a los consejos del profesor
+# Este proyecto se realizó gracias al apoyo de los profesores
 
-Hugo Escalpelo [Github](https://github.com/hugoescalpelo/detector-sintomas-covid)
 
-Y al apoyo de los profesores
-
-Lizbeth García León [Github](https://github.com/lizgarcialeon)
-
-Omar Abundis Noyola [Github](https://github.com/OmarAbundis)
+ - Lizbeth García León [Github](https://github.com/lizgarcialeon)
+   
+   
+ - Hugo Escalpelo   
+   [Github](https://github.com/hugoescalpelo/detector-sintomas-covid)
+         
+ - Omar Abundis Noyola [Github](https://github.com/OmarAbundis)
+            
+ - Raymundo Soto Soto [Github](https://github.com/raymundosoto)
