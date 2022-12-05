@@ -115,14 +115,14 @@ void loop() {
     
     // Función de calibración del sensor
        //PPM = 110.477*(RS/R0)^(-2.862) = 
-       // RS = RL*((5000-AnalogVolts)/AnalogVolts))  RL = 10000 para sesnor MQ135
+       // RS = RL*((5000-AnalogVolts)/AnalogVolts))  RL = 1000 para sensor MQ135 (es incierto el valor)
        // R0 = 2108  // Se considero un valor promedio de voltaje =1207  para calcular RS/RO ya que en aire fresco RS/R0 para CO2 es igual 3.6
        // 
 
-      float R0=2108;
-      float RS = 10000*((5000 - analogVolts)/analogVolts);
+      int R0=2108;
+      float RS = 1000*((5000 - analogVolts)/analogVolts);
 
-      analogVolts = 110.47*pow(RS/R0, -2.862);
+      analogVolts = 220.47*pow(RS/R0, -2.862);  // Calculo de las partes por millon de CO2 pero se deja como analogVolts para gudara en base de datos
     
       
    // Secuencia que se asegura de que la conexión con el sensor MQ135 exista
