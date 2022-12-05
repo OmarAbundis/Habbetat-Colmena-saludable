@@ -23,7 +23,7 @@ Para implementar la programación de microcontrolador se requiere la siguiente l
 - [Grafana v9.1.7](https://grafana.com/)
 - [Python 3.9](https://www.python.org/downloads/release/python-390/)
 
-Biblotecas de Arduino para programar el microontrolador y los sensores
+Bibliotecas de Arduino para programar el microcontrolador y los sensores
 
 - [Wifi](https://github.com/arduino-libraries/WiFi)
 - [PubSubclient](https://github.com/knolleary/pubsubclient)
@@ -87,9 +87,9 @@ Vista Trasera
 
 ## Instrucciones para la programación del ESP32 WROOM
 
-El programa para leer los sensores se encuentra en la carpeta [Carpeta]. Este programama hace uso de las bibliotecas  WiFI, PubSubClient y DHT11 por lo que es necesario instalarlas en el IDE de Arduino antes de subir el programa al ESP32, así como de preparar todo el entorno en sistema operativo (Ubuntu) para que se conecte el ESP32 WROOM a la computadora (ver material de referencias de configuración del IDE de Arduino y ESP32). Una vez que se realizan las lecturas del sensor estás son publicadas en un broker local mediante el protocolo MQTT usando mosquitto por lo que hay que configurarlo también en la computadora (ver material de referencia de configuración). 
+El programa para leer los sensores se encuentra en la carpeta [Carpeta]. Este programa hace uso de las bibliotecas Wifi, PubSubClient y DHT11 por lo que es necesario instalarlas en el IDE de Arduino antes de subir el programa al ESP32, así como de preparar todo el entorno en sistema operativo (Ubuntu) para que se conecte el ESP32 WROOM a la computadora (ver material de referencias de configuración del IDE de Arduino y ESP32). Una vez que se realizan las lecturas del sensor estás son publicadas en un broker local mediante el protocolo MQTT usando mosquitto por lo que hay que configurarlo también en la computadora (ver material de referencia de configuración). 
 
-El programa del ESP32 WROOM permite las siguiente acciones:
+El programa del ESP32 WROOM permite las siguientes acciones:
 
 - Conexión del microcontrolador a Wifi
 - Lectura del Voltaje analógico del sensor MQ-135 (concentración de CO2)
@@ -104,7 +104,7 @@ Una vez conectado el ESP32 adquiriendo los datos de temperatura, humedad y CO2 c
       2. Generar reportes con el bot de telegram desde nodered  ([Link de los detalles para creación del bot de telegram con node red](https://flows.nodered.org/node/node-red-contrib-telegrambot))
         - El bot envía reportes programados o permite realizar consultas de los datos más recientes
       3. Envío de imágenes y vídeo con la esp32CAM y el bot de telegram desde nodered ([link del programa del esp32CAM](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/tree/main/Control_Camara_Video_Interior))
-      4. El flow de node-red también tiene un panel donde podemos visualizar vídeo en tiempo real desde la colmena, está cámara se situa en el exterior de la colmena para vigilancia
+      4. El flow de node-red también tiene un panel donde podemos visualizar vídeo en tiempo real desde la colmena, está cámara se sitúa en el exterior de la colmena para vigilancia
       5. Envío de la predicción del peso de la colmena en los siguientes días ([Link del código de predicción](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/tree/main/Prediccion_Peso_Colmena))
       6. Cuando las condiciones de Temperatura, humedad o concentración de CO2 no son las favorables para la colmena también se envía un mensaje de alerta.
 
@@ -207,9 +207,9 @@ Cuando se envía _imagen_ al chat de telegram La imagen se recibe en el chat de 
 <img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_imagen_06.jpg" width="1000" height="600" />
 
 
-La predicción del comportamiento del peso de la colmena se realiza usando una biblioteca llamada _Prophet_ desarrollada por el equipo de Facebook y de acuerdo a la [página oficial de Prophet ](https://facebook.github.io/prophet/), _Prophet es un procedimiento para pronosticar datos de series temporales basado en un modelo aditivo en el que las tendencias no lineales se ajustan a la estacionalidad anual, semanal y diaria, además de los efectos de los datos faltantes. Funciona mejor con series temporales que tienen fuertes efectos estacionales y varias temporadas de datos históricos. Prophet es resistente a los datos faltantes y los cambios en la tendencia, y por lo general maneja bien los valores atípicos._ Esto tipo de comportamientos son comunes en sistemas donde se miden variables climáticas, además es relativamente fácil de implementar en Python. Dado que no se cuenta todavía con datos reales para hacer la implementación de la predicción, se toma un conjunto de datos reales que han sido medidos _in situ_ en colmenas ([dataset usado para la predicción](https://www.kaggle.com/datasets/se18m502/bee-hive-metrics)), de tal forma que los datos esperados en nuestras mediciones tengan características similares a este data set. 
+La predicción del comportamiento del peso de la colmena se realiza usando una biblioteca llamada _Prophet_ desarrollada por el equipo de Facebook y de acuerdo a la [página oficial de Prophet ](https://facebook.github.io/prophet/), _Prophet es un procedimiento para pronosticar datos de series temporales basado en un modelo aditivo en el que las tendencias no lineales se ajustan a la estacionalidad anual, semanal y diaria, además de los efectos de los datos faltantes. Funciona mejor con series temporales que tienen fuertes efectos estacionales y varias temporadas de datos históricos. Prophet es resistente a los datos faltantes y los cambios en la tendencia, y por lo general maneja bien los valores atípicos. Esto tipo de comportamientos son comunes en sistemas donde se miden variables climáticas, además es relativamente fácil de implementar en Python. Dado que no se cuenta todavía con datos reales para hacer la implementación de la predicción, se toma un conjunto de datos reales que han sido medidos _in situ_ en colmenas ([dataset usado para la predicción](https://www.kaggle.com/datasets/se18m502/bee-hive-metrics)), de tal forma que los datos esperados en nuestras mediciones tengan características similares a este data set. 
 
-Para hacer la petición de la predicción de los datos de peso de la colmena se envía la palabra _prediccion_ en el chat de telegram, esto retornará 3 gráficas que mostrarán los datos históricos del peso de la colmena (se define en el programa el tiempo de predicción), junto con la línea de tendencia y la predicción del peso en los siguientes días. De forma adicional hay 2 gráficas que nos muestran las variaciones estadísticas por hora del peso a lo largo día y los puntos (días) donde existe una variación signfificativa del peso. Estas gráficas juntos con los datos recopilados tienen el objetivo de ser el soporte de la toma de decisiones con el fin de mantener la salud de la colmena. 
+Para hacer la petición de la predicción de los datos de peso de la colmena se envía la palabra _prediccion_ en el chat de telegram, esto retornará 3 gráficas que mostrarán los datos históricos del peso de la colmena (se define en el programa el tiempo de predicción), junto con la línea de tendencia y la predicción del peso en los siguientes días. De forma adicional hay 2 gráficas que nos muestran las variaciones estadísticas por hora del peso a lo largo día y los puntos (días) donde existe una variación significativa del peso. Estas gráficas juntos con los datos recopilados tienen el objetivo de ser el soporte de la toma de decisiones con el fin de mantener la salud de la colmena. 
 
 Se muestra a continuación un ejemplo de la petición
 
@@ -217,7 +217,7 @@ Se muestra a continuación un ejemplo de la petición
 <img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_prediccion_07.jpg" width="800" height="700" />
 </p>
 
-El programa de la predición se realizó en Python y se ejecuta autamáticamente usando un administrador de procesos en segundo plano para Linux llamado **Cron** que ejecuta procesos, programas o scripts a intervalos regulares de tiempo, es decir, con crontab podemos elegir en qué momento ejecutar algo. Las tareas de Cron se registran y administran en un archivo especial llamado **_crontab_**. Cada perfil de usuario del sistema LInux puede tener su propio crontab para programar tareas, que se almacenan en __/var/spool/cron/crontabs__. En este proyecto se programaron las tareas para que se ejecute la predicción de forma automatica cada 8 días los lunes a las 00:00 horas y que los datos estén disponibles para toda la semana en el momento que el usuario invoque la predicción. Una vez editado el archivo crontab se guarda, se cierra y estará trabajando en segundo plano hasta que se desactive.
+El programa de la predicción se realizó en Python y se ejecuta automáticamente usando un administrador de procesos en segundo plano para Linux llamado **Cron** que ejecuta procesos, programas o scripts a intervalos regulares de tiempo, es decir, con crontab podemos elegir en qué momento ejecutar algo. Las tareas de Cron se registran y administran en un archivo especial llamado **_crontab_**. Cada perfil de usuario del sistema Linux puede tener su propio crontab para programar tareas, que se almacenan en __/var/spool/cron/crontabs__. En este proyecto se programaron las tareas para que se ejecute la predicción de forma automática cada 8 días los lunes a las 00:00 horas y que los datos estén disponibles para toda la semana en el momento que el usuario invoque la predicción. Una vez editado el archivo crontab se guarda, se cierra y estará trabajando en segundo plano hasta que se desactive.
 
 El archivo crontab editado para este proyecto se ve así
 
@@ -225,10 +225,10 @@ El archivo crontab editado para este proyecto se ve así
 <img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_cron_archivo_11.jpg" width="1000" height="400" />
 </p>
 
-La última línea es la que específica la hora y día en que se ejecutará el comando que invoca el script de python para la predicción.  En nuestrop caso, la última línea indica que se active un ambiente virtual llamado _profeta_ y ajecute el archivo .py con el programa para la predicción.
+La última línea es la que específica la hora y día en que se ejecutará el comando que invoca el script de python para la predicción.  En nuestro caso, la última línea indica que se active un ambiente virtual llamado _profeta_ y ejecute el archivo .py con el programa para la predicción.
 
 ## Resultados
-A continuación se muestran un informe gráfico de los resultados de todo el proceso de creación de los sensores internos de la colmena inteligente:
+A continuación, se muestran un informe gráfico de los resultados de todo el proceso de creación de los sensores internos de la colmena inteligente:
 
 ### Resultado programación de los sensores en Arduino
 
@@ -248,7 +248,7 @@ A continuación se muestran un informe gráfico de los resultados de todo el pro
 
 ### Resultados del flow de nodered
 
-Los datos del sensor son enviados al broker mosquitto al tópico _Habeetat/sensores/dht11mqtt__ donde un nodo mqtt lee los datos y los publica en la base de datos __Sensor_MQ_DHT__ en la tabla _Datos_sensores_, a continuación se muestra la sección del flow que realiza la acción de publicar en la base de datos y la lectura 
+Los datos del sensor son enviados al broker mosquitto al tópico _Habeetat/sensores/dht11mqtt__ donde un nodo mqtt lee los datos y los publica en la base de datos __Sensor_MQ_DHT__ en la tabla _Datos_sensores_, a continuación, se muestra la sección del flow que realiza la acción de publicar en la base de datos y la lectura 
 
 
 En esta imagen se puede observar el tópico en donde el flow lee en el tópico de mosquitto, descargar el json y publica los datos en la base de datos con ayuda de una función programada en javascript
@@ -256,7 +256,7 @@ En esta imagen se puede observar el tópico en donde el flow lee en el tópico d
 <img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_node_red_base_de_datos_15.jpg" width="1000" />
 </p>
 
-Los datos guardados en la base de datos local se pueden leer usando la terminal de linux 
+Los datos guardados en la base de datos local se pueden leer usando la terminal de Linux 
 
 <p align="center">
 <img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_base_de_datos_sensores_16.jpg" width="1000" />
@@ -272,7 +272,7 @@ Los datos históricos guardados en la base de datos se pueden revisar en el pane
 
 ### Resultados de la predicción del peso de la colmena
 
-En este trabajo se predice el peso de la colmena dado que es un factor que indica directamente cuál es el estado de salud de la colmena, para esto usamos el modelo matematico **Prophet** propuesto en el [artículo de Taylor, S. J., & Letham](https://peerj.com/preprints/3190.pdf), investigadores de equipo de ciencia de datos de Facebook. 
+En este trabajo se predice el peso de la colmena dado que es un factor que indica directamente cuál es el estado de salud de la colmena, para esto usamos el modelo matemático **Prophet** propuesto en el [artículo de Taylor, S. J., & Letham](https://peerj.com/preprints/3190.pdf), investigadores de equipo de ciencia de datos de Facebook. 
 
 El modelo es útil para nuestros datos ya que son datos que muestran comportamientos no lineales, además de que tienen ciertos componentes periódicos y además puede darse el caso de que haya datos faltantes o valores atípicos. El modelo toma en cuenta todo lo anterior para generar una línea de tendencia y predecir los valores en periodos de tiempo que nosotros decidamos. De acuerdo a la página oficial del proyecto **Prophet** el modelo es rápido y preciso, completamente automáticos y los pronósticos son ajustables, es decir, hay parámetros que podemos ajustar para predecir con mayor precisión.   Este modelo se ha usado para predecir precio de acciones, demanda de servicios, etc. Incluso Amazon Web Services lo tiene dentro de su documentación como un algoritmo de predicción [link a AWS](https://docs.aws.amazon.com/es_es/forecast/latest/dg/aws-forecast-recipe-prophet.html).
 
@@ -280,9 +280,9 @@ Esta predicción se realiza cada 8 días de forma automática en segundo plano u
 
 La implementación del modelo para nuestro conjunto de datos nos permite obtener tres gráficas:
 
-- Gráfica 1 (Figure 1). Muestra los datos del peso de la colmena de 1 mes anterior y la predicción de 2 días adelante. En esta gráfica se muestran los datos obtenidos con los sensores (puntos negros), la línea de tendencia (línea azul) y el intervalo de incertidumbre de la prediccción (franja azul).
+- Gráfica 1 (Figure 1). Muestra los datos del peso de la colmena de 1 mes anterior y la predicción de 2 días adelante. En esta gráfica se muestran los datos obtenidos con los sensores (puntos negros), la línea de tendencia (línea azul) y el intervalo de incertidumbre de la predicción (franja azul).
 
-- Gráfica 2 (Figure 2). En el gráfico superior se muestra la línea de tendencia del modelo y la prediccción, el el gráfico inferior un análisis estadístico de la variación del peso de acuerdo a la hora del día en todo el intervalo de tiempo de los datos considerados para el análisis.
+- Gráfica 2 (Figure 2). En el gráfico superior se muestra la línea de tendencia del modelo y la predicción, el gráfico inferior un análisis estadístico de la variación del peso de acuerdo a la hora del día en todo el intervalo de tiempo de los datos considerados para el análisis.
 
 - Gráfica 3 (Figure 3). Muestra los días en el que se observa una mayor variación del peso, esto es útil porque muestra los días donde hay un cambio en las tendencias de los datos.
 
@@ -294,7 +294,7 @@ A partir de estas gráficas se pueden tomar decisiones sobre la salud de la colm
 
 ## Evidencias
 
-Videos de youtube
+Videos de YouTube
 
 1. Funcionamiento de los sensores con MQTT, Nodered y la base de datos MySQL.
 
