@@ -113,6 +113,17 @@ void loop() {
       int analogValue = analogRead(34);
       int analogVolts = analogReadMilliVolts(34);
     
+    // Función de calibración del sensor
+       //PPM = 110.477*(RS/R0)^(-2.862) = 
+       // RS = RL*((5000-AnalogVolts)/AnalogVolts))  RL = 10000 para sesnor MQ135
+       // R0 = 2108  // Se considero un valor promedio de voltaje =1207  para calcular RS/RO ya que en aire fresco RS/R0 para CO2 es igual 3.6
+       // 
+
+      float R0=2108;
+      float RS = 10000*((5000 - analogVolts)/analogVolts);
+
+      analogVolts = 110.47*pow(RS/R0, -2.862);
+    
       
    // Secuencia que se asegura de que la conexión con el sensor MQ135 exista
     if (isnan(analogValue) || isnan(analogVolts)) {
@@ -122,7 +133,7 @@ void loop() {
     
   // Se imprimen los valores de las lecturas del sensor MQ135 
   Serial.printf("ADC analog value = %d\n",analogValue);        // Se imprime el valor análogico
-  Serial.printf("ADC millivolts value = %d\n",analogVolts);    // Se imprime el valor del voltaje añalogicos
+  Serial.printf("ADC millivolts value = %d\n",analogVolts);    // Se imprime el valor del voltaje analogico
   delay(1000);
 
 // Se inician las lecturas del sensor DHT11
