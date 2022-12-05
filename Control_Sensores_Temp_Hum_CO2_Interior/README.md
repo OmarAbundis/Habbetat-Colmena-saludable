@@ -35,6 +35,7 @@ Biblotecas de Arduino para programar el microontrolador y los sensores
 ## Servicios
 
 [Telegram bot API](https://core.telegram.org/bots/api)
+[Nodos de Telegram para Nodered](https://flows.nodered.org/node/node-red-contrib-telegrambot)
 
 ## Instrucciones para construir y programar el circuito de medición de temperatura, humedad y concentración de CO2
 
