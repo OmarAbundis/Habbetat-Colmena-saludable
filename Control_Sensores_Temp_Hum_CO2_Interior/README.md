@@ -336,7 +336,7 @@ Para el uso e implementación del algoritmo de predicción _Prophet_ revisar el 
 
 ## Créditos
 
-## Este proyecto se realizó gracias al apoyo de los profesores
+Este proyecto se realizó gracias al apoyo de los profesores
 
 
 - Lizbeth García León [Github](https://github.com/lizgarcialeon)
