@@ -11,14 +11,15 @@ En esta sección del proyecto Habeetat se construye el modulo que se encarga del
 - [IDE de Arduino 1.8.20](https://www.arduino.cc/en/software)
 - [NodeRed v3.0.2](https://nodered.org/)
 Bibliotecas de Arduino para programar el ESPCAM y convertirlo en un servidor web de imágenes (todas están incluidas en la biblioteca estándar del IDE de Arduino
-esp_camera
-WiFi
-esp_timer
-img_converters.
-fb_gfx
-soc/soc   Biblioteca que deshabilita los problemas de brownout
-soc/rtc_cntl_reg   Biblioteca que deshabilita los problemas de browout
-esp_http_server
+- esp_camera
+- WiFi
+- esp_timer
+- img_converters.
+- fb_gfx
+- soc/soc   Biblioteca que deshabilita los problemas de brownout
+- soc/rtc_cntl_reg   Biblioteca que deshabilita los problemas de browout
+- esp_http_server
+
 # Material de referencia
 # Servicios
 - [Telegram bot API](https://core.telegram.org/bots/api)
