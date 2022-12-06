@@ -616,8 +616,8 @@ En los siguientes vídeos se describe lo realizado en la parte de programación 
 
 ## Créditos
 
-Este proyecto se realizó gracias al apoyo de los profesores
+Este proyecto se realizó gracias al apoyo de los profesores:
 
-Lizbeth García León, Colaborador.
-Raymundo Soto Soto, Colaborador
-Hugo Vargas, Profesor del curso de Internet de las Cosas.
+- Lizbeth García León, Colaborador.
+- Raymundo Soto Soto, Colaborador
+- Hugo Vargas, Profesor del curso de Internet de las Cosas.
