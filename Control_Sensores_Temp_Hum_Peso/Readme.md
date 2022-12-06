@@ -608,6 +608,11 @@ Y ya también está listo para recibir el estado del sistema por mensaje de Tele
 
 ## Evidencias
 
+En los siguientes vídeos se describe lo realizado en la parte de programación y de diseño de circuito electrónico.
+
+[Programación](https://youtu.be/f8K0dvIxA-s)
+
+[Circuito electrónico](https://youtu.be/PM99izaFDMA)
 
 ## Créditos
 
