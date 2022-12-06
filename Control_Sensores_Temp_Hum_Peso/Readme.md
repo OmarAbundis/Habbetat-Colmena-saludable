@@ -606,13 +606,13 @@ para activar Grafana, en donde hay que escribir el nombre del usuario y contrase
 
 Y ya también está listo para recibir el estado del sistema por mensaje de Telegram.
 
-
-## Resultados
-
 ## Evidencias
 
-## Preguntas frecuentes
-
-## Compatibilidad
 
 ## Créditos
+
+Este proyecto se realizó gracias al apoyo de los profesores
+
+Lizbeth García León, Colaborador.
+Raymundo Soto Soto, Colaborador
+Hugo Vargas, Profesor del curso de Internet de las Cosas.
