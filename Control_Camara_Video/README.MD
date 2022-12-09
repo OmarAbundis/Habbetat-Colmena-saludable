@@ -30,9 +30,9 @@ Bibliotecas de Arduino para programar el ESPCAM y convertirlo en un servidor web
 - esp_http_server
 
 # Material de referencia
-    - [Instalación de NodeRed](https://github.com/hugoescalpelo/Notas-de-clase/blob/main/IoT-SIC-G7/20220531%20-%20Instalacion%20de%20NodeRed)
+   [Instalación de NodeRed](https://github.com/hugoescalpelo/Notas-de-clase/blob/main/IoT-SIC-G7/20220531%20-%20Instalacion%20de%20NodeRed)
     
-    - [Instalación de IDE Arduino](https://github.com/hugoescalpelo/Notas-de-clase/blob/main/IoT-SIC-G7/20220714%20-%20Configuracion%20de%20la%20IDE%20de%20Arduino%20para%20ESP32)
+   [Instalación de IDE Arduino](https://github.com/hugoescalpelo/Notas-de-clase/blob/main/IoT-SIC-G7/20220714%20-%20Configuracion%20de%20la%20IDE%20de%20Arduino%20para%20ESP32)
     
 # Servicios
 - [Telegram bot API](https://core.telegram.org/bots/api)
