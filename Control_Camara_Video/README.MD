@@ -13,11 +13,8 @@ El software se instalará en la computadora donde conectaremos nuestro ESP32 CAM
 Respetar la versión del software que se indica para evitar conflictos entre las bibliotecas.  
     • IDE de Arduino 1.8.19
     • Drivers (Windows) para el esp32 cam (se comparte en el material semanal)
-    • Bibliotecas de Arduino para el manejo del esp32 CAM
-        ◦ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json  (en preferencias-- Gestor de URLS)
-        ◦ Instalar en el <gestor de tarjetas del IDE de Arduino> la tarjeta ESP32 de Expressif Systemas
-    - NodeRed
-        -Paleta 
+    • NodeRed
+        -Palettes de NodeREd a usar
         
 Bibliotecas de Arduino para programar el ESPCAM y convertirlo en un servidor web de imágenes (todas están incluidas en la biblioteca estándar del IDE de Arduino
 - esp_camera
