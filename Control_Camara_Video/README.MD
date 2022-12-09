@@ -56,7 +56,19 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 6. Una vez configurada la placa se debe revisar que haya comunicación serial entre el dispositivo y la computadora, por lo que hay que tener conectada el ESP32 a la computadora, para esto hay que ir al menú herramientas >> monitor serie. Otra forma de saber si hay comunicación es revisar si hay puerto disponible en el menú >> puerto, si aparece un puerto habilitado es indicio de que hay comunicación. Al momento de revisar la comunicación con la primera opción hay que colocar la velocidad del monitor serial en 9600 o 115600 baudios para obtener texto que indique la comunicación. Dado que estamos usando la placa ESP32 con el convertidor usb-ttl sólo es necesario oprimir el botón de download o reset para saber si está comunicándose con la computadora.
 
-7. Establecida la comunicación serial entre el ESP32 y la computadora procedemos a cargarle el programa que nos permite crear el servidor web para tomar imágenes y vídeo, para esto usaremos el programa de la carpeta [Control_Camar_Video](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/tree/main/Control_Camara_Video/Servidor_Web_ESP32_CAM_Colmena)
+7. Establecida la comunicación serial entre el ESP32 y la computadora procedemos a cargarle el programa que nos permite crear el servidor web para tomar imágenes y vídeo, para esto usaremos el programa de la carpeta [Control_Camara_Video](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/tree/main/Control_Camara_Video/Servidor_Web_ESP32_CAM_Colmena). El programa se cargará al editor de código de Arduino para posteriormente enviarlo al ESP32CAM
+    
+8. Antes de cargar el código a la tarjeta debemos definir el tipo de cámara que estamos usando (en nuestro caso es CAMERA_MODEL_AI_THINKER) y colocar el nombre de la red wifi a la que nos conectaremos con el ESP32 CAM (aquí prendemos el modem y conectamos la computadora al mismo con el cable de red) y el password de la red.
+    
+9. Realizado lo anterior nos cercioramos que este conectado el ESP32 al puerto USB. Abrimos el monitor serial para revisar el status de la compilación y subida del código, oprimimos el botón de reset del ESP32 CAM una vez y subimos el código a la placa usando el botón subir. Esto comenzará a programar el ESP32, tardará unos segundos.
+   
+10. Al finalizar la programación del ESP32 en el monitor serial debemos ver un mensaje donde nos indicará la direcci{on donde podemos capturar imagen y vídeo
+    
+Del mensaje anterior nos interesa la última línea que nos informa la dirección IP donde podemos visualizar las imágenes de la cámara web del ESP32 CAM
+
+     Camera Ready! Use ‘http://192.168.x.xx’ to connect
+
+Copiamos y pegamos la dirección en un navegador web y ya tendremos listo nuestro servidor para recibir imágenes y vídeo del microcontrolador ESP32 CAM.
 
 
 # Notas del uso del programa del ESP32 CAM y del flow de node red
