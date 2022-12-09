@@ -606,13 +606,18 @@ para activar Grafana, en donde hay que escribir el nombre del usuario y contrase
 
 Y ya también está listo para recibir el estado del sistema por mensaje de Telegram.
 
-
-## Resultados
-
 ## Evidencias
 
-## Preguntas frecuentes
+En los siguientes vídeos se describe lo realizado en la parte de programación y de diseño de circuito electrónico.
 
-## Compatibilidad
+[Programación](https://youtu.be/f8K0dvIxA-s)
+
+[Circuito electrónico](https://youtu.be/PM99izaFDMA)
 
 ## Créditos
+
+Este proyecto se realizó gracias al apoyo de los profesores:
+
+- Lizbeth García León, Colaborador.
+- Raymundo Soto Soto, Colaborador
+- Hugo Vargas, Profesor del curso de Internet de las Cosas.
