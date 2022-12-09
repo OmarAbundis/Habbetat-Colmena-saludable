@@ -119,10 +119,10 @@ void loop() {
        // R0 = 2108  // Se considero un valor promedio de voltaje =1207  para calcular RS/RO ya que en aire fresco RS/R0 para CO2 es igual 3.6
        // 
 
-      int R0=2108;
-      float RS = 1000*((5000 - analogVolts)/analogVolts);
-
-      analogVolts = 1100.47*pow(RS/R0, -2.862);  // Calculo de las partes por millon de CO2 pero se deja como analogVolts para gudara en base de datos
+//      int R0=2108;
+//      float RS = 1000*((5000 - analogVolts)/analogVolts);
+//
+//      analogVolts = 1100.47*pow(RS/R0, -2.862);  // Calculo de las partes por millon de CO2 pero se deja como analogVolts para gudara en base de datos
     
       
    // Secuencia que se asegura de que la conexión con el sensor MQ135 exista
