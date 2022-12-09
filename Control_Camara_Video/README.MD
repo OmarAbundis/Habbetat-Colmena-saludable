@@ -8,9 +8,15 @@ En esta sección del proyecto Habeetat se construye el modulo que se encarga del
 5.	Cables jumper MM
 6.	1 cable miniusb a USB
 # Software a utilizar
-- [IDE de Arduino 1.8.20](https://www.arduino.cc/en/software)
-- [NodeRed v3.0.2](https://nodered.org/)
 
+El software se instalará en la computadora donde conectaremos nuestro ESP32 CAM.
+Respetar la versión del software que se indica para evitar conflictos entre las bibliotecas.  
+    • IDE de Arduino 1.8.19
+    • Drivers (Windows) para el esp32 cam (se comparte en el material semanal)
+    • Bibliotecas de Arduino para el manejo del esp32 CAM
+        ◦ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json  (en preferencias-- Gestor de URLS)
+        ◦ Instalar en el <gestor de tarjetas del IDE de Arduino> la tarjeta ESP32 de Expressif Systemas
+        
 Bibliotecas de Arduino para programar el ESPCAM y convertirlo en un servidor web de imágenes (todas están incluidas en la biblioteca estándar del IDE de Arduino
 - esp_camera
 - WiFi
@@ -36,13 +42,21 @@ El circuito a crear es el siguiente
 
 # Instrucciones para programar el ESP32 CAM
 
-1. Instale el complemento ESP32
+Para poder visualizar las imágenes y vídeo capturadas con la cámara del ESP32 CAM es necesario crear un servidor web, el procedimiento descrito a continuación nos permitirá crear el servidor web para visualizar en un navegador y en Python las imágenes y vídeo.
+1. Descargar e Instalar el IDE de Arduino 1.18.19 de la página oficial   https://www.arduino.cc/en/software
 
-En este ejemplo, usamos Arduino IDE para programar la placa ESP32-CAM. Por lo tanto, debe tener instalado Arduino IDE, así como el complemento para conectar la tarjeta ESP32.
+2. Instalar los drivers para establecer la conexión serial entre el circuito de la ESP32 CAM y la computadora. Los drivers son los CH34x para Windows. Si se instala en Linux no es necesario instalarlos ya que vienen por default.
 
-2. Código del servidor web de transmisión de video
+3. Dar de alta la tarjeta ESP32 cam en el IDE de Arduino en el menú archivo >> preferencias y el campo de gestor de URLS adicionales escribir 
+https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json 
 
-Después de lo anterior cargue el código en el IDE de Arduino que se encuentra en la carpeta d.
+4. En el IDE de Arduino ir a Herramientas>> Placa >> Gestor de tarjetas, buscar la placa ESP32 CAM de Expressiff Systems e instalarla. En caso de que no aparezca la placa revisar el paso anterior. 
+
+5. Después de instalar la tarjeta hay que elegir la placa ESP32 de AI Thinker para poder programarla, se elige en el menú herramientas >> placa >> ESP32 arduino >> AI Thinker ESP32-CAM. Al finalizar hay que conectar la placa al puerto USB.
+
+6. Una vez configurada la placa se debe revisar que haya comunicación serial entre el dispositivo y la computadora, por lo que hay que tener conectada el ESP32 a la computadora, para esto hay que ir al menú herramientas >> monitor serie. Otra forma de saber si hay comunicación es revisar si hay puerto disponible en el menú >> puerto, si aparece un puerto habilitado es indicio de que hay comunicación. Al momento de revisar la comunicación con la primera opción hay que colocar la velocidad del monitor serial en 9600 o 115600 baudios para obtener texto que indique la comunicación. Dado que estamos usando la placa ESP32 con el convertidor usb-ttl sólo es necesario oprimir el botón de download o reset para saber si está comunicándose con la computadora.
+
+7. Establecida la comunicación serial entre el ESP32 y la computadora procedemos a cargarle el programa que nos permite crear el servidor web para tomar imágenes y vídeo, para esto usaremos el programa de la carpeta [Control_Camar_Video](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/tree/main/Control_Camara_Video/Servidor_Web_ESP32_CAM_Colmena)
 
 
 # Notas del uso del programa del ESP32 CAM y del flow de node red
