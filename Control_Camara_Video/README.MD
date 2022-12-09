@@ -16,6 +16,8 @@ Respetar la versión del software que se indica para evitar conflictos entre las
     • Bibliotecas de Arduino para el manejo del esp32 CAM
         ◦ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json  (en preferencias-- Gestor de URLS)
         ◦ Instalar en el <gestor de tarjetas del IDE de Arduino> la tarjeta ESP32 de Expressif Systemas
+    - NodeRed
+        -Paleta 
         
 Bibliotecas de Arduino para programar el ESPCAM y convertirlo en un servidor web de imágenes (todas están incluidas en la biblioteca estándar del IDE de Arduino
 - esp_camera
@@ -28,8 +30,11 @@ Bibliotecas de Arduino para programar el ESPCAM y convertirlo en un servidor web
 - esp_http_server
 
 # Material de referencia
+    -[Instalación de NodeRed](https://github.com/hugoescalpelo/Notas-de-clase/blob/main/IoT-SIC-G7/20220531%20-%20Instalacion%20de%20NodeRed)
+    -[Instalación de IDE Arduino](https://github.com/hugoescalpelo/Notas-de-clase/blob/main/IoT-SIC-G7/20220714%20-%20Configuracion%20de%20la%20IDE%20de%20Arduino%20para%20ESP32)
 # Servicios
 - [Telegram bot API](https://core.telegram.org/bots/api)
+    
 
 
 # Instrucciones para construir el circuito del ESP32 CAM
