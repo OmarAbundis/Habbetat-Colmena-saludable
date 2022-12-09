@@ -34,8 +34,17 @@ El circuito a crear es el siguiente
 </p>
 
 
-
 # Instrucciones para programar el ESP32 CAM
+
+1. Instale el complemento ESP32
+
+En este ejemplo, usamos Arduino IDE para programar la placa ESP32-CAM. Por lo tanto, debe tener instalado Arduino IDE, así como el complemento para conectar la tarjeta ESP32.
+
+2. Código del servidor web de transmisión de video
+
+Después de lo anterior cargue el código en el IDE de Arduino que se encuentra en la carpeta d.
+
+
 # Notas del uso del programa del ESP32 CAM y del flow de node red
 # Resultados
 # Evidencias
