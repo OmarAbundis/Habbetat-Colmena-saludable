@@ -12,7 +12,7 @@ En esta sección del proyecto Habeetat se construye el modulo que se encarga del
 El software se instalará en la computadora donde conectaremos nuestro ESP32 CAM.
 Respetar la versión del software que se indica para evitar conflictos entre las bibliotecas.  
  - IDE de Arduino 1.8.19
-    • NodeRed
+    - NodeRed
  - Palettes de NodeREd a usar
         
 Bibliotecas de Arduino para programar el ESPCAM y convertirlo en un servidor web de imágenes (todas están incluidas en la biblioteca estándar del IDE de Arduino
