@@ -50,7 +50,7 @@ El circuito a crear es el siguiente
 
 # Instrucciones para programar el ESP32 CAM
 
-Para poder visualizar las imágenes y vídeo capturadas con la cámara del ESP32 CAM es necesario crear un servidor web, el procedimiento descrito a continuación nos permitirá crear el servidor web para visualizar en un navegador y en Python las imágenes y vídeo.
+Para poder visualizar las imágenes y vídeo capturadas con la cámara del ESP32 CAM es necesario crear un servidor web, el procedimiento descrito a continuación nos permitirá crear el servidor web para visualizar en un navegador las imágenes y vídeo.
 1. Descargar e Instalar el IDE de Arduino 1.18.19 de la página oficial   https://www.arduino.cc/en/software
 
 2. Instalar los drivers para establecer la conexión serial entre el circuito de la ESP32 CAM y la computadora. Los drivers son los CH34x para Windows. Si se instala en Linux no es necesario instalarlos ya que vienen por default.
