@@ -33,6 +33,17 @@ En esta parte del proyecto Habeetat se hace uso de Telegram para recibir y envia
 
 # Instrucciones de instalación
 
+1. Copiar el contenido de este repositorio en una carpeta de nuestra máquina virtual, asegurarse que estén los siguientes archivos en la carpeta
+*   abejas_datos.csv
+*   prediccion_profeta.py
+*   requirements.txt
+3. Instalar Anaconda en la máquina virtual de Ubuntu 20.04
+4. Abrir una terminal de linux en la carpeta donde guardamos los archivos del paso 1 y crear un ambiente virtual con Python 3.8 con la siguiente instrucción
+
+"conda create -n profeta python:2.8"
+
+5. 
+
 # Instrucciones de uso del programa
 
 # Resultados
