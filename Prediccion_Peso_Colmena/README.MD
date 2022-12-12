@@ -69,6 +69,9 @@ Al ejecutar el script se verá una ventana con la siguiente información
 </p>
 
 # Instrucciones de uso del programa
+Para ejecutar el código *prediccion_profeta.py* hay que tomar en cuenta las siguientes consideraciones:
+* El archivo de datos a usar para la predicción debe tener extensión *.csv*
+
 
 # Resultados
 
