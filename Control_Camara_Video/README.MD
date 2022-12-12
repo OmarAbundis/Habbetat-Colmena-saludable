@@ -90,9 +90,38 @@ Del mensaje anterior nos interesa la última línea que nos informa la direcció
      Camera Ready! Use ‘http://192.168.x.xx’ to connect
 
 Copiamos y pegamos la dirección en un navegador web y ya tendremos listo nuestro servidor para recibir imágenes y vídeo del microcontrolador ESP32 CAM.
-
+![imagen](https://user-images.githubusercontent.com/72757419/207119924-538f7ba7-3393-4469-8a62-cac5af6860c7.png)
 
 # Notas del uso del programa del ESP32 CAM y del flow de node red
+
+Esta parte del proyecto se usa en conjunto con el flow de nodered que se encuentra en la carpeta [Flow_Nodered_monitoreo_interior_colmena](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/tree/main/Control_Sensores_Temp_Hum_CO2_Interior/Flow_Nodered_monitoreo_interior_colmena)
+
+Para poder visualizar las imágenes y el vídeo en tiempo real en el dashboard de nodered se deben usar nodos http request y template donde se coloquen los siguientes códigos HTML, recordar que http://192.168.x.xx es la dirección que nos arroja el monitor serial de arduino al momento de conectar el ESP32 
+
+Para capturar fotografía
+~~~~
+<div style="margin-bottom: 10px;">
+    <img src="http://192.168.x.xx:81/capture" width="1500px" height="750px">
+</div>
+~~~~
+
+Para capturar vídeo
+~~~~
+<div style="margin-bottom: 10px;">
+    <img src="http://192.168.x.xx" width="1500px" height="750px">
+</div>
+~~~~
+
+https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_env%C3%ADo_imagenes_04.jpg
+
+En el nodo http request la dirección a la que hacemos la petición será "http://192.168.x.xx:81/capture". Los nodos image y write file que se observan son para obtener una vista prevía de la imagen y guardar la imagen en una ruta específica donde los nodos de telegram buscarán la imágen para enviarla al hacer la petición de imagen.
+
+
+
+
+
+
+
 # Resultados
 # Evidencias
 # Preguntas frecuentes 
