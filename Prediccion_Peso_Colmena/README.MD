@@ -1,5 +1,8 @@
 # Predicción del peso de la colmena usando Prophet
 
+![imagen](https://user-images.githubusercontent.com/72757419/207155336-0a286c04-ab51-48a6-a5de-d009d23ea9f4.png)
+
+
 # Resumen
 
 En este módulo se realizó la programación del predictor del peso de la colmena usando una herramienta de predicción de series de tiempo desarrollada por Facebook denominada *Prophet*. Esta biblioteca permite predecir el comportamiento de series de tiempos que tengan componentes periódicos históricos, comportamientos no lineales e incluso que presenten vacíos en sus datos. Por lo anterior es el modelo adecuado para nuestro conjunto de datos. El programa nos crea varias gráficas que permiten verificar los datos históricos, las líneas de tendencia y la predicción hacía adelante de los periodos de tiempo que elijamos.     
