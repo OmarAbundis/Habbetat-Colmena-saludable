@@ -44,7 +44,8 @@ conda create -n profeta python=3.8
 ~~~~
 En nuestra instalación el nombre del ambiente virtual es *profeta*
 
-Se instalarán varios archivos y las dependencias, seleccionar _Y_ cuando lo lo pida la instalación
+Se instalarán varios archivos y las dependencias, seleccionar _Y_ cuando lo lo pida la instalación.
+
 5. Activar el ambiente virtual en la terminal tecleando
 ~~~~
 conda activate profeta
