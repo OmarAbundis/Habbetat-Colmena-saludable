@@ -618,6 +618,6 @@ En los siguientes vídeos se describe lo realizado en la parte de programación 
 
 Este proyecto se realizó gracias al apoyo de los profesores:
 
-- Lizbeth García León, Colaborador.
+- Lizbeth García León, Colaboradora.
 - Raymundo Soto Soto, Colaborador
 - Hugo Vargas, Profesor del curso de Internet de las Cosas.
