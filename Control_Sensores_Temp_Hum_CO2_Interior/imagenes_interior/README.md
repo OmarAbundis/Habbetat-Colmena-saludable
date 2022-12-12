@@ -1,1 +1,1 @@
-## carpeta con las imágenes del interior de la colmena 
+## Carpeta con las imágenes de los sensores interiores, cámara y predición del peso.
