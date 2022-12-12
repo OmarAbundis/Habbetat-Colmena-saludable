@@ -117,13 +117,43 @@ Para capturar vídeo
 
 En el nodo http request la dirección a la que hacemos la petición será "http://192.168.x.xx:81/capture". Los nodos image y write file que se observan son para obtener una vista prevía de la imagen y guardar la imagen en una ruta específica donde los nodos de telegram buscarán la imágen para enviarla al hacer la petición de imagen.
 
+La parte del flow que recibe la petición de *imagen* y envía una fotografía al chat de Telegram es la siguiente:
 
+<p align="center">
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_env%C3%ADo_imagen_05.jpg"  />
+</p>
 
+El nodo función *Envío imagen cámara Telegram* lleva el siguiente código
 
+~~~~
+if (msg.payload.content == "imagen" || msg.payload.content == "Imagen")
+{
+    msg.payload = {};
+    msg.payload.chatId = -xxxxxxxxx; // Aquí va el ID del chat de telegram donde se publica el mensaje
+    msg.payload.type = "photo";
+    var espacio = " \n";
+    msg.payload.content = "/ruta_a_la_imagen/imagenactual.png"; // Ruta hacía la imagen que se envía
+    return msg;
+}
+~~~~
 
-
+En este script hay que añadir el ID del chat de telegram hacía donde se envía la imagen y la imagen que se envirá específicando la ruta completa y el nombre de la imagen que en nuestro caso es *imagenactual.png*
 
 # Resultados
+Se muestra 
+
+<body>
+    <div class="fila">
+        <div class="columna">
+            <img src="[https://picsum.photos/800/600](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_imagen_06.jpg)">
+        </div>
+        <div class="columna">
+            <img src="[https://picsum.photos/800/600](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_node_red_dashboard_08.jpg)">
+        </div>
+    </div>    
+    </div>
+</body>
+
 # Evidencias
 # Preguntas frecuentes 
 # Compatibilidad
