@@ -153,6 +153,20 @@ Resultado de la petición de imagen en Telegrama
 </p>
 
 # Evidencias
+Videos de YouTube
+
+* Funcionamiento de los sensores con MQTT, Nodered y la base de datos MySQL
+
+https://www.youtube.com/watch?v=seBQrWVgVqA
+
+* Funcionamiento del bot de Telegram
+
+https://www.youtube.com/watch?v=s4fPHFBnQRI
+
+* Panel de Grafana y Dashboard de Nodered
+
+https://youtu.be/pgujhDJBkKk
+
 # Preguntas frecuentes 
 # Compatibilidad
 ## Créditos
