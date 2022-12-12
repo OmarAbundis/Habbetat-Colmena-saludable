@@ -111,8 +111,9 @@ Para capturar vídeo
     <img src="http://192.168.x.xx" width="1500px" height="750px">
 </div>
 ~~~~
-
-https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_env%C3%ADo_imagenes_04.jpg
+<p align="center">
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_env%C3%ADo_imagenes_04.jpg" width="800" height="700" />
+</p>
 
 En el nodo http request la dirección a la que hacemos la petición será "http://192.168.x.xx:81/capture". Los nodos image y write file que se observan son para obtener una vista prevía de la imagen y guardar la imagen en una ruta específica donde los nodos de telegram buscarán la imágen para enviarla al hacer la petición de imagen.
 
