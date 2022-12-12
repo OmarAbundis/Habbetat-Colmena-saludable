@@ -137,7 +137,7 @@ if (msg.payload.content == "imagen" || msg.payload.content == "Imagen")
 }
 ~~~~
 
-En este script hay que añadir el ID del chat de telegram hacía donde se envía la imagen y la imagen que se envirá específicando la ruta completa y el nombre de la imagen que en nuestro caso es *imagenactual.png*
+En este script hay que añadir el ID del chat de telegram hacía donde se envía la imagen y la imagen que se envirá específicando la ruta completa y el nombre de la imagen que en nuestro caso es *imagenactual.png*. Tambíen es importante que se configure el chat de telegram en el que se ebviará la imagen para que reciba los mensajes del bot, de preferencia agregar el bot como participante del chat con privilegíos de administrador.
 
 # Resultados
 Se muestra el dashboard de nodered con el panel de imágenes y vídeo 
@@ -167,8 +167,18 @@ https://www.youtube.com/watch?v=s4fPHFBnQRI
 
 https://youtu.be/pgujhDJBkKk
 
-# Preguntas frecuentes 
+# Preguntas frecuentes
+
+P. El nodo del bot de Telegram no envía imágenes al chat de telegram, ¿Qué puede estar mal?
+
+1. Verifica que el ID del chat sea el correcto
+2. Verifica que el bot tiene permisos de administrador el chat donde está publicando
+3. En algunas ocasiones hay que enviar un mensaje desde el bot para poder usarlo, esto se da sobre todo si aparece un mensaje de bot no inicializado.
+
 # Compatibilidad
+
+Este parte del proyecto sólo es compatible con el ESP32 CAM
+
 ## Créditos
 Este proyecto se realizó gracias al apoyo de los profesores
 - Lizbeth García León [Github](https://github.com/lizgarcialeon)
