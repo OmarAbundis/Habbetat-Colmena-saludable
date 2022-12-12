@@ -82,6 +82,8 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 9. Realizado lo anterior nos cercioramos que este conectado el ESP32 al puerto USB. Abrimos el monitor serial para revisar el status de la compilación y subida del código, oprimimos el botón de reset del ESP32 CAM una vez y subimos el código a la placa usando el botón subir. Esto comenzará a programar el ESP32, tardará unos segundos.
    
 10. Al finalizar la programación del ESP32 en el monitor serial debemos ver un mensaje donde nos indicará la dirección donde podemos capturar imagen y vídeo
+
+![imagen](https://user-images.githubusercontent.com/72757419/207119456-9ed2dea4-0d48-40cb-b43e-2c70d5c51b2d.png)
     
 Del mensaje anterior nos interesa la última línea que nos informa la dirección IP donde podemos visualizar las imágenes de la cámara web del ESP32 CAM
 
