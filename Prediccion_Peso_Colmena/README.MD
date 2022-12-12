@@ -6,7 +6,7 @@ En este módulo se realizó la programación del predictor del peso de la colmen
 
 # Material necesario
 
-No requiere material físico, sólo se requiere el conjunto de datos que se usarán para predecir
+No requiere material físico, sólo se requiere el [conjunto de datos que se usarán para predecir el peso](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Prediccion_Peso_Colmena/abejas_datos.csv)
 
 # Software a utilizar
 
@@ -14,8 +14,11 @@ No requiere material físico, sólo se requiere el conjunto de datos que se usar
 * Anaconda para linux [Guía de instalación de Anaconda en linux](https://docs.anaconda.com/anaconda/install/linux/) 
 * [Python 3.8.0](https://www.python.org/downloads/release/python-380/)
 * [Flow de Nodered del proyecto Habeetat](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/tree/main/Control_Sensores_Temp_Hum_CO2_Interior/Flow_Nodered_monitoreo_interior_colmena)
+* [Cron para linux](http://dis.um.es/~lopezquesada/documentos/IES_1213/SAD/curso/UT3/ActividadesAlumnos/13/cron.html)
 
 # Material de referencia
+
+Para correr el script se recomienda crear un ambiente virtual de Python que corra en Anaconda y que ejecute en Python 3.0.0 [Guía de creación y gestion de ambientes virtuales en Ancaonda](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
 
 # Servicios
 
