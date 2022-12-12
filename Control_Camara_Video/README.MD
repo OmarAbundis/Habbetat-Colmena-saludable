@@ -47,6 +47,13 @@ El circuito a crear es el siguiente
 <img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_ESP32_CAM_19.jpg" width="700" height="400" />
 </p>
 
+La conexión entre pines del FTD y el ESP32 CAM; debe ser el siguiente:
+| ESP32 CAM |FTDI  |
+|--|--|
+|5V  |5V  |
+|GND  |GND  |
+| UOT |RX  |
+|UOR  |TX  |
 
 # Instrucciones para programar el ESP32 CAM
 
