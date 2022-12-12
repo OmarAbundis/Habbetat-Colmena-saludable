@@ -42,7 +42,14 @@ En esta parte del proyecto Habeetat se hace uso de Telegram para recibir y envia
 ~~~~
 conda create -n profeta python=3.8
 ~~~~
-5. 
+En nuestra instalación el nombre del ambiente virtual es *profeta*
+
+Se instalarán varios archivos y las dependencias, seleccionar _Y_ cuando lo lo pida la instalación
+5. Activar el ambiente virtual en la terminal tecleando
+~~~~
+conda activate profeta
+~~~~
+Esto activará nuestro ambiente y podremos usar Python 3.8 para ejecutar nuestro script
 
 # Instrucciones de uso del programa
 
