@@ -13,7 +13,8 @@ El software se instalará en la computadora donde conectaremos nuestro ESP32 CAM
 Respetar la versión del software que se indica para evitar conflictos entre las bibliotecas.  
  - IDE de Arduino 1.8.19
  - NodeRed
-  - Palettes de NodeREd a usar
+ - Palettes de NodeREd a usar
+  - Telegram 
         
 Bibliotecas de Arduino para programar el ESPCAM y convertirlo en un servidor web de imágenes (todas están incluidas en la biblioteca estándar del IDE de Arduino
 - esp_camera
