@@ -74,7 +74,8 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 7. Establecida la comunicación serial entre el ESP32 y la computadora procedemos a cargarle el programa que nos permite crear el servidor web para tomar imágenes y vídeo, para esto usaremos el programa de la carpeta [Control_Camara_Video](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/tree/main/Control_Camara_Video/Servidor_Web_ESP32_CAM_Colmena). El programa se cargará al editor de código de Arduino para posteriormente enviarlo al ESP32CAM
     
 8. Antes de cargar el código a la tarjeta debemos definir el tipo de cámara que estamos usando (en nuestro caso es CAMERA_MODEL_AI_THINKER) y colocar el nombre de la red wifi y el password de la a que nos conectaremos con el ESP32 CAM.
-** Antes de subir el código hay que cerciorrase que el GPIO del ESP32 CAM esté conectado a GND para entrar en el modo programador, después de subir el código desconectarlos
+
+** Antes de subir el código hay que cerciorrase que el GPIO del ESP32 CAM esté conectado a GND para entrar en el modo programador, después de subir el código habrá que desconectarlos**
     
 9. Realizado lo anterior nos cercioramos que este conectado el ESP32 al puerto USB. Abrimos el monitor serial para revisar el status de la compilación y subida del código, oprimimos el botón de reset del ESP32 CAM una vez y subimos el código a la placa usando el botón subir. Esto comenzará a programar el ESP32, tardará unos segundos.
    
