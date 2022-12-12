@@ -1,6 +1,8 @@
 # Predicción del peso de la colmena usando Prophet
 
-![imagen](https://user-images.githubusercontent.com/72757419/207155336-0a286c04-ab51-48a6-a5de-d009d23ea9f4.png)
+<p align="center">
+<img src="https://miro.medium.com/max/964/0*tVCene42rgUTNv9Q.png"  />
+</p>
 
 
 # Resumen
