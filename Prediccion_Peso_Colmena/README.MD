@@ -62,7 +62,7 @@ La instrucción instalará todas las bibliotecas que están enlistadas en el arc
 ~~~~
 python prediccion_profeta.py
 ~~~~
- 
+Al ejecutar el script se verá una ventana con la siguiente información
 
 # Instrucciones de uso del programa
 
