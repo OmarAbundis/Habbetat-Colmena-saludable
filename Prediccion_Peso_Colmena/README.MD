@@ -11,9 +11,9 @@ No requiere material físico, sólo se requiere el conjunto de datos que se usar
 # Software a utilizar
 
 * El software se ejecuta en una máquina virtual de virtual box en donde se corre Ubuntu 20.04 revisar la [guía de creación de máquinas virtuales](https://github.com/codigo-iot/Notas-de-clase/blob/main/IoT-SIC-G7/20220512%20-%20VirtualBox)
-
-* Anaconda para linux [Guía de instalación de Anaconda en linux](https://docs.anaconda.com/anaconda/install/linux/)  
-
+* Anaconda para linux [Guía de instalación de Anaconda en linux](https://docs.anaconda.com/anaconda/install/linux/) 
+* [Python 3.8.0](https://www.python.org/downloads/release/python-380/)
+* [Flow de Nodered del proyecto Habeetat](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/tree/main/Control_Sensores_Temp_Hum_CO2_Interior/Flow_Nodered_monitoreo_interior_colmena)
 
 # Material de referencia
 
