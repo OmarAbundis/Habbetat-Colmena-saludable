@@ -140,19 +140,17 @@ if (msg.payload.content == "imagen" || msg.payload.content == "Imagen")
 En este script hay que añadir el ID del chat de telegram hacía donde se envía la imagen y la imagen que se envirá específicando la ruta completa y el nombre de la imagen que en nuestro caso es *imagenactual.png*
 
 # Resultados
-Se muestra 
+Se muestra el dashboard de nodered con el panel de imágenes y vídeo 
 
+<p align="center">
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_node_red_dashboard_08.jpg"  />
+</p>
 
-    <div class="fila">
-        <div class="columna">
-            <img src="[https://picsum.photos/800/600](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_imagen_06.jpg)">
-        </div>
-        <div class="columna">
-            <img src="[https://picsum.photos/800/600](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_node_red_dashboard_08.jpg)">
-        </div>
-    </div>    
-    </div>
+Resultado de la petición de imagen en Telegrama
 
+<p align="center">
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_imagen_06.jpg"  />
+</p>
 
 # Evidencias
 # Preguntas frecuentes 
