@@ -80,7 +80,7 @@ El programa se realizó en Python 3.8.0 pero es comptible con versiones más nue
 
 Para el uso e implementación del algoritmo de predicción _Prophet_ revisar el siguiente articulo
 
-1. Taylor, S. J., & Letham, B. (2018). Forecasting at scale. The American Statistician, 72(1), 37-45. [Link](file:///D:/Descargas%202022/peerj-preprints-3190.pdf)
+1. Taylor, S. J., & Letham, B. (2018). Forecasting at scale. The American Statistician, 72(1), 37-45. [Link](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Prediccion_Peso_Colmena/Articulo_prediccion_prophet.pdf)
 
 # Créditos
 
