@@ -11,10 +11,12 @@ En esta sección del proyecto Habeetat se construye el modulo que se encarga del
 
 El software se instalará en la computadora donde conectaremos nuestro ESP32 CAM.
 Respetar la versión del software que se indica para evitar conflictos entre las bibliotecas.  
- - IDE de Arduino 1.8.19
- - NodeRed
- - Palettes de NodeREd a usar
-  - Telegram 
+ * IDE de Arduino 1.8.19
+ * NodeRed
+ * Nodos de Nodered a usar (instalarlos desde nodered)
+  * [Image tools](https://flows.nodered.org/node/node-red-contrib-image-tools)  
+  * [mySQL](https://flows.nodered.org/node/node-red-contrib-image-tools)
+  * [Telegrambot](https://flows.nodered.org/node/node-red-contrib-telegrambot)
         
 Bibliotecas de Arduino para programar el ESPCAM y convertirlo en un servidor web de imágenes (todas están incluidas en la biblioteca estándar del IDE de Arduino
 - esp_camera
@@ -34,6 +36,7 @@ Bibliotecas de Arduino para programar el ESPCAM y convertirlo en un servidor web
     
 # Servicios
 - [Telegram bot API](https://core.telegram.org/bots/api)
+- Crear y configurar el bot de telegram en la aplicación usando esta [Guía de configuración del bot de telegram](https://www.adslzone.net/como-se-hace/telegram/crear-bot/)
     
 
 
@@ -67,7 +70,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
     
 9. Realizado lo anterior nos cercioramos que este conectado el ESP32 al puerto USB. Abrimos el monitor serial para revisar el status de la compilación y subida del código, oprimimos el botón de reset del ESP32 CAM una vez y subimos el código a la placa usando el botón subir. Esto comenzará a programar el ESP32, tardará unos segundos.
    
-10. Al finalizar la programación del ESP32 en el monitor serial debemos ver un mensaje donde nos indicará la direcci{on donde podemos capturar imagen y vídeo
+10. Al finalizar la programación del ESP32 en el monitor serial debemos ver un mensaje donde nos indicará la dirección donde podemos capturar imagen y vídeo
     
 Del mensaje anterior nos interesa la última línea que nos informa la dirección IP donde podemos visualizar las imágenes de la cámara web del ESP32 CAM
 
