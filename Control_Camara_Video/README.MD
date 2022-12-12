@@ -76,6 +76,8 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 8. Antes de cargar el código a la tarjeta debemos definir el tipo de cámara que estamos usando (en nuestro caso es CAMERA_MODEL_AI_THINKER) y colocar el nombre de la red wifi y el password de la a que nos conectaremos con el ESP32 CAM.
 
 **Antes de subir el código hay que cerciorrase que el GPIO del ESP32 CAM esté conectado a GND para entrar en el modo programador, después de subir el código habrá que desconectarlos**
+
+![imagen](https://user-images.githubusercontent.com/72757419/207119299-ea247f1b-f0fa-4dc7-9887-429a59bd08c4.png)
     
 9. Realizado lo anterior nos cercioramos que este conectado el ESP32 al puerto USB. Abrimos el monitor serial para revisar el status de la compilación y subida del código, oprimimos el botón de reset del ESP32 CAM una vez y subimos el código a la placa usando el botón subir. Esto comenzará a programar el ESP32, tardará unos segundos.
    
