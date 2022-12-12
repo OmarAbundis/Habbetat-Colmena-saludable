@@ -64,6 +64,10 @@ python prediccion_profeta.py
 ~~~~
 Al ejecutar el script se verá una ventana con la siguiente información
 
+<p align="center">
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_prediccion_19.jpg"  />
+</p>
+
 # Instrucciones de uso del programa
 
 # Resultados
