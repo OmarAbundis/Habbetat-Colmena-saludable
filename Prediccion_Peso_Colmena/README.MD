@@ -55,8 +55,13 @@ Esto activará nuestro ambiente y podremos usar Python 3.8 para ejecutar nuestro
 ~~~~
 pip install requeriments.txt
 ~~~~
-La instrucción instalará todas las bibliotecas que están enlistadas en el archivos *requeriments.txt*, dentro de ellas está incluida *prophet 1.1.1* que es la que usamos en este trabajo.
-7. 
+La instrucción instalará todas las bibliotecas que están enlistadas en el archivos *requeriments.txt*, dentro de ellas está incluida *prophet 1.1.1* que es la que usamos en este trabajo. Al finalizar esta instlación ya podemos hacer predicción del comportamiento del peso de la colmena. 
+
+7. Ejecutar el código *prediccion_profeta.py* para realizar la predicción con la siguiente instrucción
+~~~~
+python prediccion_profeta.py
+~~~~
+ 
 
 # Instrucciones de uso del programa
 
