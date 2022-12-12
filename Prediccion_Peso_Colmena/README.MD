@@ -69,12 +69,12 @@ Al ejecutar el script se verá una ventana con la siguiente información
 </p>
 
 # Instrucciones de uso del programa
-Para ejecutar el código *prediccion_profeta.py* hay que tomar en cuenta las siguientes consideraciones:
+- Para ejecutar el código *prediccion_profeta.py* hay que tomar en cuenta las siguientes consideraciones:
 * El archivo de datos a usar para la predicción debe tener extensión *.csv*
 * El archivo debe contener 2 columnas, la primera debe tener el encabezado *ds* y la segunda *y*. La primera es la columna del tiempo (datestamp) y la segunda el peso.
 * El conjunto de datos puede ser de *n* columnas (millones de datos).
 
-En el código la lìnea
+- En el código la lìnea
 ~~~~
 df = pd.read_csv('abejas_datos.csv')
 ~~~~
