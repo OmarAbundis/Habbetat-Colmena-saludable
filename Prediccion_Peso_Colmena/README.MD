@@ -18,9 +18,13 @@ No requiere material físico, sólo se requiere el [conjunto de datos que se usa
 
 # Material de referencia
 
-Para correr el script se recomienda crear un ambiente virtual de Python que corra en Anaconda y que ejecute en Python 3.0.0 [Guía de creación y gestion de ambientes virtuales en Ancaonda](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
+Para correr el script se recomienda crear un ambiente virtual de Python que corra en Anaconda y que ejecute en Python 3.8.0 [Guía de creación y gestion de ambientes virtuales en Ancaonda](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
 
 # Servicios
+En esta parte del proyecto Habeetat se hace uso de Telegram para recibir y enviar mensajes de la predicción del peso de la colmena
+
+* [Telegram bot API](https://core.telegram.org/bots/api)
+* Crear y configurar el bot de telegram en la aplicación usando esta [Guía de configuración del bot de telegram](https://www.adslzone.net/como-se-hace/telegram/crear-bot/)
 
 # Instrucciones de instalación
 
