@@ -50,6 +50,12 @@ Se instalarán varios archivos y las dependencias, seleccionar _Y_ cuando lo lo 
 conda activate profeta
 ~~~~
 Esto activará nuestro ambiente y podremos usar Python 3.8 para ejecutar nuestro script
+6. Instalar *Prophet* y sus dependencias, para esto usaremos el archivo *requeriments.txt* del paso 1. Usar la siguiente instrucción
+~~~~
+pip install requeriments.txt
+~~~~
+La instrucción instalará todas las bibliotecas que están enlistadas en el archivos *requeriments.txt*, dentro de ellas está incluida *prophet 1.1.1* que es la que usamos en este trabajo.
+7. 
 
 # Instrucciones de uso del programa
 
