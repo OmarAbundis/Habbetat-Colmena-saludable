@@ -37,8 +37,8 @@ En esta parte del proyecto Habeetat se hace uso de Telegram para recibir y envia
 *   abejas_datos.csv
 *   prediccion_profeta.py
 *   requirements.txt
-3. Instalar Anaconda en la máquina virtual de Ubuntu 20.04
-4. Abrir una terminal de linux en la carpeta donde guardamos los archivos del paso 1 y crear un ambiente virtual con Python 3.8 con la siguiente instrucción
+2. Instalar Anaconda en la máquina virtual de Ubuntu 20.04
+3. Abrir una terminal de linux en la carpeta donde guardamos los archivos del paso 1 y crear un ambiente virtual con Python 3.8 con la siguiente instrucción
 ~~~~
 conda create -n profeta python=3.8
 ~~~~
@@ -46,19 +46,19 @@ En nuestra instalación el nombre del ambiente virtual es *profeta*
 
 Se instalarán varios archivos y las dependencias, seleccionar _Y_ cuando lo lo pida la instalación.
 
-5. Activar el ambiente virtual en la terminal tecleando
+4. Activar el ambiente virtual en la terminal tecleando
 ~~~~
 conda activate profeta
 ~~~~
 Esto activará nuestro ambiente y podremos usar Python 3.8 para ejecutar nuestro script.
 
-6. Instalar *Prophet* y sus dependencias, para esto usaremos el archivo *requeriments.txt* del paso 1. Usar la siguiente instrucción
+5. Instalar *Prophet* y sus dependencias, para esto usaremos el archivo *requeriments.txt* del paso 1. Usar la siguiente instrucción
 ~~~~
 pip install requeriments.txt
 ~~~~
 La instrucción instalará todas las bibliotecas que están enlistadas en el archivos *requeriments.txt*, dentro de ellas está incluida *prophet 1.1.1* que es la que usamos en este trabajo. Al finalizar esta instlación ya podemos hacer predicción del comportamiento del peso de la colmena. 
 
-7. Ejecutar el código *prediccion_profeta.py* para realizar la predicción con la siguiente instrucción
+6. Ejecutar el código *prediccion_profeta.py* para realizar la predicción con la siguiente instrucción
 ~~~~
 python prediccion_profeta.py
 ~~~~
