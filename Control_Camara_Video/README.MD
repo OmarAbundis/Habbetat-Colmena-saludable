@@ -142,7 +142,7 @@ En este script hay que añadir el ID del chat de telegram hacía donde se envía
 # Resultados
 Se muestra 
 
-<body>
+
     <div class="fila">
         <div class="columna">
             <img src="[https://picsum.photos/800/600](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_imagen_06.jpg)">
@@ -152,7 +152,7 @@ Se muestra
         </div>
     </div>    
     </div>
-</body>
+
 
 # Evidencias
 # Preguntas frecuentes 
