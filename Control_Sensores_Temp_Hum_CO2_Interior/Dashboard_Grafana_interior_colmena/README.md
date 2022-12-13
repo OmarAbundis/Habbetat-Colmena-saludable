@@ -74,6 +74,29 @@ El panel final de Grafana para los sensores internos tiene el siguiente aspecto
 <img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_panel_grafana_resultados_18.jpg" width="1000" height="600" />
 </p>
 
+## Evidencias
+
+Videos de YouTube
+
+1. Funcionamiento de los sensores con MQTT, Nodered y la base de datos MySQL.
+
+https://www.youtube.com/watch?v=seBQrWVgVqA
+
+2. Funcionamiento del bot de Telegram
+
+https://www.youtube.com/watch?v=s4fPHFBnQRI 
+
+3. Panel de Grafana y Dashboard de Nodered
+
+https://youtu.be/pgujhDJBkKk
+
+## Créditos
+
+Este proyecto se realizó gracias al apoyo de los profesores
 
 
+- Lizbeth García León [Github](https://github.com/lizgarcialeon)
+- Hugo Escalpelo [Github](https://github.com/hugoescalpelo/detector-sintomas-covid)
+- Omar Abundis Noyola [Github](https://github.com/OmarAbundis)
+- Raymundo Soto Soto [Github](https://github.com/raymundosoto)
 
