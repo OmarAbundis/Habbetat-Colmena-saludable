@@ -2,4 +2,20 @@
 
 ## Resumen
 
-En este repositorio se muestra el procedimiento para la creación del dashboard de Grafana en los que se muestran los datos recopilados con los sensores MQ135 y DHT11 para monitorear la temperatura, humedad y concentración de CO2 al interior de la colmena. El dashboard de grafana usa como fuente de datos la base de datos creada en el respositorio [Base_de_datos_My_SQL_interior_colmena](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/tree/main/Control_Sensores_Temp_Hum_CO2_Interior/Base_de_datos_My_SQL_interior_colmena)  
+En este repositorio se muestra el procedimiento para la creación del dashboard de Grafana en los que se muestran los datos recopilados con los sensores MQ135 y DHT11 para monitorear la temperatura, humedad y concentración de CO2 al interior de la colmena. El dashboard de grafana usa como fuente de datos la base de datos creada en el repositorio [Base_de_datos_My_SQL_interior_colmena](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/tree/main/Control_Sensores_Temp_Hum_CO2_Interior/Base_de_datos_My_SQL_interior_colmena). El panel final consta de 3 gráficas de series de tiempo mostrando la temperatura, humedad y concentración de CO2 históricos y 3 indicadores de aguja que muestran los datos actuales de la variables medidas. Estas gráficas proporcionan un resumen gráfico muy vistoso de lo que ocurre al interior de la colmena.  
+
+# Software necesario
+
+* Máquina virtual con Ubuntu 22.04
+* Grafana
+
+# Instrucciones de instalación
+
+1. Abrir una terminal de Ubunto y teclear las siguientes instrucciones
+
++ `sudo apt-get install -y apt-transport-https` 
++ `sudo apt-get install -y software-properties-common wget`
++ `sudo wget -q -O /usr/share/keyrings/grafana.key https://packages.grafana.com/gpg.key`
++ `echo "deb [signed-by=/usr/share/keyrings/grafana.key] https://packages.grafana.com/enterprise/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list`
++ `sudo apt-get update`
++ `sudo apt-get install grafana-enterprise`
