@@ -26,8 +26,8 @@ En este repositorio se muestra el procedimiento para la creación del dashboard 
 
 3. Para abrir Grafana abrimos un navegador y nos vamos a la dirección `http://localhost:3000/` donde nos logeamos con el usuario y contraseña por deafault, se recomienda actualizar esos datos.
 
-`User: admin`
-`Password: admin`
+- `User: admin`
+- `Password: admin`
 
 Con lo anterior podemos crear ya un panel de Grafana
 
