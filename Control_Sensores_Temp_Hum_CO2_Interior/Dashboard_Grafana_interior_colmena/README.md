@@ -11,7 +11,7 @@ En este repositorio se muestra el procedimiento para la creación del dashboard 
 
 # Instrucciones de instalación
 
-1. Abrir una terminal de Ubunto y teclear las siguientes instrucciones
+1. Abrir una terminal de Ubuntu y teclear las siguientes instrucciones
 
 + `sudo apt-get install -y apt-transport-https` 
 + `sudo apt-get install -y software-properties-common wget`
@@ -19,3 +19,24 @@ En este repositorio se muestra el procedimiento para la creación del dashboard 
 + `echo "deb [signed-by=/usr/share/keyrings/grafana.key] https://packages.grafana.com/enterprise/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list`
 + `sudo apt-get update`
 + `sudo apt-get install grafana-enterprise`
+
+2. Una vez terminada la instalación hay que arrancar Grafana y poder abrirlo desde el navegador, este comando se ejecuta cada vez que queramos abrir Grafana
+
+* `sudo /bin/systemctl enable grafana-server`
+
+3. Para abrir Grafana abrimos un navegador y nos vamos a la dirección `http://localhost:3000/` donde nos logeamos con el usuario y contraseña por deafault, se recomienda actualizar esos datos.
+
+`User: admin`
+`Password: admin`
+
+Con lo anterior podemos crear ya un panel de Grafana
+
+# Instrucciones de uso
+
+
+
+# Resultados
+
+
+
+
