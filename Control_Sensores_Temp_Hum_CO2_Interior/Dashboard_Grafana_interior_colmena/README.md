@@ -71,7 +71,7 @@ Con lo anterior podemos crear ya un panel de Grafana
 
 El panel final de Grafana para los sensores internos tiene el siguiente aspecto
 <p align="center">
-<img src="[https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_cron_archivo_11.jpg](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_panel_grafana_resultados_18.jpg)" width="1000" height="400" />
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_panel_grafana_resultados_18.jpg" width="1000" height="400" />
 </p>
 
 
