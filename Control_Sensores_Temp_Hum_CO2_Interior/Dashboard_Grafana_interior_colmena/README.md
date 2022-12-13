@@ -90,6 +90,10 @@ https://www.youtube.com/watch?v=s4fPHFBnQRI
 
 https://youtu.be/pgujhDJBkKk
 
+## Compatibilidad
+
+Grafana es compatible con la mayoría de los sistemas operativos y se pueden visualizar en todos los navegadores. 
+
 ## Créditos
 
 Este proyecto se realizó gracias al apoyo de los profesores
