@@ -51,6 +51,7 @@ return msg;
 Este nodo estará enviando los datos a la tabla Datos_Sensores para guardarlos en la base de datos. 
 
 * El nodo mysql ´sensor_MQ_DHT´ se configura para conectarse la base creada en el punto 3; la database debe ser _sensor_MQ_DHT_, el Host localhost, en el puerto 3306 y el usuario y contraseña del punto 6.
+
 <p align="center">
 <img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_node_red_base_de_datos_15.jpg" />
 </p>
