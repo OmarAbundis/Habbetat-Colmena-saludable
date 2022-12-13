@@ -108,6 +108,8 @@ El comando puede ser prácticamente cualquiera que ejecute habitualmente en la l
 ~~~~
 minute hour day_of_month month day_of_week comandos_a_correr
 ~~~~
+Si queremos saber si Crontab se está ejecutando en nuestro shell de linux tecleamos la instrucción `systemctl status cron` si el servicio está activo nos lo mostrará con la leyenda `active`. Si no está activo podemos ponerlo a trabajar con la instrucción `sudo service cron start`. Si queremos saber cuándo se ejecutó por última vez podemos usar `cron ps aux | grep cron`.
+
 Para programar la ejecuciòn de nuestro script *prediccion_profeta.py* se realizan los siguientes pasos.
 
 1. Abrir una terminal de Linux
@@ -166,7 +168,7 @@ en msg.payload.chatId colocamos el chatId de los chats de telegram donde visuali
 
 
 # Resultados
-Las siguiente gráficas son el producto de la predicción: la primera gráfica representa el comportamiento histórico de los datos del peso de la colmena (puntos negros), la línea de tendencia predecida por el modelo *prophet*(línea azul) y la incertidumbre de la predicción (franja azul clara)
+Las siguiente gráficas son el producto de la predicción: la primera gráfica representa el comportamiento histórico de los datos del peso de la colmena (puntos negros), la línea de tendencia predecida por el modelo *prophet*(línea azul) y la incertidumbre de la predicción (franja azul clara). Se muestra también una muestra del envío de la predicción al chat de Telegram
 |  |  |
 |--|--|
 | ![Imagen 1](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Prediccion_Peso_Colmena/prediccion_1.png?raw=true) | ![Imagen 2](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Prediccion_Peso_Colmena/analisis_tendencia.png?raw=true) |
@@ -189,7 +191,8 @@ https://www.youtube.com/watch?v=s4fPHFBnQRI
 https://youtu.be/pgujhDJBkKk
 
 # Preguntas frecuentes
-
+P. ¿Se puede usar el programa sin necesidad de instalar el ambiente virtual de Anaconda?
+R. Si, se puede pero es una buena práctica crear los ambientes virtuales para ejecutar proyectos de este tipo para encapuslar las dependendicias y no intereactuen con algunas otras instalciones.
 
 
 # Compatiblidad
