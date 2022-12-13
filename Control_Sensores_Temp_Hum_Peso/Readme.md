@@ -48,7 +48,7 @@ Previamente a la realización de está práctica, ha sido necesario el estudio d
 - Introducción a NodeRed.
 - Instalación de Mosquitto MQTT.
 
-En los siguientes enlaces se decriben de manera partícular los trabajos que dan soporte a está etapa del proyecto.
+En los siguientes enlaces se describen de manera particular los trabajos que dan soporte a está etapa del proyecto.
 
 - [Sensado de temperatura y humedad con DHT11](https://github.com/OmarAbundis/Sensado-de-temperatura-y-humedad-con-el-DHT11)
 - [Sensado de peso con el HX711](https://github.com/OmarAbundis/Sensado-de-peso-con-el-HX711-y-el-ESP32CAM)
