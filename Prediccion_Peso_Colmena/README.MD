@@ -123,6 +123,9 @@ Esto abrirá el editor de código predeterminado de Linux
 Despues de guardar los cambios y cerrar el archivo saldrá el mensaje `crontab: installing new crontab` que indica que se realizó el cambio satisfactoriamemnte.
 
 Este comando realizará de forma automática la predicción al activar el ambiente virtual profeta y después ejecutará el script predicción_profeta.py todos los lunes a la media noche.
+<p align="center">
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_crontab__b_020.jpg" />
+</p>
 
 # Resultados
 
