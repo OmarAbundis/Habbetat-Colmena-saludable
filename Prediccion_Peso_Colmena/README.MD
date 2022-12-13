@@ -128,17 +128,67 @@ Este comando realizará de forma automática la predicción al activar el ambien
 </p>
 
 # Petición de predicción en el bot de Telegram 
+Esta predicción trabaja en conjunto con el [flow de node red del proyecto Habeetat](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/tree/main/Control_Sensores_Temp_Hum_CO2_Interior/Flow_Nodered_monitoreo_interior_colmena) que permite obtener las gráficas con los resultados de la predicción. Para esto se agregaron 3 nodos: receiver, function y sender. El nodo sender y receiver se configuran con el nombre del bot creado y su token, el nodo receiver recibe la palabra *prediccion* y envía las gráficas al chat elegido usando el nodo función *Envío predicción Telegram 2*
+
+<p align="center">
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_chat_sender_telegram_02.jpg" />
+</p>
+El código para el nodo función *Envío predicción Telegram 2* que enviará un grupo de 3 imágenes con el resultado de la predicción es el siguiente.
+~~~~
+if (msg.payload.content == "prediccion" || msg.payload.content == "Prediccion")
+{   
+    msg.payload = {};
+    msg.payload.chatId = -xxxxxxxxx, -xxxxxxxxx;
+    msg.payload.type = "mediaGroup";
+    msg.payload.content = [
+    {
+        type : "photo",
+        media : "/home/raymundo/Documents/IOT/Archivos_proyecto/profeta/prediccion_1.png",
+        caption : "Tendencia y predicción de los datos de las últimas horas"
+    },
+    {
+        type : "photo",
+        media : "/home/raymundo/Documents/IOT/Archivos_proyecto/profeta/analisis_tendencia.png",
+        caption : "Análisis de temporalidad de los datos"
+    },
+    {
+        type : "photo",
+        media : "/home/raymundo/Documents/IOT/Archivos_proyecto/profeta/zonas_cambios.png",
+        caption : "Análisis de los cambios más bruscos"
+    }
+];
+return msg;   
+}
+~~~~
+en msg.payload.chatId colocamos el chatId de los chats de telegram donde visualizaremos las gráficas de la predicción 
+
 
 # Resultados
-Las siguiente gráficas son el producto de la predicción
-
+Las siguiente gráficas son el producto de la predicción: la primera gráfica representa el comportamiento histórico de los datos del peso de la colmena (puntos negros), la línea de tendencia predecida por el modelo *prophet*(línea azul) y la incertidumbre de la predicción (franja azul clara)
+|  |  |
 |--|--|
 | ![Imagen 1](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Prediccion_Peso_Colmena/prediccion_1.png?raw=true) | ![Imagen 2](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Prediccion_Peso_Colmena/analisis_tendencia.png?raw=true) |
 | ![Chat telegram](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Prediccion_Peso_Colmena/zonas_cambios.png?raw=true) |![enter image description here](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_prediccion_07.jpg?raw=true)
 
 # Evidencias
 
+Videos de YouTube
+
+1. Funcionamiento de los sensores con MQTT, Nodered y la base de datos MySQL.
+
+https://www.youtube.com/watch?v=seBQrWVgVqA
+
+2. Funcionamiento del bot de Telegram
+
+https://www.youtube.com/watch?v=s4fPHFBnQRI 
+
+3. Panel de Grafana y Dashboard de Nodered
+
+https://youtu.be/pgujhDJBkKk
+
 # Preguntas frecuentes
+
+
 
 # Compatiblidad
 
