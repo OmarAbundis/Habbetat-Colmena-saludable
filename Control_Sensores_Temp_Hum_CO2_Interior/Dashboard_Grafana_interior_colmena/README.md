@@ -33,6 +33,16 @@ Con lo anterior podemos crear ya un panel de Grafana
 
 # Instrucciones de uso
 
+1. Antes de comenzar a crear un panel de Grafana debemos añadir una fuente de datos (Add your first data source o add data source), para este panel elegimos MySQL en la lista de opciones de la que disponemos. 
+2. Posteriormente le coolocamos un nombre a nuestra fuente.
+3. El host es `localhost:3306`
+4. El nombre de la base de datos debe ser el nombre con el que creamos la base: en este caso `sensor_MQ_DHT`
+5. El usuario y contraseña con la que ingresamos a MySQL
+6. Todas las demás opciones las dejamos por default
+7. Oprimimos `Save & test`
+8. Si todo está bien aparecerá un mensaje indicando que se agregó la base de datos
+9. 
+
 
 
 # Resultados
