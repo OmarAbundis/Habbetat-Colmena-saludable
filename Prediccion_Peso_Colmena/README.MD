@@ -134,6 +134,7 @@ Esta predicción trabaja en conjunto con el [flow de node red del proyecto Habee
 <img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_chat_sender_telegram_02.jpg" />
 </p>
 El código para el nodo función *Envío predicción Telegram 2* que enviará un grupo de 3 imágenes con el resultado de la predicción es el siguiente.
+
 ~~~~
 if (msg.payload.content == "prediccion" || msg.payload.content == "Prediccion")
 {   
@@ -160,6 +161,7 @@ if (msg.payload.content == "prediccion" || msg.payload.content == "Prediccion")
 return msg;   
 }
 ~~~~
+
 en msg.payload.chatId colocamos el chatId de los chats de telegram donde visualizaremos las gráficas de la predicción 
 
 
