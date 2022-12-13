@@ -74,17 +74,23 @@ Al ejecutar el script se verá una ventana con la siguiente información
 * El archivo debe contener 2 columnas, la primera debe tener el encabezado *ds* y la segunda *y*. La primera es la columna del tiempo (datestamp) y la segunda el peso.
 * El conjunto de datos puede ser de *n* columnas (millones de datos).
 
-2. En el código la lìnea
+2. La siguiente lìnea del código
 ~~~~
 df = pd.read_csv('abejas_datos.csv')
 ~~~~
 Lee el conjunto de datos *abejas_datos.csv* que está en la misma carpeta que el script, sino están en misma ubicación habrá que escribir la ruta completa.  
 
+3. La línea de código
+~~~~
+df = df[-5000:]
+~~~~
+importa al espacio de trabajo los últimos 5000 datos del dataframe, con estos se realiza la predicción. Se puede modificar para considerar mayor cantidad de datos.
 
-
-
-
-
+4. La elección del tiempo hacía adelante en el que queremos observar la predicción se realiza en la línea
+~~~~
+future = m.make_future_dataframe(periods=1)
+~~~~
+Donde periods es el parámetro que nos permite elegir cuántos días hacía adelante, si queremos más días de predicción considerar periods>1, con la salvedad que a mayor cantidad de días el error de la predicción aumenta.
 # Resultados
 
 # Evidencias
