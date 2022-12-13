@@ -41,7 +41,20 @@ Con lo anterior podemos crear ya un panel de Grafana
 6. Todas las demás opciones las dejamos por default
 7. Oprimimos `Save & test`
 8. Si todo está bien aparecerá un mensaje indicando que se agregó la base de datos
-9. 
+9. Agregamos un nuevo panel oprimiendo el botón superior derecho que contiene un símbolo de + y una gráfica de barras (`Add panel`)
+10. Configuramos el panel
+  * Eligiendo un tipo de gráfica (Time series, Bar chart, stat, gauge, table, heatmap, etc)
+  * Elegimos la fuente de datos (data source)
+  * Seleccionamos la columnas de nuestra base de datos a graficar
+    * Seleccionar tabla
+    * Seleccionar columna de tiempo  
+    * SELECT column value (datos de temperatura, VoltajeAnalógico, Humedad)
+    * En estas opciones se selecionan todos los datos a mostrar en nuestra gráfica
+    * Posteriormente se la da formato al gráfico para seleccionar colores, tipo de líneas, etiquetas a mostrar, etc
+    * Oprimimos Apply
+    * La gráfica queda guardada y lista para ser mostrada
+11. Se repiten los pasos anteriores para agregar nuevas gráficas a nuestro dashboard
+12.   
 
 
 
