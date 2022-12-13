@@ -193,12 +193,15 @@ https://youtu.be/pgujhDJBkKk
 # Preguntas frecuentes
 P. ¿Se puede usar el programa sin necesidad de instalar el ambiente virtual de Anaconda?.
 
-R. Si, se puede pero es una buena práctica crear los ambientes virtuales para ejecutar proyectos de este tipo para encapuslar las dependendicias y no intereactuen con algunas otras instalciones.
+R. Si, se puede pero es una buena práctica crear los ambientes virtuales para ejecutar proyectos de este tipo para encapsular las dependencias y que no intereactuen con algunas otras instalaciones.
 
+P. ¿Hay algunos otros modelos para predecir el comportamiento del peso de la colmena?
+
+R. Sí, como mpor ejemplo las redes neuronales del tipo LSTM pero para este proyecto se eligió el modelo Prophet ya que es aconsejable para el tipo de datos que se obtienen con los sensores.
 
 # Compatiblidad
 
-El programa se realizó en Python 3.8.0 pero es comptible con versiones más nuevas de Pythonexith() 
+El programa se realizó en Python 3.8.0 pero es compatible con versiones más nuevas de Pythonexith() 
 
 # BIbliografía
 
