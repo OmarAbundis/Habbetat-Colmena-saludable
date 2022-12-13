@@ -14,15 +14,15 @@ La base de datos se creo en una máquina virtual de Ubuntu 20.04 usando MySQL. L
 * `sudo mysql`
     
 3. Crear una nueva base de datos para guardar los datos de los sensores
-    `CREATE DATABASE sensor_MQ_DHT;`
+* `CREATE DATABASE sensor_MQ_DHT;`
     
 4. Seleccionar base de datos
-    `USE sennor_MQ_DHT;`
+* `use sensor_MQ_DHT;`
     
 5. Crear una tabla llamada registro que contenga todos los campos necesarios
-    `CREATE TABLE Datos_Sensores (n_registro INT(7) UNSIGNED AUTO_INCREMENT PRIMARY KEY, fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP, id_sensor CHAR (248) NOT NULL, ValorAnalogico FLOAT(7,3) NOT NULL, VoltajeAnalogico FLOAT(7,3) NOT NULL, Temperatura FLOAT(7,3) NOT NULL, Humedad FLOAT(7,3) NOT NULL);`
+* `CREATE TABLE Datos_Sensores (n_registro INT(7) UNSIGNED AUTO_INCREMENT PRIMARY KEY, fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP, id_sensor CHAR (248) NOT NULL, ValorAnalogico FLOAT(7,3) NOT NULL, VoltajeAnalogico FLOAT(7,3) NOT NULL, Temperatura FLOAT(7,3) NOT NULL, Humedad FLOAT(7,3) NOT NULL);`
     
-    Esto creará la base de datos que guardará nuestros datos que son
+Esto creará la base de datos que guardará nuestros datos que son
     * id_sensor
     * ValorAnalogico
     * VoltajeAnalogico
