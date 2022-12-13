@@ -94,7 +94,13 @@ future = m.make_future_dataframe(periods=1)
 ~~~~
 Donde periods es el parámetro que nos permite elegir cuántos días hacía adelante, si queremos más días de predicción considerar periods>1, con la salvedad que a mayor cantidad de días el error de la predicción aumenta.
 
-5. Se recomienda elegir una mayor cantidad de datos para tener un comportamiento más exacto y que el error de predicción disminuya. 
+5. Se recomienda elegir una mayor cantidad de datos para tener un comportamiento más exacto y que el error de predicción disminuya
+6. Con la instrucción 
+~~~~
+with open('serialized_model.json', 'w') as fout:  
+    fout.write(model_to_json(m))  
+~~~~
+Se guarda el archivo json con el modelo cargado, este archivo se puede utilizar para realizar predicciones sin necesidad de volver a realizar el ajuste o entrenamiento del modelo, el archivo de salida es [serialized_model.json](serialized_model.json)
 
 # Automatización de la predicción con Cron
 
