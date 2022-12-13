@@ -23,8 +23,8 @@ La base de datos se creo en una máquina virtual de Ubuntu 20.04 usando MySQL. L
 * `CREATE TABLE Datos_Sensores (n_registro INT(7) UNSIGNED AUTO_INCREMENT PRIMARY KEY, fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP, id_sensor CHAR (248) NOT NULL, ValorAnalogico FLOAT(7,3) NOT NULL, VoltajeAnalogico FLOAT(7,3) NOT NULL, Temperatura FLOAT(7,3) NOT NULL, Humedad FLOAT(7,3) NOT NULL);`
     
 Esto creará la base de datos que guardará nuestros datos que son
-    * id_sensor
-    * ValorAnalogico
-    * VoltajeAnalogico
-    * Tempertura
-    * Humedad
+* id_sensor
+* ValorAnalogico
+* VoltajeAnalogico
+* Tempertura
+* Humedad
