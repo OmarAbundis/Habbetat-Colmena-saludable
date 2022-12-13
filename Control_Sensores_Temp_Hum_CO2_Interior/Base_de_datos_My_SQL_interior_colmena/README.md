@@ -7,11 +7,11 @@ La base de datos se creo en una máquina virtual de Ubuntu 20.04 usando MySQL. L
 # Instrucciones para creación de base de datos
 
 1. Abrir una terminal e instalar mysql server con los comandos
-    `sudo apt update`
-    `sudo apt install mysql-server`
+* `sudo apt update`
+* `sudo apt install mysql-server`
     
 2. Ejecutar mysql
-    `sudo mysql`
+* `sudo mysql`
     
 3. Crear una nueva base de datos para guardar los datos de los sensores
     `CREATE DATABASE sensor_MQ_DHT;`
