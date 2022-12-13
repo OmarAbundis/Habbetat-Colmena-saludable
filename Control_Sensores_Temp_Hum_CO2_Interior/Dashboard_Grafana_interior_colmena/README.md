@@ -49,12 +49,23 @@ Con lo anterior podemos crear ya un panel de Grafana
     * Seleccionar tabla
     * Seleccionar columna de tiempo  
     * SELECT column value (datos de temperatura, VoltajeAnalógico, Humedad)
-    * En estas opciones se selecionan todos los datos a mostrar en nuestra gráfica
+    * En estas opciones se seleccionan todos los datos a mostrar en nuestra gráfica
+
+<p align="center">
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/Raymundo_dashborad_query_graf_24.jpg" />
+</p>
+
     * Posteriormente se la da formato al gráfico para seleccionar colores, tipo de líneas, etiquetas a mostrar, etc
     * Oprimimos Apply
+    
+ <p align="center">
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_grafana_25.jpg" />
+</p>
+    
     * La gráfica queda guardada y lista para ser mostrada
 11. Se repiten los pasos anteriores para agregar nuevas gráficas a nuestro dashboard
-12.   
+12. Se guardan los cambios del panel 
+13. Si se desea se puede exportar el panel en formato HTML para embeberlo en páginas web 
 
 
 
