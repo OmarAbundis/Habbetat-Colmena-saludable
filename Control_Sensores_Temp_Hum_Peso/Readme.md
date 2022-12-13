@@ -40,7 +40,7 @@ En la experimentación de está práctica se debe de contar con el siguiente sof
 
 ## Material de referencia
 
-Previamente a la realización de está práctica, ha sido necesario el estudio de distitos temas, que se encuentran en la plataforma [edu.codigoiot.com](https://www.codigoiot.com/), en donde se explican conceptos y configuraciones necesarias, tales como:
+Previamente a la realización de está práctica, ha sido necesario el estudio de distintos temas, que se encuentran en la plataforma [edu.codigoiot.com](https://www.codigoiot.com/), en donde se explican conceptos y configuraciones necesarias, tales como:
 
 - Instalación de virtual Box y Ubuntu 20.04.
 - Configuración de Arduino IDE para ESP32CAM.
