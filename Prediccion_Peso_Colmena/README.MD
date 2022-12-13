@@ -191,7 +191,8 @@ https://www.youtube.com/watch?v=s4fPHFBnQRI
 https://youtu.be/pgujhDJBkKk
 
 # Preguntas frecuentes
-P. ¿Se puede usar el programa sin necesidad de instalar el ambiente virtual de Anaconda?
+P. ¿Se puede usar el programa sin necesidad de instalar el ambiente virtual de Anaconda?.
+
 R. Si, se puede pero es una buena práctica crear los ambientes virtuales para ejecutar proyectos de este tipo para encapuslar las dependendicias y no intereactuen con algunas otras instalciones.
 
 
