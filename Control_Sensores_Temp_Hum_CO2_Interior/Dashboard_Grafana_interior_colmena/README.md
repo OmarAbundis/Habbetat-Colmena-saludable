@@ -49,17 +49,58 @@ Con lo anterior podemos crear ya un panel de Grafana
     * Seleccionar tabla
     * Seleccionar columna de tiempo  
     * SELECT column value (datos de temperatura, VoltajeAnalógico, Humedad)
-    * En estas opciones se selecionan todos los datos a mostrar en nuestra gráfica
+    * En estas opciones se seleccionan todos los datos a mostrar en nuestra gráfica
+
+<p align="center">
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/Raymundo_dashborad_query_graf_24.jpg" />
+</p>
+
     * Posteriormente se la da formato al gráfico para seleccionar colores, tipo de líneas, etiquetas a mostrar, etc
     * Oprimimos Apply
+    
+ <p align="center">
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_grafana_25.jpg" />
+</p>
+    
     * La gráfica queda guardada y lista para ser mostrada
 11. Se repiten los pasos anteriores para agregar nuevas gráficas a nuestro dashboard
-12.   
-
-
+12. Se guardan los cambios del panel 
+13. Si se desea se puede exportar el panel en formato HTML para embeberlo en páginas web 
 
 # Resultados
 
+El panel final de Grafana para los sensores internos tiene el siguiente aspecto
+<p align="center">
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_panel_grafana_resultados_18.jpg" width="1000" height="600" />
+</p>
+
+## Evidencias
+
+Videos de YouTube
+
+1. Funcionamiento de los sensores con MQTT, Nodered y la base de datos MySQL.
+
+https://www.youtube.com/watch?v=seBQrWVgVqA
+
+2. Funcionamiento del bot de Telegram
+
+https://www.youtube.com/watch?v=s4fPHFBnQRI 
+
+3. Panel de Grafana y Dashboard de Nodered
+
+https://youtu.be/pgujhDJBkKk
+
+## Compatibilidad
+
+Grafana es compatible con la mayoría de los sistemas operativos y se pueden visualizar en todos los navegadores. 
+
+## Créditos
+
+Este proyecto se realizó gracias al apoyo de los profesores
 
 
+- Lizbeth García León [Github](https://github.com/lizgarcialeon)
+- Hugo Escalpelo [Github](https://github.com/hugoescalpelo/detector-sintomas-covid)
+- Omar Abundis Noyola [Github](https://github.com/OmarAbundis)
+- Raymundo Soto Soto [Github](https://github.com/raymundosoto)
 
