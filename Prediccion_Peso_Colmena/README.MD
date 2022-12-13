@@ -62,9 +62,67 @@ La instrucción instalará todas las bibliotecas que están enlistadas en el arc
 ~~~~
 python prediccion_profeta.py
 ~~~~
- 
+Al ejecutar el script se verá una ventana con la siguiente información
+
+<p align="center">
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_prediccion_19.jpg"  />
+</p>
 
 # Instrucciones de uso del programa
+
+En nuestro proyecto todavía no tenemos datos reales que hayan sido medidos *in situ* para probar el modelo de predicción por lo que usamos un conjunto de datos reportados en la plataforma [kagle.com](https://www.kaggle.com/) de un proyecto denominado [beehive metrics](https://www.kaggle.com/datasets/se18m502/bee-hive-metrics) que contiene varios datasets reales con el peso de la colmena. De esta forma fue posible conseguir y usar los datos. 
+1. Para ejecutar el código *prediccion_profeta.py* hay que tomar en cuenta las siguientes consideraciones:
+* El archivo de datos a usar para la predicción debe tener extensión *.csv*
+* El archivo debe contener 2 columnas, la primera debe tener el encabezado *ds* y la segunda *y*. La primera es la columna del tiempo (datestamp) y la segunda el peso.
+* El conjunto de datos puede ser de *n* columnas (millones de datos).
+
+2. La siguiente lìnea del código
+~~~~
+df = pd.read_csv('abejas_datos.csv')
+~~~~
+Lee el conjunto de datos *abejas_datos.csv* que está en la misma carpeta que el script, sino están en misma ubicación habrá que escribir la ruta completa.  
+
+3. La línea de código
+~~~~
+df = df[-5000:]
+~~~~
+importa al espacio de trabajo los últimos 5000 datos del dataframe, con estos se realiza la predicción. Se puede modificar para considerar mayor cantidad de datos.
+
+4. La elección del tiempo hacía adelante en el que queremos observar la predicción se realiza en la línea
+~~~~
+future = m.make_future_dataframe(periods=1)
+~~~~
+Donde periods es el parámetro que nos permite elegir cuántos días hacía adelante, si queremos más días de predicción considerar periods>1, con la salvedad que a mayor cantidad de días el error de la predicción aumenta.
+
+5. Se recomienda elegir una mayor cantidad de datos para tener un comportamiento más exacto y que el error de predicción disminuya. 
+
+# Automatización de la predicción con Cron
+
+Cron es una aplicación de Linux/Unix diseñada para ejecutar automáticamente comandos y scripts en un momento concreto, a una hora y fecha establecidas. Puede ser utilizado para cualquier tarea, pero es usado sobre todo para respaldos y otras tareas administrativas. Cron viene instalado en Linux y por defecto se ejecuta automáticamente al iniciar el equipo por lo que sólo edita el tiempo en el que queremos que se ejecute la tarea.
+
+Las tareas de Cron se registran y administran en un archivo especial llamado crontab. Cada perfil de usuario del sistema puede tener su propio crontab para programar tareas, que se almacenan en /var/spool/cron/crontabs.
+
+Para programar una tarea, simplemente debe abrir su crontab a fin de editar y añadir una tarea escrita en forma de expresión de Cron. La sintaxis para escribir expresiones de Cron puede dividirse en dos elementos: la programación y el comando de ejecución.
+
+El comando puede ser prácticamente cualquiera que ejecute habitualmente en la línea de comandos. El componente de programación de la sintaxis se divide en 5 campos distintos, que se escriben en el siguiente orden:
+~~~~
+minute hour day_of_month month day_of_week comandos_a_correr
+~~~~
+Para programar la ejecuciòn de nuestro script *prediccion_profeta.py* se realizan los siguientes pasos.
+
+1. Abrir una terminal de Linux
+2. Editar Crontab con el comando
+~~~~
+crontab -e
+~~~~
+Esto abrirá el editor de código predeterminado de Linux
+3. Ir a la última línea del archivo y pegar la siguiente instrucción
+~~~~
+0 0 * * 1 conda activate profeta && python ruta_al_archivo/prediccion_profeta.py
+~~~~
+Despues de guardar los cambios y cerrar el archivo saldrá el mensaje `crontab: installing new crontab` que indica que se realizó el cambio satisfactoriamemnte.
+
+Este comando realizará de forma automática la predicción al activar el ambiente virtual profeta y después ejecutará el script predicción_profeta.py todos los lunes a la media noche.
 
 # Resultados
 
@@ -80,7 +138,7 @@ El programa se realizó en Python 3.8.0 pero es comptible con versiones más nue
 
 Para el uso e implementación del algoritmo de predicción _Prophet_ revisar el siguiente articulo
 
-1. Taylor, S. J., & Letham, B. (2018). Forecasting at scale. The American Statistician, 72(1), 37-45. [Link](file:///D:/Descargas%202022/peerj-preprints-3190.pdf)
+1. Taylor, S. J., & Letham, B. (2018). Forecasting at scale. The American Statistician, 72(1), 37-45. [Link](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Prediccion_Peso_Colmena/Articulo_prediccion_prophet.pdf)
 
 # Créditos
 
