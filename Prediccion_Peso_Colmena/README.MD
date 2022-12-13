@@ -69,6 +69,8 @@ Al ejecutar el script se verá una ventana con la siguiente información
 </p>
 
 # Instrucciones de uso del programa
+
+En nuestro proyecto todavía no tenemos datos reales que hayan sido medidos *in situ* para probar el modelo de predicción por lo que usamos un conjunto de datos reportados en la plataforma [kagle.com](https://www.kaggle.com/) de un proyecto denominado [beehive metrics](https://www.kaggle.com/datasets/se18m502/bee-hive-metrics) que contiene varios datasets reales con el peso de la colmena. De esta forma fue posible conseguir y usar los datos. 
 1. Para ejecutar el código *prediccion_profeta.py* hay que tomar en cuenta las siguientes consideraciones:
 * El archivo de datos a usar para la predicción debe tener extensión *.csv*
 * El archivo debe contener 2 columnas, la primera debe tener el encabezado *ds* y la segunda *y*. La primera es la columna del tiempo (datestamp) y la segunda el peso.
@@ -91,6 +93,8 @@ importa al espacio de trabajo los últimos 5000 datos del dataframe, con estos s
 future = m.make_future_dataframe(periods=1)
 ~~~~
 Donde periods es el parámetro que nos permite elegir cuántos días hacía adelante, si queremos más días de predicción considerar periods>1, con la salvedad que a mayor cantidad de días el error de la predicción aumenta.
+
+5. Se recomienda elegir una mayor cantidad de datos para tener un comportamiento más exacto y que el error de predicción disminuya. 
 # Resultados
 
 # Evidencias
