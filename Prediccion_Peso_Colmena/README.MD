@@ -127,7 +127,14 @@ Este comando realizará de forma automática la predicción al activar el ambien
 <img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_crontab__b_020.jpg" />
 </p>
 
+# Petición de predicción en el bot de Telegram 
+
 # Resultados
+Las siguiente gráficas son el producto de la predicción
+|  |  |
+|--|--|
+| ![Imagen 1](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Prediccion_Peso_Colmena/prediccion_1.png?raw=true) | ![Imagen 2](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Prediccion_Peso_Colmena/analisis_tendencia.png?raw=true) |
+| ![Chat telegram](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Prediccion_Peso_Colmena/zonas_cambios.png?raw=true) |![enter image description here](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_prediccion_07.jpg?raw=true)
 
 # Evidencias
 
