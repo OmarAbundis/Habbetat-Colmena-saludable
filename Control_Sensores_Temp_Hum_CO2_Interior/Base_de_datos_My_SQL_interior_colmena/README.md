@@ -4,6 +4,10 @@
 
 La base de datos se creó en una máquina virtual de Ubuntu 20.04 usando MySQL. Los datos obtenidos de los sensores MQ135 y DHT11 son enviados por MQTT en formato json al broker local donde son leìdos por el flow de NodeRed y guardados en nuestra base de datos local usando el nodo MySQL. Posteriormente está base de datos es usada com fuente de datos para un panel de Grafana donde visualizamos el comportamiento local.
 
+# Software a utilizar
+* Maquina virtual con Ubuntu 20.04
+* My Sql para Linux [Paquete descargable](https://dev.mysql.com/downloads/mysql/)
+
 # Instrucciones para creación de base de datos
 
 1. Abrir una terminal e instalar mysql server con los comandos
@@ -56,6 +60,7 @@ Este nodo estará enviando los datos a la tabla Datos_Sensores para guardarlos e
 <img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_node_red_base_de_datos_15.jpg" />
 </p>
 
+Una vez creada la base de datos podemos usarla para visualizar datos en Grafana o tomarlos para hacer predicciones de comportamiento.
   
 # Resultados
 
@@ -71,8 +76,26 @@ Los datos guardados desde el flow de nodered se muestra en esta imagen
 </p>
 
 # Evidencia
+Videos de YouTube
 
+1. Funcionamiento de los sensores con MQTT, Nodered y la base de datos MySQL.
 
+https://www.youtube.com/watch?v=seBQrWVgVqA
 
+2. Funcionamiento del bot de Telegram
 
+https://www.youtube.com/watch?v=s4fPHFBnQRI 
+
+3. Panel de Grafana y Dashboard de Nodered
+
+https://youtu.be/pgujhDJBkKk
+
+## Créditos
+
+Este proyecto se realizó gracias al apoyo de los profesores
+
+- Lizbeth García León [Github](https://github.com/lizgarcialeon)
+- Hugo Escalpelo [Github](https://github.com/hugoescalpelo/detector-sintomas-covid)
+- Omar Abundis Noyola [Github](https://github.com/OmarAbundis)
+- Raymundo Soto Soto [Github](https://github.com/raymundosoto)
 
