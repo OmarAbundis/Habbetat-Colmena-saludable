@@ -35,3 +35,20 @@ Esto creará la base de datos que guardará nuestros datos que son
 * `GRANT ALL PRIVILEGES ON *.* TO 'raymundo_soto'@'localhost';`
 
 Esto nos permitirá el accceso  a nuestra base de datos local
+
+# Resultados
+
+La base de datos con la tabla creada se muestra a continuación
+
+<p align="center">
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_21_tablas_BD_21.jpg" />
+</p>
+
+Los datos guardados desde el flow de nodered se muestra en esta imagen
+<p align="center">
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/raymundo_base_de_datos_datos_22.jpg" />
+</p>
+
+
+
+
