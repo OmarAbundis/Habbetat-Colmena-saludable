@@ -2,7 +2,7 @@
 
 # Resumen
 
-La base de datos se creo en una máquina virtual de Ubuntu 20.04 usando MySQL. Los datos obtenidos de los sensores MQ135 y DHT11 son enviados por MQTT en formato json al broker local donde son leìdos por el flow de NodeRed y guardados en nuestra base de datos local usando el nodo MySQL. Posteriormente está base de datos es usada com fuente de datos para un panel de Grafana donde visualizamos el comportamiento local.
+La base de datos se creó en una máquina virtual de Ubuntu 20.04 usando MySQL. Los datos obtenidos de los sensores MQ135 y DHT11 son enviados por MQTT en formato json al broker local donde son leìdos por el flow de NodeRed y guardados en nuestra base de datos local usando el nodo MySQL. Posteriormente está base de datos es usada com fuente de datos para un panel de Grafana donde visualizamos el comportamiento local.
 
 # Instrucciones para creación de base de datos
 
@@ -28,3 +28,10 @@ Esto creará la base de datos que guardará nuestros datos que son
 * VoltajeAnalogico
 * Tempertura
 * Humedad
+
+6. Se requiere crear un usuario y contraseña para poder ingresar posteriormente desde Grafana a nuestra base de datos, lo creamos usando las instruccciones
+
+* `CREATE USER 'raymundo_soto'@'localhost' IDENTIFIED BY 'contrasena';`
+* `GRANT ALL PRIVILEGES ON *.* TO 'raymundo_soto'@'localhost';`
+
+Esto nos permitirá el accceso  a nuestra base de datos local
