@@ -85,7 +85,7 @@ En los siguientes puntos se describen las distintas etapas de la elaboración de
 
 ***Circuito Electrónico de Control y Adquisición de Peso, Temperatura y Humedad, y Control de Carga***.
 
-En las siguientes tablas, se puede observar la correspondencia de las terminales que se deben de conectar entre el ESP32-CAM y los distintos sensores y el actuador.
+En las siguientes tablas, se puede observar la correspondencia de las terminales que deben de conectar entre el ESP32-CAM y los distintos sensores y el actuador.
 
 ***Terminales de Conexión de ESP32-CAM a DHT11***.
 | ESP32-CAM | DTH11|
