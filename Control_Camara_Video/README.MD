@@ -1,5 +1,5 @@
 # Resumen
-En esta sección del proyecto Habeetat se construye el modulo que se encarga del envío de imágenes y vídeo en tiempo real al flow de NodeRed donde, posteriormente, son enviadas al chat de Telegram para su consulta. El módulo consiste de un microcontrolador ESP32 con cámara que se conecta al Wifi y funciona como un servidor web de imágenes y vídeos, esto permite el intercambio de imágenes a través de internet. El bot de telegram se configura de tal forma que en un chat se pueda hacer la petición de las imágenes en tiempo real enviando la palabra _imagen_. Al final se muestran imágenes de su funcionamiento. 
+En esta sección del proyecto Habeetat se construye el módulo que se encarga del envío de imágenes y vídeo en tiempo real al flow de NodeRed donde, posteriormente, son enviadas al chat de Telegram para su consulta. El módulo consiste de un microcontrolador ESP32 con cámara que se conecta al Wifi y funciona como un servidor web de imágenes y vídeos, esto permite el intercambio de imágenes a través de internet. El bot de telegram se configura de tal forma que en un chat se pueda hacer la petición de las imágenes en tiempo real enviando la palabra _imagen_. Al final se muestran imágenes de su funcionamiento. 
 # Material necesario
 1.	Computadora
 2.	1 microcontrolador ESP32 con cámara OV2640
@@ -75,7 +75,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
     
 8. Antes de cargar el código a la tarjeta debemos definir el tipo de cámara que estamos usando (en nuestro caso es CAMERA_MODEL_AI_THINKER) y colocar el nombre de la red wifi y el password de la a que nos conectaremos con el ESP32 CAM.
 
-**Antes de subir el código hay que cerciorrase que el GPIO del ESP32 CAM esté conectado a GND para entrar en el modo programador, después de subir el código habrá que desconectarlos**
+**Antes de subir el código hay que cerciorarse que el GPIO del ESP32 CAM esté conectado a GND para entrar en el modo programador, después de subir el código habrá que desconectarlos**
 
 ![imagen](https://user-images.githubusercontent.com/72757419/207119299-ea247f1b-f0fa-4dc7-9887-429a59bd08c4.png)
     
@@ -137,7 +137,7 @@ if (msg.payload.content == "imagen" || msg.payload.content == "Imagen")
 }
 ~~~~
 
-En este script hay que añadir el ID del chat de telegram hacía donde se envía la imagen y la imagen que se envirá específicando la ruta completa y el nombre de la imagen que en nuestro caso es *imagenactual.png*. Tambíen es importante que se configure el chat de telegram en el que se ebviará la imagen para que reciba los mensajes del bot, de preferencia agregar el bot como participante del chat con privilegíos de administrador.
+En este script hay que añadir el ID del chat de telegram hacía donde se envía la imagen y la imagen que se enviará específicando la ruta completa y el nombre de la imagen que en nuestro caso es *imagenactual.png*. También es importante que se configure el chat de telegram en el que se enviará la imagen para que reciba los mensajes del bot, de preferencia agregar el bot como participante del chat con privilegios de administrador.
 
 # Resultados
 Se muestra el dashboard de nodered con el panel de imágenes y vídeo 
