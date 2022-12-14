@@ -266,7 +266,7 @@ GRANT ALL PRIVILEGES ON *.* TO ‘PanchoLopez’@’localhost’;
 
 ***Nota***: Guarda bien el usuario y la contraseña para su posterior uso.
 
-¡Listo! Ya está la base de datos para el almacenamiento de los parámetros conrrespondientes a la variables temperatura, humedad y peso de la colmena.
+¡Listo! Ya está la base de datos para el almacenamiento de los parámetros correspondientes a la variables temperatura, humedad y peso de la colmena.
 
 # 4. Interfaz gráfica y de control en NodeRed
 
