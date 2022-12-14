@@ -450,7 +450,7 @@ Y se ha completado el *Dasboard* para visualizar los valores de las variables qu
 
 ### ¿Podríamos consultar los datos de la colmena haciendo una petición de un mensaje de texto por algún servicio de mensajería?
 
-La respuesta es sí, se pueden solicitar los datos de las variables temperatura, humedad, peso y CO2; relacionadas con la colmena e incluso una imagen de su estado y en base a la información recopilada, una predicción esperada del peso de la colmena para los siguientes dos día.
+La respuesta es sí, se pueden solicitar los datos de las variables temperatura, humedad, peso y CO2; relacionadas con la colmena e incluso una imagen de su estado y en base a la información recopilada, una predicción esperada del peso de la colmena para los siguientes dos días.
 
 ### ¿Y cómo se hace?
 
