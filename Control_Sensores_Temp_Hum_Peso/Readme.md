@@ -568,7 +568,7 @@ para activar Grafana. En este paso socita la contraseña de administrador, despu
 
 ***Inicialización de Grafana.***
 
-4.	Conectar el FTDI mediante un cable USM a USB mini a una fuente de voltaje, por ejemplo la que utiliza para suministrar carga a la batería de su smartphone.
+4.	Conectar el FTDI mediante un cable USB a USB mini a una fuente de voltaje, por ejemplo la que utiliza para suministrar carga a la batería de su smartphone.
 
 5.	Se abre una página de un explorador de internet y se escribe
 ~~~
