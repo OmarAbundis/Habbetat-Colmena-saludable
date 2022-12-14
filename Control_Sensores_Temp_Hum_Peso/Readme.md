@@ -542,9 +542,9 @@ Y ha quedado funcional la parte del proyecto encargada de la detección de la te
 
 ## Instrucciones de operación
 
-En lo que respecta a esta parte de la implementación del proyecto, no es muy complicada de utilizar, una vez que todas sus partes han sido armadas y programadas. Solo hay que seguir los siguientes pasos:
+En lo que respecta a esta parte de la implementación del proyecto, no es muy complicada de utilizar, una vez que todas sus partes han sido creadas y programadas. Solo hay que seguir los siguientes pasos:
 
-1.	Inicializar su máquina virtual en donde tiene instalado Ubuntu 20.04.
+1.	Inicialice su máquina virtual en donde tiene instalado Ubuntu 20.04.
 
 2.	Ya corriendo el sistema operativo Ubuntu 20.04, se abre una terminal y se escribe el comando 
 ~~~
