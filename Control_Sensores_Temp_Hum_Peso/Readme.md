@@ -409,10 +409,6 @@ ORDER BY fecha
 
 6.	Se aplican y se salvan todas las configuraciones hechas.
 
-![A054](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A054.JPG)
-
-***Aplicación de configuraciones.***
-
 ![A055](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A055.JPG)
 ![A056](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A056.JPG)
 ![A057](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_Peso/Imagenes/A057.JPG)
