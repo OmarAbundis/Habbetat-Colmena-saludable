@@ -128,7 +128,7 @@ Esto abrirá el editor de código predeterminado de Linux
 ~~~~
 0 0 * * 1 conda activate profeta && python ruta_al_archivo/prediccion_profeta.py
 ~~~~
-Despues de guardar los cambios y cerrar el archivo saldrá el mensaje `crontab: installing new crontab` que indica que se realizó el cambio satisfactoriamemnte.
+Despues de guardar los cambios y cerrar el archivo saldrá el mensaje `crontab: installing new crontab` que indica que se realizó el cambio satisfactoriamente.
 
 Este comando realizará de forma automática la predicción al activar el ambiente virtual profeta y después ejecutará el script predicción_profeta.py todos los lunes a la media noche.
 <p align="center">
