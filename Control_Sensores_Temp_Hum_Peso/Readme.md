@@ -182,7 +182,7 @@ Hasta este momento, se tiene resuelto la detección de las variables de interés
 
 Estos sistemas de *streaming*, además de que tienen modelos de predicción o algoritmos de inteligencia artificial (que también se incluye en nuestro proyecto un ejemplo de implementación), para que funcionen necesitan de datos y entre más tiempo este recopilando datos, se puede hacer una mejor predicción, en el caso de los *streaming*, de tus gustos.
 
-En resumen, para implementar un modelo predictivo, entonces necesitamos recopilar datos, provenientes del peso, temperatura, humedad y CO2; de la colmena y almacenarlos para su posterior procesamiento con algún algoritmo de predicción..
+En resumen, para implementar un modelo predictivo, entonces necesitamos recopilar datos, provenientes del peso, temperatura, humedad y CO2; de la colmena y almacenarlos para su posterior procesamiento con algún algoritmo de predicción.
 
 A continuación, se muestra, cómo se puede implementar una rápida y sencilla base de datos utilizando MySQL, que es un software libre y que fácilmente se puede implementar en Ubuntu 20.04, nuestro sistema operativo en utilización.
 
