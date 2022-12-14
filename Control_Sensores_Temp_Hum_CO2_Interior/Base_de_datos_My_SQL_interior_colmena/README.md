@@ -23,22 +23,22 @@ La base de datos se creó en una máquina virtual de Ubuntu 20.04 usando MySQL. 
 4. Seleccionar base de datos
 * `use sensor_MQ_DHT;`
     
-5. Crear una tabla llamada registro que contenga todos los campos necesarios
+5. Crear una tabla llamada Datos_Sensores que contenga todos los campos necesarios
 * `CREATE TABLE Datos_Sensores (n_registro INT(7) UNSIGNED AUTO_INCREMENT PRIMARY KEY, fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP, id_sensor CHAR (248) NOT NULL, ValorAnalogico FLOAT(7,3) NOT NULL, VoltajeAnalogico FLOAT(7,3) NOT NULL, Temperatura FLOAT(7,3) NOT NULL, Humedad FLOAT(7,3) NOT NULL);`
     
 Esto creará la base de datos que guardará nuestros datos que son
 * id_sensor
 * ValorAnalogico
 * VoltajeAnalogico
-* Tempertura
+* Temperatura
 * Humedad
 
-6. Se requiere crear un usuario y contraseña para poder ingresar posteriormente desde Grafana a nuestra base de datos, lo creamos usando las instruccciones
+6. Se requiere crear un usuario y contraseña para poder ingresar posteriormente desde Grafana a nuestra base de datos, lo creamos usando las instrucciones
 
 * `CREATE USER 'raymundo_soto'@'localhost' IDENTIFIED BY 'contrasena';`
 * `GRANT ALL PRIVILEGES ON *.* TO 'raymundo_soto'@'localhost';`
 
-Esto nos permitirá el accceso  a nuestra base de datos local.
+Esto nos permitirá el acceso  a nuestra base de datos local.
 
 7. Para guardar desde Node se usan los siguientes Nodos mqtt, función y MySQL
 <p align="center">
