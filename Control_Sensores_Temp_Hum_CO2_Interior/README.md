@@ -87,7 +87,7 @@ Vista Trasera
 
 ## Instrucciones para la programación del ESP32 WROOM
 
-El programa para leer los sensores se encuentra en la carpeta [Carpeta]. Este programa hace uso de las bibliotecas Wifi, PubSubClient y DHT11 por lo que es necesario instalarlas en el IDE de Arduino antes de subir el programa al ESP32, así como de preparar todo el entorno en sistema operativo (Ubuntu) para que se conecte el ESP32 WROOM a la computadora (ver material de referencias de configuración del IDE de Arduino y ESP32). Una vez que se realizan las lecturas del sensor estás son publicadas en un broker local mediante el protocolo MQTT usando mosquitto por lo que hay que configurarlo también en la computadora (ver material de referencia de configuración). 
+El programa para leer los sensores se encuentra en la [carpeta de este link](https://github.com/OmarAbundis/Habeetat-Colmena-saludable/tree/main/Control_Sensores_Temp_Hum_CO2_Interior/Sensor_DHT11_MQ135_WiFI_MQTT)  Este programa hace uso de las bibliotecas Wifi, PubSubClient y DHT11 por lo que es necesario instalarlas en el IDE de Arduino antes de subir el programa al ESP32, así como de preparar todo el entorno en sistema operativo (Ubuntu) para que se conecte el ESP32 WROOM a la computadora (ver material de referencias de configuración del IDE de Arduino y ESP32). Una vez que se realizan las lecturas del sensor estás son publicadas en un broker local mediante el protocolo MQTT usando mosquitto por lo que hay que configurarlo también en la computadora (ver material de referencia de configuración). 
 
 El programa del ESP32 WROOM permite las siguientes acciones:
 
