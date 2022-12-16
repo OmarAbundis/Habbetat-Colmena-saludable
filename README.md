@@ -4,7 +4,7 @@
 
 Como parte de las actividades del curso de internet de las cosas (IoT), implementado en la plataforma de [edu.codigoiot.com](https://www.codigoiot.com/), se solicita a manera de conclusión realizar un proyecto en donde se ponga en práctica lo aprendido a lo largo del curso e invita participar en lo que se denomina el [proyecto Capstone](https://edu.codigoiot.com/mod/resource/view.php?id=3463).
 
-Dentro de los requisitos se busca que el proyecto repercuta en el desarrollo de la sociedad mediante el uso de las tecnológias de la comunicación y de ahí, el primer problema a resolver, ¿qué diseñar?
+Dentro de los requisitos se busca que el proyecto repercuta en el desarrollo de la sociedad mediante el uso de las tecnologías de la comunicación y de ahí, el primer problema a resolver, ¿qué diseñar?
 
 Teniendo en cuenta que hoy en día puedes encontrar hasta [cafeteras controladas por internet](https://www.home-connect.com/es/es/electrodomesticos-inteligentes/cafetera), no deberíamos tener problemas para elegir algo que realizar, pero nuevamente no se trata de conectar cualquier electrodoméstico a internet, sino que el proyecto sirva de **piedra angular** para el desarrollo de una área social y considerando que algo sobra en nuestro país, México, son problemas sociales.
 
