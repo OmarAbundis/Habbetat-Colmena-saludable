@@ -55,6 +55,13 @@ La conexión entre pines del FTD y el ESP32 CAM; debe ser el siguiente:
 | UOT |RX  |
 |UOR  |TX  |
 
+El circuito final se verá así
+
+<p align="center">
+<img src="https://github.com/OmarAbundis/Habeetat-Colmena-saludable/blob/main/Control_Sensores_Temp_Hum_CO2_Interior/imagenes_interior/RSS0036.jpg" width="700" height="400" />
+</p>
+
+
 # Instrucciones para programar el ESP32 CAM
 
 Para poder visualizar las imágenes y vídeo capturadas con la cámara del ESP32 CAM es necesario crear un servidor web, el procedimiento descrito a continuación nos permitirá crear el servidor web para visualizar en un navegador las imágenes y vídeo.
