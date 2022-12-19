@@ -78,8 +78,8 @@ const char* password = "4520297937";      // Aquí debes poner la contraseña de
 
 //Datos del broker MQTT
 
-const char* mqtt_server = "192.168.1.66"; // Si estas en una red local, coloca la IP asignada, en caso contrario, coloca la IP publica
-IPAddress server(192,168,1,66);
+const char* mqtt_server = "192.168.1.64"; // Si estas en una red local, coloca la IP asignada, en caso contrario, coloca la IP publica
+IPAddress server(192,168,1,64);
 
 // Datos para el control de la balanza
 
