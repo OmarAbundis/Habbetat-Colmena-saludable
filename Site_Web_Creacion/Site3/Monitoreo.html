@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="es"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Objetivo:, En la experimentación de está práctica se debe de contar con el siguiente software libre:">
+    <meta name="description" content="">
+    <title>Monitoreo</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+<link rel="stylesheet" href="Monitoreo.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 4.21.12, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    
+    
+    
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "images/hb.jpeg"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Monitoreo">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body u-xl-mode" data-lang="es"><header class="u-clearfix u-header u-header" id="sec-6538"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="825" data-image-height="544">
+          <img src="images/hb.jpeg" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Inicio.html" style="padding: 10px 20px;">Inicio</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Repositorio.html" style="padding: 10px 20px;">Repositorio</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Proyecto-Habeetat.html" style="padding: 10px 20px;">Proyecto Habeetat</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Inicio.html">Inicio</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Repositorio.html">Repositorio</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Proyecto-Habeetat.html">Proyecto Habeetat</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-align-center u-clearfix u-palette-1-light-3 u-section-1" id="sec-049f">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-default u-text-1">Objetivo:</h1>
+        <p class="u-text u-text-2"> Sistema de monitoreo de variables locales y control de actuadores en​ la
+colmena.​&nbsp;</p>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-palette-3-light-2 u-section-2" id="sec-e020">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-expanded-width u-tabs u-tabs-1">
+          <ul class="u-border-1 u-border-grey-25 u-tab-list u-unstyled" role="tablist">
+            <li class="u-tab-item" role="presentation">
+              <a class="active u-active-white u-border-2 u-border-active-grey-15 u-border-hover-grey-15 u-border-no-bottom u-button-style u-tab-link u-text-active-palette-2-base u-text-hover-black u-tab-link-1" id="link-tab-ed10" href="#tab-ed10" role="tab" aria-controls="tab-ed10" aria-selected="true">DHT11</a>
+            </li>
+            <li class="u-tab-item" role="presentation">
+              <a class="u-active-white u-border-2 u-border-active-grey-15 u-border-hover-grey-15 u-border-no-bottom u-button-style u-tab-link u-text-active-palette-2-base u-text-hover-black u-tab-link-2" id="link-tab-da73" href="#tab-da73" role="tab" aria-controls="tab-da73" aria-selected="false">Circuito</a>
+            </li>
+            <li class="u-tab-item" role="presentation">
+              <a class="u-active-white u-border-2 u-border-active-grey-15 u-border-hover-grey-15 u-border-no-bottom u-button-style u-tab-link u-text-active-palette-2-base u-text-hover-black u-tab-link-3" id="link-tab-a124" href="#tab-a124" role="tab" aria-controls="tab-a124" aria-selected="false">Terminales de conexión</a>
+            </li>
+          </ul>
+          <div class="u-tab-content">
+            <div class="u-container-style u-tab-active u-tab-pane u-white u-tab-pane-1" id="tab-ed10" role="tabpanel" aria-labelledby="link-tab-ed10">
+              <div class="u-container-layout u-container-layout-1">
+                <h4 class="u-text u-text-1">Descripción</h4>
+                <p class="u-text u-text-2">El sensor DHT11 permite medir la temperatura y humedad,&nbsp;&nbsp;es digital, protege frente al ruido en comunicación,tiene una alta fiabilidad y estabilidad&nbsp;debido a su señal digital calibrada.<br>
+                  <br>MODELO DHT11<br>-Alimentaciónde 3,5 V a 5 V<br>-Consumo 2,5 mA<br>-Señal de salida Digital<br>-Para Temperatura<br>-Rangode 0ºC a 50ºC<br>-Precisión a 25ºC&nbsp;± 2ºC<br>-Resolución 1ºC (8-bit)<br>-Humedad&nbsp;<br>-Rango de 20% RH a 90% RH<br>-Precisión entre 0ºC y 50ºC ± 5% RH<br>-Resolución 1% RH<br>
+                </p>
+                <img alt="" class="u-image u-image-default u-image-1" data-image-width="225" data-image-height="225" src="images/sensortemp.jpg">
+              </div>
+            </div>
+            <div class="u-container-style u-tab-pane u-white u-tab-pane-2" id="tab-da73" role="tabpanel" aria-labelledby="link-tab-da73">
+              <div class="u-container-layout u-container-layout-2">
+                <img class="u-image u-image-contain u-image-round u-radius-10 u-image-2" src="images/circuitohyt.png" alt="" data-image-width="1562" data-image-height="825">
+              </div>
+            </div>
+            <div class="u-container-style u-tab-pane u-white u-tab-pane-3" id="tab-a124" role="tabpanel" aria-labelledby="link-tab-a124">
+              <div class="u-container-layout u-container-layout-3">
+                <div class="fr-view u-clearfix u-rich-text u-text u-text-3">
+                  <p>Terminales de Conexión de ESP32-CAM a DHT11</p>
+                  <table border="0" cellpadding="0" cellspacing="0" style="background:white;border-collapse:collapse;mso-yfti-tbllook:1184;">
+                    <thead>
+                      <tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes;">
+                        <td style="padding:.75pt .75pt .75pt .75pt;">
+                          <p>ESP32-CAM</p>
+                        </td>
+                        <td style="padding:.75pt .75pt .75pt .75pt;">
+                          <p>DHT11</p>
+                        </td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr style="mso-yfti-irow:1;">
+                        <td style="padding:.75pt .75pt .75pt .75pt;">
+                          <p>GPIO 2</p>
+                        </td>
+                        <td style="padding:.75pt .75pt .75pt .75pt;">
+                          <p>DATA</p>
+                        </td>
+                      </tr>
+                      <tr style="mso-yfti-irow:2;">
+                        <td style="padding:.75pt .75pt .75pt .75pt;">
+                          <p>5V</p>
+                        </td>
+                        <td style="padding:.75pt .75pt .75pt .75pt;">
+                          <p>Vcc</p>
+                        </td>
+                      </tr>
+                      <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes;">
+                        <td style="padding:.75pt .75pt .75pt .75pt;">
+                          <p>GND</p>
+                        </td>
+                        <td style="padding:.75pt .75pt .75pt .75pt;">
+                          <p>GND</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>Terminales de Conexión de ESP32-CAM a HX711 &nbsp;</p>
+                  <p>&nbsp;</p>
+                  <table border="0" cellpadding="0" cellspacing="0" style="background:white;border-collapse:collapse;mso-yfti-tbllook:1184;">
+                    <thead>
+                      <tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes;">
+                        <td style="padding:.75pt .75pt .75pt .75pt;">
+                          <p>ESP32-CAM</p>
+                        </td>
+                        <td style="padding:.75pt .75pt .75pt .75pt;">
+                          <p>HX711</p>
+                        </td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr style="mso-yfti-irow:1;">
+                        <td style="padding:.75pt .75pt .75pt .75pt;">
+                          <p>Vcc = 5V</p>
+                        </td>
+                        <td style="padding:.75pt .75pt .75pt .75pt;">
+                          <p>Vcc</p>
+                        </td>
+                      </tr>
+                      <tr style="mso-yfti-irow:2;">
+                        <td style="padding:.75pt .75pt .75pt .75pt;">
+                          <p>GND</p>
+                        </td>
+                        <td style="padding:.75pt .75pt .75pt .75pt;">
+                          <p>GND</p>
+                        </td>
+                      </tr>
+                      <tr style="mso-yfti-irow:3;">
+                        <td style="padding:.75pt .75pt .75pt .75pt;">
+                          <p>GPIO 12</p>
+                        </td>
+                        <td style="padding:.75pt .75pt .75pt .75pt;">
+                          <p>SCK</p>
+                        </td>
+                      </tr>
+                      <tr style="mso-yfti-irow:4;mso-yfti-lastrow:yes;">
+                        <td style="padding:.75pt .75pt .75pt .75pt;">
+                          <p>GPIO 13</p>
+                        </td>
+                        <td style="padding:.75pt .75pt .75pt .75pt;">
+                          <p>DT</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>Terminales de Conexión de ESP32-CAM a MOC3043 &nbsp;&nbsp;</p>
+                  <table border="0" cellpadding="0" cellspacing="0" style="background:white;border-collapse:collapse;mso-yfti-tbllook:1184;">
+                    <thead>
+                      <tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes;">
+                        <td style="padding:.75pt .75pt .75pt .75pt;">
+                          <p>ESP32-CAM</p>
+                        </td>
+                        <td style="padding:.75pt .75pt .75pt .75pt;">
+                          <p>MOC3043</p>
+                        </td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr style="mso-yfti-irow:1;">
+                        <td style="padding:.75pt .75pt .75pt .75pt;">
+                          <p>GPIO 15</p>
+                        </td>
+                        <td style="padding:.75pt .75pt .75pt .75pt;">
+                          <p>PIN 1</p>
+                        </td>
+                      </tr>
+                      <tr style="mso-yfti-irow:2;mso-yfti-lastrow:yes;">
+                        <td style="padding:.75pt .75pt .75pt .75pt;">
+                          <p>GND</p>
+                        </td>
+                        <td style="padding:.75pt .75pt .75pt .75pt;">
+                          <p>PIN 2</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-palette-1-light-3 u-section-3" id="sec-9c55">
+      <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-sheet-1">
+        <div class="u-expanded-width u-tabs u-tabs-1">
+          <ul class="u-border-1 u-border-grey-25 u-tab-list u-unstyled" role="tablist">
+            <li class="u-tab-item" role="presentation">
+              <a class="active u-active-white u-border-2 u-border-active-grey-15 u-border-hover-grey-15 u-border-no-bottom u-button-style u-tab-link u-text-active-palette-2-base u-text-hover-black u-tab-link-1" id="link-tab-f94d" href="#tab-f94d" role="tab" aria-controls="tab-f94d" aria-selected="true">HX711</a>
+            </li>
+            <li class="u-tab-item" role="presentation">
+              <a class="u-active-white u-border-2 u-border-active-grey-15 u-border-hover-grey-15 u-border-no-bottom u-button-style u-tab-link u-text-active-palette-2-base u-text-hover-black u-tab-link-2" id="link-tab-6af7" href="#tab-6af7" role="tab" aria-controls="tab-6af7" aria-selected="false"> Especificaciones</a>
+            </li>
+            <li class="u-tab-item" role="presentation">
+              <a class="u-active-white u-border-2 u-border-active-grey-15 u-border-hover-grey-15 u-border-no-bottom u-button-style u-tab-link u-text-active-palette-2-base u-text-hover-black u-tab-link-3" id="link-tab-bbf9" href="#tab-bbf9" role="tab" aria-controls="tab-bbf9" aria-selected="false">Celda de carga</a>
+            </li>
+          </ul>
+          <div class="u-tab-content">
+            <div class="u-container-style u-tab-active u-tab-pane u-white u-tab-pane-1" id="tab-f94d" role="tabpanel" aria-labelledby="link-tab-f94d">
+              <div class="u-container-layout u-container-layout-1">
+                <h4 class="u-text u-text-1">Descripción</h4>
+                <img alt="" class="u-expanded-width-xs u-image u-image-default u-image-1" data-image-width="241" data-image-height="138" src="images/hx711.png">
+                <p class="u-text u-text-2"> Una celda de carga es un transductor capaz de convertir una fuerza en una señal eléctrica, esto la hace a través uno o más galgas internas que posee.<br>Este módulo es una interface entre las celdas de carga y el microcontrolador, permitiendo poder leer el peso de manera sencilla. Internamente se encarga de la lectura del puente wheatstone formado por la celda de carga, convirtiendo la lectura analógica a digital con su conversor A/D interno de 24 bits.<br>
+                </p>
+              </div>
+            </div>
+            <div class="u-container-style u-tab-pane u-white u-tab-pane-2" id="tab-6af7" role="tabpanel" aria-labelledby="link-tab-6af7">
+              <div class="u-container-layout u-container-layout-2">
+                <img class="u-image u-image-default u-image-2" src="images/conexionhx7111.jpg" alt="" data-image-width="642" data-image-height="360">
+              </div>
+            </div>
+            <div class="u-container-style u-tab-pane u-white u-tab-pane-3" id="tab-bbf9" role="tabpanel" aria-labelledby="link-tab-bbf9">
+              <div class="u-container-layout u-container-layout-3">
+                <p class="u-text u-text-default u-text-3">Para instalar la celda de carga hay que hacerlo con separadores, los cuales deben de distanciar a la base y recipiente de la celda para que la parte central quede libre; además hay que tener en cuenta que el sentido de la flecha indica la dirección de la fuerza o peso a aplicar.</p>
+                <img class="u-image u-image-contain u-image-round u-radius-10 u-image-3" src="images/A028.png" alt="" data-image-width="514" data-image-height="365">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-palette-3-light-2 u-section-4" id="sec-dc21">
+      <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-sheet-1">
+        <div class="u-expanded-width u-tabs u-tabs-1">
+          <ul class="u-border-1 u-border-grey-25 u-tab-list u-unstyled" role="tablist">
+            <li class="u-tab-item" role="presentation">
+              <a class="active u-active-white u-border-2 u-border-active-grey-15 u-border-hover-grey-15 u-border-no-bottom u-button-style u-tab-link u-text-active-palette-2-base u-text-hover-black u-tab-link-1" id="link-tab-bd98" href="#tab-bd98" role="tab" aria-controls="tab-bd98" aria-selected="true">ESP32-CAM</a>
+            </li>
+            <li class="u-tab-item" role="presentation">
+              <a class="u-active-white u-border-2 u-border-active-grey-15 u-border-hover-grey-15 u-border-no-bottom u-button-style u-tab-link u-text-active-palette-2-base u-text-hover-black u-tab-link-2" id="link-tab-2f5d" href="#tab-2f5d" role="tab" aria-controls="tab-2f5d" aria-selected="false"> Especificaciones</a>
+            </li>
+            <li class="u-tab-item" role="presentation">
+              <a class="u-active-white u-border-2 u-border-active-grey-15 u-border-hover-grey-15 u-border-no-bottom u-button-style u-tab-link u-text-active-palette-2-base u-text-hover-black u-tab-link-3" id="link-tab-b29b" href="#tab-b29b" role="tab" aria-controls="tab-b29b" aria-selected="false">Conexiones</a>
+            </li>
+          </ul>
+          <div class="u-tab-content">
+            <div class="u-container-style u-tab-active u-tab-pane u-white u-tab-pane-1" id="tab-bd98" role="tabpanel" aria-labelledby="link-tab-bd98">
+              <div class="u-container-layout u-container-layout-1">
+                <h4 class="u-text u-text-1">Descripción</h4>
+                <img alt="" class="u-expanded-width-xs u-image u-image-default u-image-1" data-image-width="300" data-image-height="208" src="images/esp32cam.jpg">
+                <p class="u-align-center u-text u-text-2">Permite hacer streaming de vídeo e imágenes y servirlas a la red creando un servidor local en el mismo chip.&nbsp;&nbsp;<br>&nbsp; &nbsp;
+                </p>
+              </div>
+            </div>
+            <div class="u-align-left u-container-style u-tab-pane u-white u-tab-pane-2" id="tab-2f5d" role="tabpanel" aria-labelledby="link-tab-2f5d">
+              <div class="u-container-layout u-valign-top u-container-layout-2">
+                <ul class="u-text u-text-default u-text-3">
+                  <li> Voltaje de alimentación: 5VDC</li>
+                  <li>Voltaje entradas/salidas(GPIO): 3.3VDC</li>
+                  <li>SoM: ESP-32S (Ai-Thinker)</li>
+                  <li>SoC: ESP32 (ESP32-D0WDQ6)</li>
+                  <li>CPU: Dual core Tensilica Xtensa LX6 (32 bit)</li>
+                  <li>Wifi 802.11b/g/n, Bluetooth 4.2</li>
+                  <li>Antena PCB, también disponible conexión a antena externa</li>
+                  <li>520KB SRAM interna, 4MB SRAM externa</li>
+                  <li>Soporta UART/SPI/I2C/PWM/ADC/DAC</li>
+                  <li>Incluye socket para</li>
+                  <li>TF card micro-SD</li>
+                  <li>Cámara</li>
+                  <li>OV2640</li>
+                  <li>Resolución fotos:</li>
+                  <li>1600 x 1200 pixels</li>
+                  <li>Resolución vídeo: 1080p30, 720p60 y 640x480p90</li>
+                  <li>Incluye LED de flash en placa</li>
+                  <li>Óptica de 1/4"</li>
+                  <li>Dimensiones: 27*40.5*6 mm</li>
+                  <li>Peso: 20 gramos</li>
+                </ul>
+              </div>
+            </div>
+            <div class="u-container-style u-tab-pane u-white u-tab-pane-3" id="tab-b29b" role="tabpanel" aria-labelledby="link-tab-b29b">
+              <div class="u-container-layout u-container-layout-3">
+                <img class="u-image u-image-round u-radius-10 u-image-2" src="images/conexionesp32cam.jpg" alt="" data-image-width="522" data-image-height="246">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-palette-1-light-2 u-section-5" id="carousel_2a13">
+      <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-sheet-1">
+        <div class="u-expanded-width u-tabs u-tabs-1">
+          <ul class="u-border-1 u-border-grey-25 u-tab-list u-unstyled" role="tablist">
+            <li class="u-tab-item" role="presentation">
+              <a class="active u-active-white u-border-2 u-border-active-grey-15 u-border-hover-grey-15 u-border-no-bottom u-button-style u-tab-link u-text-active-palette-2-base u-text-hover-black u-tab-link-1" id="link-tab-06e1" href="#tab-06e1" role="tab" aria-controls="tab-06e1" aria-selected="true">MQ-135</a>
+            </li>
+            <li class="u-tab-item" role="presentation">
+              <a class="u-active-white u-border-2 u-border-active-grey-15 u-border-hover-grey-15 u-border-no-bottom u-button-style u-tab-link u-text-active-palette-2-base u-text-hover-black u-tab-link-2" id="link-tab-afcb" href="#tab-afcb" role="tab" aria-controls="tab-afcb" aria-selected="false"> Especificaciones</a>
+            </li>
+            <li class="u-tab-item" role="presentation">
+              <a class="u-active-white u-border-2 u-border-active-grey-15 u-border-hover-grey-15 u-border-no-bottom u-button-style u-tab-link u-text-active-palette-2-base u-text-hover-black u-tab-link-3" id="link-tab-7c15" href="#tab-7c15" role="tab" aria-controls="tab-7c15" aria-selected="false">Conexiones</a>
+            </li>
+          </ul>
+          <div class="u-tab-content">
+            <div class="u-container-style u-tab-active u-tab-pane u-white u-tab-pane-1" id="tab-06e1" role="tabpanel" aria-labelledby="link-tab-06e1">
+              <div class="u-container-layout u-container-layout-1">
+                <h4 class="u-text u-text-1">Descripción</h4>
+                <img alt="" class="u-expanded-width-xs u-image u-image-default u-image-1" data-image-width="126" data-image-height="126" src="images/mq135.jpg">
+                <p class="u-align-center u-text u-text-2"> Este sensor de control de calidad de aire es usado para la detección de contaminación en el medio ambiente,&nbsp;<br>Este sensor se encarga de la detección de concentración de gas en diversos porcentajes.<br>&nbsp;&nbsp;<br>&nbsp; &nbsp;
+                </p>
+              </div>
+            </div>
+            <div class="u-align-left u-container-style u-tab-pane u-white u-tab-pane-2" id="tab-afcb" role="tabpanel" aria-labelledby="link-tab-afcb">
+              <div class="u-container-layout u-container-layout-2">
+                <ul class="u-text u-text-default u-text-3">
+                  <li>Voltaje de operación: 5V DC</li>
+                  <li>Corriente de operación: 150mA</li>
+                  <li>Potencia de consumo: 800mW</li>
+                  <li>Tiempo de precalentemiento: 20 segundos</li>
+                  <li>Resistencia de carga: Potenciómetro (Ajustable)</li>
+                  <li>Detección de partes por millón: 10ppm~1000ppm</li>
+                  <li>Concentración detectable: Amoniaco, sulfuro, benceno, humo</li>
+                  <li>Concentración de oxígeno: 2%~21%</li>
+                  <li>Humedad de operación: &lt;95%RH</li>
+                  <li>Temperatura de operación: -20°C~70°C</li>
+                </ul>
+              </div>
+            </div>
+            <div class="u-container-style u-tab-pane u-white u-tab-pane-3" id="tab-7c15" role="tabpanel" aria-labelledby="link-tab-7c15">
+              <div class="u-container-layout u-container-layout-3">
+                <img class="u-image u-image-round u-radius-10 u-image-2" src="images/conexionmq135.png" alt="" data-image-width="1782" data-image-height="735">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-palette-3-light-2 u-section-6" id="carousel_46bd">
+      <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-sheet-1">
+        <div class="u-expanded-width u-tabs u-tabs-1">
+          <ul class="u-border-1 u-border-grey-25 u-tab-list u-unstyled" role="tablist">
+            <li class="u-tab-item" role="presentation">
+              <a class="active u-active-white u-border-2 u-border-active-grey-15 u-border-hover-grey-15 u-border-no-bottom u-button-style u-tab-link u-text-active-palette-2-base u-text-hover-black u-tab-link-1" id="link-tab-a381" href="#tab-a381" role="tab" aria-controls="tab-a381" aria-selected="true">ESP32-WROOM</a>
+            </li>
+            <li class="u-tab-item" role="presentation">
+              <a class="u-active-white u-border-2 u-border-active-grey-15 u-border-hover-grey-15 u-border-no-bottom u-button-style u-tab-link u-text-active-palette-2-base u-text-hover-black u-tab-link-2" id="link-tab-56f1" href="#tab-56f1" role="tab" aria-controls="tab-56f1" aria-selected="false"> Especificaciones</a>
+            </li>
+            <li class="u-tab-item" role="presentation">
+              <a class="u-active-white u-border-2 u-border-active-grey-15 u-border-hover-grey-15 u-border-no-bottom u-button-style u-tab-link u-text-active-palette-2-base u-text-hover-black u-tab-link-3" id="link-tab-ad21" href="#tab-ad21" role="tab" aria-controls="tab-ad21" aria-selected="false">Conexiones</a>
+            </li>
+          </ul>
+          <div class="u-tab-content">
+            <div class="u-container-style u-tab-active u-tab-pane u-white u-tab-pane-1" id="tab-a381" role="tabpanel" aria-labelledby="link-tab-a381">
+              <div class="u-container-layout u-container-layout-1">
+                <h4 class="u-text u-text-1">Descripción</h4>
+                <img alt="" class="u-expanded-width-xs u-image u-image-default u-image-1" data-image-width="100" data-image-height="100" src="images/esp32wroom.jpg">
+                <p class="u-align-center u-text u-text-2"> ESP-WROOM-32&nbsp;es un potente módulo que integra WiFi y Bluetooth, ideal para desarrollar productos de IoT.<br>
+                  <br>En el núcleo de este módulo está el SoC ESP32-D0WDQ6. El chip integrado está diseñado para ser escalable y adaptado.<br>
+                  <br>El módulo ESP-WROOM-32 trabaja a 3.3V en alimentación y GPIO&nbsp;&nbsp;<br>&nbsp; &nbsp;
+                </p>
+              </div>
+            </div>
+            <div class="u-align-left u-container-style u-tab-pane u-white u-tab-pane-2" id="tab-56f1" role="tabpanel" aria-labelledby="link-tab-56f1">
+              <div class="u-container-layout u-container-layout-2">
+                <ul class="u-text u-text-default u-text-3">
+                  <li> Voltaje de Alimentación: 3.3V DC (2.7~ 3.6V)</li>
+                  <li>Voltaje lógico entradas/salidas (GPIO): 3.3V</li>
+                  <li>Corriente de Operación: ~80mA (fuente superior a 500mA)</li>
+                  <li>SoM: ESP-WROOM-32</li>
+                  <li>SoC: ESP32 (ESP32-D0WDQ6)</li>
+                  <li>CPU: Dual</li>
+                  <li>core Tensilica Xtensa LX6 (32 bit)</li>
+                  <li>Frecuencia de Reloj: 240MHz</li>
+                  <li>SRAM: 520KB</li>
+                  <li>Memoria Flash Externa: 4MB</li>
+                  <li>Pines Digitales GPIO:</li>
+                  <li>34 (incluyendo todos los periféricos)</li>
+                  <li>UART:</li>
+                  <li>2</li>
+                  <li>SPI: 3</li>
+                  <li>I2C: 2</li>
+                  <li>Capacitive touch sensors: 10</li>
+                  <li>Interfaz SD</li>
+                  <li>Timers: 3 (16-bit)</li>
+                  <li>PWM Led: 16 canales independientes (16-bits)</li>
+                  <li>ADC: 2 (12-bit)</li>
+                  <li>DAC: 2 (8-bit)</li>
+                  <li>Wi-Fi, Protocolo 802.11 b/g/n/e/i (802.11n up to 150 Mbps)</li>
+                  <li>Wi-Fi, certificación RF: FCC/CE/IC/TELEC/KCC/SRRC/NCC</li>
+                  <li>Wi-Fi, rango de Frecuencia: 2.4 ~ 2.5 GHz</li>
+                  <li>Wi-Fi mode Station/SoftAP/SoftAP+Station/P2P</li>
+                  <li>Wi-Fi Security WPA/WPA2/WPA2-Enterprise/WPS</li>
+                  <li>Network protocols IPv4, IPv6, SSL, TCP/UDP/HTTP/FTP/MQTT</li>
+                  <li>Bluetooth,</li>
+                  <li>Protocolos: V4.2 BR/EDR and BLE specification</li>
+                  <li>Bluetooth, Radios: NZIF receiver with -97 dBm sensitivity, Class-1, class-2 and class-3 transmitter, AFH</li>
+                  <li>Bluetooth, Audio: CVSD and SBC</li>
+                  <li>Stack de Protocolo TCP/IP integrado</li>
+                  <li>Dimensiones:</li>
+                  <li>18*25.5*3.1 mm</li>
+                  <li>Peso: 3 gramos</li>
+                </ul>
+              </div>
+            </div>
+            <div class="u-container-style u-tab-pane u-white u-tab-pane-3" id="tab-ad21" role="tabpanel" aria-labelledby="link-tab-ad21">
+              <div class="u-container-layout u-container-layout-3">
+                <img class="u-image u-image-round u-radius-10 u-image-2" src="images/conexionmq135.png" alt="" data-image-width="1782" data-image-height="735">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-a3a4"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">Proyecto Capstone</p>
+      </div></footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+        <span>Website Templates</span>
+      </a>
+      <p class="u-text">
+        <span>created with</span>
+      </p>
+      <a class="u-link" href="" target="_blank">
+        <span>Website Builder Software</span>
+      </a>. 
+    </section>
+  
+</body></html>
